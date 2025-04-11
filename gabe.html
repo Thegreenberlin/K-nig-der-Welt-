@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deine Gabe</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: #fffbe6;
+      color: #3b2e14;
+      margin: 0;
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      box-sizing: border-box;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    a {
+      color: #d4af37;
+    }
+    
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #d4af37;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  max-width: 90%;
+  text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  white-space: normal;
+}
+
+        .section {
+          background: #fffaf0;
+          border-radius: 1rem;
+          padding: 1.5rem;
+          box-shadow: 0 0 10px rgba(0,0,0,0.05);
+          margin-top: 2rem;
+        }
+        .crypto-box {
+          background: #f0f0f0;
+          padding: 1rem;
+          border-radius: 0.5rem;
+          font-family: monospace;
+        }
+        .note {
+          font-size: 0.9rem;
+          color: #666;
+          margin-top: 0.5rem;
+        }
+        label, input, textarea {
+          display: block;
+          width: 100%;
+          font-family: inherit;
+          margin-top: 1rem;
+        }
+        textarea, input {
+          padding: 0.6rem;
+          border-radius: 0.5rem;
+          border: 1px solid #aaa;
+        }
+        
+  </style>
+</head>
+<body>
+
+<style>
+/* Hamburger-Menü */
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  padding: 1rem;
+}
+.menu-toggle {
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu-toggle div {
+  background: #d4af37;
+  height: 4px;
+  border-radius: 2px;
+}
+.menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #0c0c0c;
+  color: #f0e6d2;
+  width: 200px;
+  height: 100vh;
+  padding: 2rem 1rem;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+}
+.menu a {
+  display: block;
+  color: #f0e6d2;
+  text-decoration: none;
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+}
+.menu a:hover {
+  color: #d4af37;
+}
+</style>
+<div class="navbar">
+  <div class="menu-toggle" onclick="document.getElementById('menu').style.display = (document.getElementById('menu').style.display === 'block') ? 'none' : 'block'">
+    <div></div><div></div><div></div>
+  </div>
+</div>
+<div class="menu" id="menu">
+  <a href="index.html">Ruf zur neuen Welt</a>
+  <a href="vision.html">Vision</a>
+  <a href="gabe.html">Gabe</a>
+  <a href="kommentare.html">Stimme des Volkes</a>
+  <a href="audienzzimmer.html">Audienzzimmer</a>
+  <a href="raenge.html">Ränge</a>
+  <a href="impressum.html">Impressum</a>
+</div>
+
+<main>
+
+<h1>Deine Gabe</h1>
+<div class="section">
+  <h2>Spendenmöglichkeiten</h2>
+  <p><a href="https://www.paypal.me/deinlink" target="_blank">Zur königlichen PayPal-Seite</a></p>
+  <div class="crypto-box">
+    <strong>BTC:</strong> 1KÖNIGBTCADRESSE1234567890<br>
+    <strong>ETH:</strong> 0xKÖNIGETHADRESSE1234567890<br>
+    <strong>Monero:</strong> 4KÖNIGXMRADRESSE1234567890...
+  </div>
+  <p class="note">Diese Adressen sind Platzhalter – bitte mit echten Wallets ersetzen.</p>
+</div>
+<div class="section">
+  <h2>Deine Botschaft</h2>
+  <form onsubmit="event.preventDefault(); document.getElementById('thankyou').style.display = 'block';">
+    <label for="name">Dein Name (optional)</label>
+    <input type="text" id="name" name="name" />
+    <label for="message">Widmung oder Nachricht an das Reich</label>
+    <textarea id="message" rows="4" required></textarea>
+    <p style="text-align:center;"><button type="submit" class="button">Gabe übergeben</button></p>
+  </form>
+  <div id="thankyou" class="thankyou" style="display:none; margin-top:1rem; background:#e8f5d4; padding:1rem; border-radius:1rem;">
+    <strong>Danke für deine Gabe und deine Worte.</strong><br>
+    Mögest du in Fülle wandeln.
+  </div>
+</div>
+        
+</main>
+</body>
+</html>
