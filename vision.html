@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vision des adelschen Königreichs</title>
-
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
@@ -13,21 +12,6 @@
       padding: 0;
       background-color: #111;
       color: #f0f0f0;
-    }
-    header {
-      background-color: #222;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header a {
-      color: white;
-      margin-right: 1rem;
-      text-decoration: none;
-    }
-    header a:last-child {
-      margin-right: 0;
     }
     .container {
       max-width: 960px;
@@ -66,18 +50,77 @@
       cursor: pointer;
       margin-top: 1rem;
     }
+    /* Menü-Stile */
+    .nav-container {
+      background-color: #222;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      position: relative;
+    }
+    .nav-logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #222;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: right;
+        padding: 1rem;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <div style="color: white; font-size: 1.2rem; font-weight: bold;">Adelsreich</div>
-  <nav>
-    <a href="index.html">Start</a>
-    <a href="vision.html">Vision</a>
-    <a href="gabe.html">Gabe</a>
-    <a href="kommentare.html">Kommentare</a>
-  </nav>
+  <div class="nav-container">
+    <div class="nav-logo">Adelsreich</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Start</a>
+      <a href="vision.html">Vision</a>
+      <a href="gabe.html">Gabe</a>
+      <a href="kommentare.html">Kommentare</a>
+    </nav>
+  </div>
 </header>
 
 <div class="container">
@@ -95,6 +138,10 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+  }
   function speak(button) {
     const text = button.previousElementSibling.innerText;
     const msg = new SpeechSynthesisUtterance(text);
