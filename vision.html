@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vision des adelschen Königreichs</title>
 
-  <!-- AOS Scroll Animation -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
@@ -14,6 +13,21 @@
       padding: 0;
       background-color: #111;
       color: #f0f0f0;
+    }
+    header {
+      background-color: #222;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header a {
+      color: white;
+      margin-right: 1rem;
+      text-decoration: none;
+    }
+    header a:last-child {
+      margin-right: 0;
     }
     .container {
       max-width: 960px;
@@ -55,78 +69,39 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1 class="section-title" data-aos="fade-up">Die Vision des adelschen Königreichs</h1>
 
-    <div class="vision-block" data-aos="fade-up">
-      <h2><span class="icon">🌟</span>1. Freiheit – nicht mehr nur ein Wort, sondern Realität</h2>
-      <p>Im adelschen Königreich bedeutet Freiheit mehr als Wahlrecht oder Reisefreiheit. Freiheit heißt: Keine Existenzangst. Keine Lohnsklaverei. Keine Abhängigkeit.</p>
-      <p>Dank Replikatoren-Technologie hat jeder Mensch Zugang zu Nahrung, Wasser, Energie, Medizin und Wohnraum – bedingungslos. Arbeit wird zur Berufung. Zeit gehört wieder dir.</p>
-      <p>Freiheit heißt: Du entscheidest, wie du leben willst.</p>
-      <button class="speak-btn" onclick="speak(this)">Anhören</button>
-    </div>
+<header>
+  <div style="color: white; font-size: 1.2rem; font-weight: bold;">Adelsreich</div>
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="vision.html">Vision</a>
+    <a href="gabe.html">Gabe</a>
+    <a href="kommentare.html">Kommentare</a>
+  </nav>
+</header>
 
-    <div class="vision-block" data-aos="fade-up">
-      <h2><span class="icon">💼</span>2. Gesellschaftlicher Aufstieg durch Würde und Beitrag</h2>
-      <p>Hier zählt nicht Herkunft, Reichtum oder Status – sondern dein Beitrag zur Gemeinschaft. Ob durch Ideen, Mitgefühl, Kunst oder Einsatz: Wer gibt, wächst. Wer inspiriert, wird geehrt.</p>
-      <p>Titel, Ehren, Rollen entstehen aus Leistung, nicht aus Macht. Jeder Mensch kann aufsteigen. Jeder Mensch wird gesehen.</p>
-      <button class="speak-btn" onclick="speak(this)">Anhören</button>
-    </div>
+<div class="container">
+  <h1 class="section-title" data-aos="fade-up">Die Vision des adelschen Königreichs</h1>
 
-    <div class="vision-block" data-aos="fade-up">
-      <h2><span class="icon">📈</span>3. Eine Wirtschaft des Überflusses</h2>
-      <p>Vergiss Knappheit. Vergiss Konkurrenz um das Nötigste. Replikatoren machen Ressourcen frei – für alle. Wirtschaft wird zu einem Spiel der Ideen.</p>
-      <p>Tauschhandel, Schenkökonomie, freiwilliger Handel, digitale Anerkennungssysteme: Der neue Reichtum heißt Kreativität, Sinn und Gemeinschaft. Der Mensch produziert nicht mehr aus Zwang – sondern aus Vision.</p>
-      <button class="speak-btn" onclick="speak(this)">Anhören</button>
-    </div>
-
-    <div class="vision-block" data-aos="fade-up">
-      <h2><span class="icon">❤️</span>4. Gesundheit als unantastbares Grundrecht</h2>
-      <p>Im adelschen Königreich ist Gesundheit kein Luxus und keine Ware. Medizin ist frei. Therapien sind offen. Hilfe ist selbstverständlich.</p>
-      <p>Körperliche und seelische Heilung werden umfassend verstanden und gefördert. Prävention, Aufklärung, Betreuung – nicht nur Reparatur. Jeder Mensch verdient ein gesundes Leben – einfach, weil er existiert.</p>
-      <button class="speak-btn" onclick="speak(this)">Anhören</button>
-    </div>
-
-    <div class="vision-block" data-aos="fade-up">
-      <h2><span class="icon">🌳</span>5. Die Natur als Mitbewohnerin, nicht als Ressource</h2>
-      <p>Technologie ersetzt Zerstörung. Energie kommt sauber. Nahrung wird erzeugt, nicht geerntet. Die Erde darf wieder atmen. Wälder kehren zurück. Tiere finden Raum.</p>
-      <p>Der Mensch wird Teil des Gleichgewichts – nicht sein Feind. Natur ist kein Werkzeug – sondern Schwester. Wir leben nicht <em>auf</em> ihr – wir leben <em>mit</em> ihr.</p>
-      <button class="speak-btn" onclick="speak(this)">Anhören</button>
-    </div>
-
-    <div class="vision-block" data-aos="fade-up">
-      <h2><span class="icon">🌍</span>6. Das Weltparlament der Vielen – eine neue Demokratie für alle</h2>
-      <p>Im adelschen Königreich ist jeder Mensch Teil der Regierung. Keine Eliten. Keine Parteien. Keine Lobby. Ein digitales, faires System gibt jedem eine Stimme – und jede Stimme zählt gleich viel.</p>
-      <p>Vorschläge und Entscheidungen entstehen aus Schwarmintelligenz und kollektiver Debatte. Eine KI moderiert, gleicht aus, schützt Minderheiten und erkennt gemeinsame Wege.</p>
-      <p>So entsteht ein neues Modell: Demokratie, die funktioniert – weil sie allen gehört.</p>
-      <button class="speak-btn" onclick="speak(this)">Anhören</button>
-    </div>
-
-    <div class="vision-block" data-aos="fade-up">
-      <h2><span class="icon">🔮</span>7. Bildung, Erkenntnis, Erleuchtung</h2>
-      <p>Alle Schranken zum Wissen fallen. Jeder Mensch hat Zugang zu allem, was je gedacht, entdeckt, erschaffen wurde. Bildung ist nicht mehr Mittel zum Zweck – sondern Lebensrecht.</p>
-      <p>Du lernst, weil du willst. Nicht, weil du musst. Der neue Mensch ist kein Werkzeug mehr – sondern ein Schöpfer.</p>
-      <button class="speak-btn" onclick="speak(this)">Anhören</button>
-    </div>
-
-    <div class="vision-block" data-aos="fade-up">
-      <h2><span class="icon">👑</span>8. Warum Bürger werden?</h2>
-      <p>Weil du fühlst, dass mehr möglich ist. Weil du weißt, dass diese Welt nicht das Ende sein muss. Weil du Teil von etwas sein willst, das nicht verwaltet – sondern verwandelt.</p>
-      <p>Das adelsche Königreich ist kein Staat. Es ist ein Versprechen. An die Zukunft. An das Leben. An dich.</p>
-      <button class="speak-btn" onclick="speak(this)">Anhören</button>
-    </div>
+  <div class="vision-block" data-aos="fade-up">
+    <h2><span class="icon">🌟</span>1. Freiheit – nicht mehr nur ein Wort, sondern Realität</h2>
+    <p>Im adelschen Königreich bedeutet Freiheit mehr als Wahlrecht oder Reisefreiheit. Freiheit heißt: Keine Existenzangst. Keine Lohnsklaverei. Keine Abhängigkeit.</p>
+    <p>Dank Replikatoren-Technologie hat jeder Mensch Zugang zu Nahrung, Wasser, Energie, Medizin und Wohnraum – bedingungslos. Arbeit wird zur Berufung. Zeit gehört wieder dir.</p>
+    <p>Freiheit heißt: Du entscheidest, wie du leben willst.</p>
+    <button class="speak-btn" onclick="speak(this)">Anhören</button>
   </div>
+</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+  function speak(button) {
+    const text = button.previousElementSibling.innerText;
+    const msg = new SpeechSynthesisUtterance(text);
+    msg.lang = "de-DE";
+    speechSynthesis.speak(msg);
+  }
+</script>
 
-    function speak(button) {
-      const text = button.previousElementSibling.innerText;
-      const msg = new SpeechSynthesisUtterance(text);
-      msg.lang = "de-DE";
-      speechSynthesis.speak(msg);
-    }
-  </script>
 </body>
 </html>
