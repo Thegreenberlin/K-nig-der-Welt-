@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pactum Elysium: Cor Unum</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #0e0e0e;
+      overflow: hidden;
+    }
+
+    #intro {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: #0e0e0e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 3s ease-in-out forwards;
+      z-index: 10;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: scale(1.1);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        filter: drop-shadow(0 0 5px gold);
+      }
+      50% {
+        filter: drop-shadow(0 0 15px gold);
+      }
+    }
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    #intro.fade-out {
+      animation: fadeOut 2s ease-in-out forwards;
+    }
+
+    #main-content {
+      display: none;
+      opacity: 0;
+      animation: contentFadeIn 2s ease-in-out forwards;
+    }
+
+    @keyframes contentFadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    #intro img {
+      width: 60%;
+      animation: glow 4s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+  <div id="intro">
+    <img src="./pactum-elysium-emblem.png" alt="Pactum Elysium: Cor Unum Emblem">
+  </div>
+
+  <div id="main-content">
+    <!-- Hier kommt später deine Hauptseite -->
+    <h1 style="color: white; text-align: center; padding-top: 20vh;">Willkommen auf der neuen Welt</h1>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      const intro = document.getElementById('intro');
+      intro.classList.add('fade-out');
+
+      setTimeout(() => {
+        intro.style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+        document.getElementById('main-content').style.animation = 'contentFadeIn 2s ease-in-out forwards';
+      }, 2000);
+    }, 5000);
+  </script>
+</body>
+</html>
