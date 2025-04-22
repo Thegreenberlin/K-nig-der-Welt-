@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pactum Elysium: Ruf zur neuen Welt</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      background-color: #0e0e0e;
-      color: #3b2e14;
-      font-family: Georgia, serif;
+      background-color: #111;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
     }
     #intro {
       position: fixed;
@@ -21,22 +21,37 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
       animation: fadeIn 3s ease-in-out forwards;
       z-index: 10;
+      text-align: center;
+    }
+    #intro img {
+      width: 100%;
+      max-width: 700px;
+      animation: glow 4s ease-in-out infinite;
+    }
+    #intro p {
+      color: white;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      padding: 0 1rem;
     }
     @keyframes fadeIn {
       0% { opacity: 0; transform: scale(1.1); }
       100% { opacity: 1; transform: scale(1); }
     }
-    @keyframes glow {
-      0%, 100% { filter: drop-shadow(0 0 5px gold); }
-      50% { filter: drop-shadow(0 0 15px gold); }
-    }
     @keyframes fadeOut {
       0% { opacity: 1; }
       100% { opacity: 0; }
     }
-    #intro.fade-out { animation: fadeOut 2s ease-in-out forwards; }
+    @keyframes glow {
+      0%, 100% { filter: drop-shadow(0 0 8px gold); }
+      50% { filter: drop-shadow(0 0 20px gold); }
+    }
+    #intro.fade-out {
+      animation: fadeOut 2s ease-in-out forwards;
+    }
     #main-content {
       display: none;
       animation: contentFadeIn 2s ease-in-out forwards;
@@ -45,18 +60,21 @@
       0% { opacity: 0; }
       100% { opacity: 1; }
     }
-    #intro img {
-      width: 60%;
-      animation: glow 4s ease-in-out infinite;
-    }
     .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem 1rem;
-      background: #fffbe6;
-      color: #3b2e14;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem;
     }
-    h1, h2 { text-align: center; }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
     .block {
       opacity: 0;
       transform: translateY(20px);
@@ -77,15 +95,12 @@
       color: white;
       font-weight: bold;
       text-decoration: none;
+      border: none;
       border-radius: 0.5rem;
-      margin-top: 1.5rem;
-      max-width: 90%;
-      text-align: center;
+      margin-top: 2rem;
       font-size: 1.1rem;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-      white-space: normal;
+      cursor: pointer;
     }
-    /* Menü */
     .navbar {
       position: fixed;
       top: 0;
@@ -131,46 +146,49 @@
   </style>
 </head>
 <body>
-  <div id="intro">
-    <img src="pactum-elysium-emblem.png" alt="Pactum Elysium: Cor Unum Emblem">
-  </div>
 
-  <div id="main-content">
-    <div class="navbar">
-      <div class="menu-toggle" onclick="document.getElementById('menu').style.display = (document.getElementById('menu').style.display === 'block') ? 'none' : 'block'">
-        <div></div><div></div><div></div>
-      </div>
-    </div>
-    <div class="menu" id="menu">
-      <a href="index.html">Ruf zur neuen Welt</a>
-      <a href="vision.html">Vision</a>
-      <a href="saeulen_blockstil_mit_animation.html">Säulen des Königreichs</a>
-      <a href="gabe.html">Gabe</a>
-      <a href="kommentare.html">Stimme des Volkes</a>
-      <a href="audienzzimmer.html">Audienzzimmer</a>
-      <a href="raenge.html">Ränge</a>
-      <a href="impressum.html">Impressum</a>
-    </div>
-    <div class="container">
-      <h1 class="block">Der Ruf der neuen Welt</h1>
-      <p class="block">Es begann mit einer Frage.<br>Warum leben Milliarden Menschen in Mühe, wenn Überfluss möglich ist?</p>
-      <p class="block">Warum gibt es Hunger – wenn Maschinen nähren können?<br>Warum Arbeit – wenn Technologie längst befreit?<br>Warum Krieg – wenn ein geeinter Schutz reicht?</p>
-      <p class="block">Und dann erhob sich einer.<br>Kein Kaiser, kein Tyrann. Sondern einer aus dem Volk, der bereit war, Verantwortung zu tragen.</p>
-      <p class="block">Er sprach von Replikatoren, von Freiheit, von einer Welt ohne Zwang.<br>Und er sagte: <em>„Ich will kein Thron für mich – ich will ein Leben für alle.“</em></p>
-      <p class="block">So begann die Bewegung.<br>Und du stehst nun am Tor.<br>Nicht als Zuschauer, sondern als Teil einer neuen Geschichte.</p>
-      <p style="text-align:center;"><a href='vision.html' class='button block'>Ich will mehr erfahren</a></p>
+<div id="intro">
+  <img src="pactum-elysium-emblem.png" alt="Pactum Elysium Emblem">
+  <p>Pactum Elysium: Cor Unum</p>
+</div>
+
+<div id="main-content">
+  <div class="navbar">
+    <div class="menu-toggle" onclick="document.getElementById('menu').style.display = (document.getElementById('menu').style.display === 'block') ? 'none' : 'block'">
+      <div></div><div></div><div></div>
     </div>
   </div>
+  <div class="menu" id="menu">
+    <a href="index.html">Ruf zur neuen Welt</a>
+    <a href="vision.html">Vision</a>
+    <a href="saeulen_blockstil_mit_animation.html">Säulen des Königreichs</a>
+    <a href="gabe.html">Gabe</a>
+    <a href="kommentare.html">Stimme des Volkes</a>
+    <a href="audienzzimmer.html">Audienzzimmer</a>
+    <a href="raenge.html">Ränge</a>
+    <a href="impressum.html">Impressum</a>
+  </div>
 
-  <script>
+  <div class="container">
+    <h1 class="block">Der Ruf der neuen Welt</h1>
+    <p class="block">Es begann mit einer Frage.<br>Warum leben Milliarden Menschen in Mühe, wenn Überfluss möglich ist?</p>
+    <p class="block">Warum gibt es Hunger – wenn Maschinen nähren können?<br>Warum Arbeit – wenn Technologie längst befreit?<br>Warum Krieg – wenn ein geeinter Schutz reicht?</p>
+    <p class="block">Und dann erhob sich einer.<br>Kein Kaiser, kein Tyrann. Sondern einer aus dem Volk, der bereit war, Verantwortung zu tragen.</p>
+    <p class="block">Er sprach von Replikatoren, von Freiheit, von einer Welt ohne Zwang.<br>Und er sagte: <em>„Ich will kein Thron für mich – ich will ein Leben für alle.“</em></p>
+    <p class="block">So begann die Bewegung.<br>Und du stehst nun am Tor.<br>Nicht als Zuschauer, sondern als Teil einer neuen Geschichte.</p>
+    <p style="text-align:center;"><a href="vision.html" class="button block">Ich will mehr erfahren</a></p>
+  </div>
+</div>
+
+<script>
+  setTimeout(() => {
+    const intro = document.getElementById('intro');
+    intro.classList.add('fade-out');
     setTimeout(() => {
-      const intro = document.getElementById('intro');
-      intro.classList.add('fade-out');
-      setTimeout(() => {
-        intro.style.display = 'none';
-        document.getElementById('main-content').style.display = 'block';
-      }, 2000);
-    }, 5000);
-  </script>
+      intro.style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    }, 2000);
+  }, 5000);
+</script>
 </body>
 </html>
