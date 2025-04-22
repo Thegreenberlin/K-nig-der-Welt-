@@ -3,66 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Deine Gabe</title>
+  <title>Deine Gabe an das Königreich</title>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    html, body {
       margin: 0;
       padding: 0;
       background-color: #111;
       color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
     }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    h1 {
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .section {
-      background-color: #1a1a1a;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.05);
-      margin-bottom: 2rem;
-    }
-    label, input, textarea {
-      display: block;
+
+    #intro {
+      position: fixed;
       width: 100%;
-      margin-top: 1rem;
-      font-family: inherit;
+      height: 100%;
+      background-color: #0e0e0e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      animation: fadeIn 3s ease-in-out forwards;
+      z-index: 10000;
+      text-align: center;
     }
-    input, textarea {
-      padding: 0.6rem;
-      border-radius: 6px;
-      border: none;
-      background-color: #2a2a2a;
-      color: #f0f0f0;
+
+    #intro img {
+      width: 100%;
+      max-width: 700px;
+      animation: glow 4s ease-in-out infinite;
     }
-    .button {
-      display: inline-block;
-      padding: 0.8rem 1.5rem;
-      background: #d4af37;
+
+    #intro p {
       color: white;
-      font-weight: bold;
-      text-decoration: none;
-      border: none;
-      border-radius: 0.5rem;
-      font-size: 1.1rem;
-      margin-top: 1.5rem;
-      cursor: pointer;
-    }
-    .thankyou {
-      background: #1c3a2f;
-      padding: 1rem;
-      border-radius: 1rem;
+      font-size: 1.2rem;
       margin-top: 1rem;
-      display: none;
+      padding: 0 1rem;
     }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(1.1); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes glow {
+      0%, 100% { filter: drop-shadow(0 0 8px gold); }
+      50% { filter: drop-shadow(0 0 20px gold); }
+    }
+
+    #intro.fade-out {
+      animation: fadeOut 2s ease-in-out forwards;
+    }
+
+    #main-content {
+      display: none;
+      animation: contentFadeIn 2s ease-in-out forwards;
+    }
+
+    @keyframes contentFadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
     .navbar {
       position: fixed;
       top: 0;
@@ -70,6 +77,7 @@
       z-index: 999;
       padding: 1rem;
     }
+
     .menu-toggle {
       cursor: pointer;
       width: 30px;
@@ -78,81 +86,179 @@
       flex-direction: column;
       justify-content: space-between;
     }
+
     .menu-toggle div {
       background: #d4af37;
       height: 4px;
       border-radius: 2px;
     }
+
     .menu {
-      display: none;
       position: fixed;
       top: 0;
-      right: 0;
+      right: -100%;
+      width: 50vw;
+      height: 100vh;
       background: #0c0c0c;
       color: #f0e6d2;
-      width: 200px;
-      height: 100vh;
-      padding: 2rem 1rem;
-      box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+      padding: 3rem 2rem;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+      transition: right 0.4s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 998;
     }
+
+    .menu.active {
+      right: 0;
+    }
+
     .menu a {
-      display: block;
+      font-size: 1.5rem;
       color: #f0e6d2;
       text-decoration: none;
-      margin-bottom: 1.2rem;
-      font-size: 1.1rem;
+      margin: 1rem 0;
     }
+
     .menu a:hover {
       color: #d4af37;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .block {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInText 1s ease forwards;
+    }
+
+    .block:nth-child(n) {
+      animation-delay: calc(0.5s + 0.3s * var(--i));
+    }
+
+    @keyframes fadeInText {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: #d4af37;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 2rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.7rem;
+      background: #222;
+      border: none;
+      border-radius: 6px;
+      color: #f0f0f0;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .thankyou {
+      background: #1c3a2f;
+      padding: 1rem;
+      border-radius: 1rem;
+      margin-top: 1rem;
+      display: none;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-<div class="navbar">
-  <div class="menu-toggle" onclick="document.getElementById('menu').style.display = (document.getElementById('menu').style.display === 'block') ? 'none' : 'block'">
-    <div></div><div></div><div></div>
+<div id="intro">
+  <img src="pactum-elysium-emblem.png" alt="Pactum Elysium Emblem">
+  <p>Pactum Elysium: Gabe für das Reich</p>
+</div>
+
+<div id="main-content">
+  <div class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
   </div>
-</div>
-<div class="menu" id="menu">
-  <a href="index.html">Ruf zur neuen Welt</a>
-  <a href="vision.html">Vision</a>
-  <a href="saeulen_des_Koenigreichs.html">Säulen des Königreichs</a>
-  <a href="gabe.html">Gabe</a>
-  <a href="kommentare.html">Stimme des Volkes</a>
-  <a href="audienzzimmer.html">Audienzzimmer</a>
-  <a href="raenge.html">Ränge</a>
-  <a href="impressum.html">Impressum</a>
-</div>
 
-<div class="container">
-  <h1 data-aos="fade-up">Deine Gabe</h1>
+  <div class="menu" id="menu">
+    <a href="index.html">Ruf zur neuen Welt</a>
+    <a href="vision.html">Vision</a>
+    <a href="saeulen_des_Koenigreichs.html">Säulen des Königreichs</a>
+    <a href="gabe.html">Gabe</a>
+    <a href="kommentare.html">Stimme des Volkes</a>
+    <a href="audienzzimmer.html">Audienzzimmer</a>
+    <a href="raenge.html">Ränge</a>
+    <a href="impressum.html">Impressum</a>
+  </div>
 
-  <div class="section" data-aos="fade-up">
-    <h2>Spendenmöglichkeiten</h2>
-    <p>Mit deiner Spende entfesselst du die Replikator-Revolution: eine Welt ohne Zwang, ohne Hunger, ohne Arbeit. Du wirst Teil der Geschichte – ein Erbauer der Freiheit, ein Unterstützer des Königreichs. Die Zukunft beginnt mit dir.</p>
-    <p style="text-align:center;">
-      <a class="button" href="https://www.paypal.com/pool/9ecMebu16P?sr=ancr" target="_blank">Jetzt spenden via PayPal</a>
+  <div class="container">
+    <h1 class="block" style="--i:0">Deine Gabe</h1>
+    <p class="block" style="--i:1">
+      Mit deiner Spende entfesselst du die Replikator-Revolution: eine Welt ohne Zwang, ohne Hunger, ohne Arbeit. Du wirst Teil der Geschichte – ein Erbauer der Freiheit, ein Unterstützer des Königreichs. Die Zukunft beginnt mit dir.
     </p>
-  </div>
 
-  <div class="section" data-aos="fade-up">
-    <h2>Deine Botschaft</h2>
-    <form onsubmit="event.preventDefault(); document.getElementById('thankyou').style.display = 'block';">
-      <label for="name">Dein Name (optional)</label>
-      <input type="text" id="name" name="name" />
-      <label for="message">Widmung oder Nachricht an das Reich</label>
-      <textarea id="message" rows="4" required></textarea>
-      <p style="text-align:center;"><button type="submit" class="button">Gabe übergeben</button></p>
-    </form>
-    <div id="thankyou" class="thankyou">
-      <strong>Danke für deine Gabe und deine Worte.</strong><br>
-      Mögest du in Fülle wandeln.
+    <div class="block" style="--i:2; text-align:center;">
+      <form action="https://www.paypal.com/donate" method="post" target="_blank">
+        <input type="hidden" name="hosted_button_id" value="DEIN_BUTTON_ID">
+        <input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="Spenden mit PayPal">
+        <img alt="" border="0" src="https://www.paypal.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+      </form>
+    </div>
+
+    <div class="block" style="--i:3; margin-top: 3rem;">
+      <h2>Deine Botschaft</h2>
+      <form onsubmit="event.preventDefault(); document.getElementById('thankyou').style.display = 'block';">
+        <label for="name">Dein Name (optional)</label>
+        <input type="text" id="name" name="name" />
+        <label for="message">Widmung oder Nachricht an das Reich</label>
+        <textarea id="message" rows="4" required></textarea>
+        <p style="text-align:center;"><button type="submit" class="button">Gabe übergeben</button></p>
+      </form>
+      <div id="thankyou" class="thankyou">
+        <strong>Danke für deine Gabe und deine Worte.</strong><br>
+        Mögest du in Fülle wandeln.
+      </div>
     </div>
   </div>
 </div>
 
+<script>
+  function toggleMenu() {
+    document.getElementById('menu').classList.toggle('active');
+  }
+
+  setTimeout(() => {
+    const intro = document.getElementById('intro');
+    intro.classList.add('fade-out');
+    setTimeout(() => {
+      intro.style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    }, 2000);
+  }, 5000);
+</script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init();</script>
+
 </body>
 </html>
