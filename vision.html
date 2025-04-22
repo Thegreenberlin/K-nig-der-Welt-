@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
-      font-family: "Segoe UI", sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #111;
@@ -50,82 +50,73 @@
       cursor: pointer;
       margin-top: 1rem;
     }
-    .nav-container {
-      background-color: #222;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    /* Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 999;
       padding: 1rem;
-      position: relative;
-    }
-    .nav-logo {
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-    .nav-links {
-      display: flex;
-      gap: 1rem;
-    }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
     }
     .menu-toggle {
-      display: none;
-      flex-direction: column;
       cursor: pointer;
+      width: 30px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .menu-toggle div {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      margin: 4px 0;
+      background: #d4af37;
+      height: 4px;
+      border-radius: 2px;
     }
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #222;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        text-align: right;
-        padding: 1rem;
-      }
-      .nav-links.active {
-        display: flex;
-      }
-      .menu-toggle {
-        display: flex;
-      }
+    .menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background: #0c0c0c;
+      color: #f0e6d2;
+      width: 200px;
+      height: 100vh;
+      padding: 2rem 1rem;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+    }
+    .menu a {
+      display: block;
+      color: #f0e6d2;
+      text-decoration: none;
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+    }
+    .menu a:hover {
+      color: #d4af37;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="nav-container">
-    <div class="nav-logo">Adelsreich</div>
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <nav class="nav-links" id="navLinks">
-      <a href="index.html">Start</a>
-      <a href="vision.html">Vision</a>
-      <a href="gabe.html">Gabe</a>
-      <a href="kommentare.html">Kommentare</a>
-    </nav>
+<div class="navbar">
+  <div class="menu-toggle" onclick="document.getElementById('menu').style.display = (document.getElementById('menu').style.display === 'block') ? 'none' : 'block'">
+    <div></div><div></div><div></div>
   </div>
-</header>
+</div>
+<div class="menu" id="menu">
+  <a href="index.html">Ruf zur neuen Welt</a>
+  <a href="vision.html">Vision</a>
+  <a href="saeulen_blockstil_mit_animation.html">Säulen des Königreichs</a>
+  <a href="gabe.html">Gabe</a>
+  <a href="kommentare.html">Stimme des Volkes</a>
+  <a href="audienzzimmer.html">Audienzzimmer</a>
+  <a href="raenge.html">Ränge</a>
+  <a href="impressum.html">Impressum</a>
+</div>
 
 <div class="container">
   <h1 class="section-title" data-aos="fade-up">Die Vision des adelschen Königreichs</h1>
 
- <div class="vision-block" data-aos="fade-up">
+  <div class="vision-block" data-aos="fade-up">
     <h2><span class="icon">🌟</span>1. Freiheit – nicht mehr nur ein Wort, sondern Realität</h2>
     <p>Im adelschen Königreich bedeutet Freiheit mehr als Wahlrecht oder Reisefreiheit. Freiheit heißt: Keine Existenzangst. Keine Lohnsklaverei. Keine Abhängigkeit.</p>
     <p>Dank Replikatoren-Technologie hat jeder Mensch Zugang zu Nahrung, Wasser, Energie, Medizin und Wohnraum – bedingungslos. Arbeit wird zur Berufung. Zeit gehört wieder dir.</p>
@@ -140,68 +131,19 @@
     <button class="speak-btn" onclick="speak(this)">Anhören</button>
   </div>
 
-  <div class="vision-block" data-aos="fade-up">
-    <h2><span class="icon">📈</span>3. Eine Wirtschaft des Überflusses</h2>
-    <p>Vergiss Knappheit. Vergiss Konkurrenz um das Nötigste. Replikatoren machen Ressourcen frei – für alle. Wirtschaft wird zu einem Spiel der Ideen.</p>
-    <p>Tauschhandel, Schenkökonomie, freiwilliger Handel, digitale Anerkennungssysteme: Der neue Reichtum heißt Kreativität, Sinn und Gemeinschaft. Der Mensch produziert nicht mehr aus Zwang – sondern aus Vision.</p>
-    <button class="speak-btn" onclick="speak(this)">Anhören</button>
-  </div>
+  <!-- Weitere Vision-Abschnitte kannst du genauso ergänzen -->
 
-  <div class="vision-block" data-aos="fade-up">
-    <h2><span class="icon">❤️</span>4. Gesundheit als unantastbares Grundrecht</h2>
-    <p>Im adelschen Königreich ist Gesundheit kein Luxus und keine Ware. Medizin ist frei. Therapien sind offen. Hilfe ist selbstverständlich.</p>
-    <p>Körperliche und seelische Heilung werden umfassend verstanden und gefördert. Prävention, Aufklärung, Betreuung – nicht nur Reparatur. Jeder Mensch verdient ein gesundes Leben – einfach, weil er existiert.</p>
-    <button class="speak-btn" onclick="speak(this)">Anhören</button>
-  </div>
+</div>
 
-  <div class="vision-block" data-aos="fade-up">
-    <h2><span class="icon">🌳</span>5. Die Natur als Mitbewohnerin, nicht als Ressource</h2>
-    <p>Technologie ersetzt Zerstörung. Energie kommt sauber. Nahrung wird erzeugt, nicht geerntet. Die Erde darf wieder atmen. Wälder kehren zurück. Tiere finden Raum.</p>
-    <p>Der Mensch wird Teil des Gleichgewichts – nicht sein Feind. Natur ist kein Werkzeug – sondern Schwester. Wir leben nicht <em>auf</em> ihr – wir leben <em>mit</em> ihr.</p>
-    <button class="speak-btn" onclick="speak(this)">Anhören</button>
-  </div>
-
-  <div class="vision-block" data-aos="fade-up">
-    <h2><span class="icon">🌍</span>6. Das Weltparlament der Vielen – eine neue Demokratie für alle</h2>
-    <p>Im adelschen Königreich ist jeder Mensch Teil der Regierung. Keine Eliten. Keine Parteien. Keine Lobby. Ein digitales, faires System gibt jedem eine Stimme – und jede Stimme zählt gleich viel.</p>
-    <p>Vorschläge und Entscheidungen entstehen aus Schwarmintelligenz und kollektiver Debatte. Eine KI moderiert, gleicht aus, schützt Minderheiten und erkennt gemeinsame Wege.</p>
-    <p>So entsteht ein neues Modell: Demokratie, die funktioniert – weil sie allen gehört.</p>
-    <button class="speak-btn" onclick="speak(this)">Anhören</button>
-  </div>
-
-  <div class="vision-block" data-aos="fade-up">
-    <h2><span class="icon">🔮</span>7. Bildung, Erkenntnis, Erleuchtung</h2>
-    <p>Alle Schranken zum Wissen fallen. Jeder Mensch hat Zugang zu allem, was je gedacht, entdeckt, erschaffen wurde. Bildung ist nicht mehr Mittel zum Zweck – sondern Lebensrecht.</p>
-    <p>Du lernst, weil du willst. Nicht, weil du musst. Der neue Mensch ist kein Werkzeug mehr – sondern ein Schöpfer.</p>
-    <button class="speak-btn" onclick="speak(this)">Anhören</button>
-  </div>
-
-  <div class="vision-block" data-aos="fade-up">
-    <h2><span class="icon">👑</span>8. Warum Bürger werden?</h2>
-    <p>Weil du fühlst, dass mehr möglich ist. Weil du weißt, dass diese Welt nicht das Ende sein muss. Weil du Teil von etwas sein willst, das nicht verwaltet – sondern verwandelt.</p>
-    <p>Das adelsche Königreich ist kein Staat. Es ist ein Versprechen. An die Zukunft. An das Leben. An dich.</p>
-    <button class="speak-btn" onclick="speak(this)">Anhören</button>
-  </div>
-
-  </div> <!-- Ende .container -->
-
-<!-- Animation + Sprachfunktion -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
-
-  function toggleMenu() {
-    const nav = document.getElementById("navLinks");
-    nav.classList.toggle("active");
-  }
-
-  function speak(button) {
-    const text = button.previousElementSibling.innerText;
+  function speak(btn) {
+    const text = btn.previousElementSibling.innerText;
     const msg = new SpeechSynthesisUtterance(text);
-    msg.lang = "de-DE";
+    msg.lang = 'de-DE';
     speechSynthesis.speak(msg);
   }
 </script>
-
 </body>
 </html>
