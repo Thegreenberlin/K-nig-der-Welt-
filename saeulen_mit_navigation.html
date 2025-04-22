@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="de">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Vision des adelschen Königreichs</title> <!-- AOS (Animate On Scroll) CSS --> <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet"/> <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Säulen des Königreichs</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -36,173 +37,113 @@
     .vision-block p {
       line-height: 1.6;
     }
-    .icon {
-      font-size: 1.8rem;
-      margin-right: 0.5rem;
+    /* Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 999;
+      padding: 1rem;
     }
-    .speak-btn {
-      background: #444;
-      color: #fff;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
+    .menu-toggle {
       cursor: pointer;
-      margin-top: 1rem;
+      width: 30px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    .lang-switch {
-      text-align: right;
-      margin-bottom: 1rem;
+    .menu-toggle div {
+      background: #d4af37;
+      height: 4px;
+      border-radius: 2px;
     }
-    .lang-switch button {
-      background: none;
-      border: 1px solid #888;
-      color: #ccc;
-      padding: 0.3rem 0.6rem;
-      margin-left: 0.5rem;
-      cursor: pointer;
-      border-radius: 4px;
+    .menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background: #0c0c0c;
+      color: #f0e6d2;
+      width: 200px;
+      height: 100vh;
+      padding: 2rem 1rem;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.3);
     }
-  </style></head>
+    .menu a {
+      display: block;
+      color: #f0e6d2;
+      text-decoration: none;
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+    }
+    .menu a:hover {
+      color: #d4af37;
+    }
+  </style>
+</head>
 <body>
-<header style="position: fixed; top: 0; right: 0; padding: 1rem; z-index: 999;">
-<div id="menu-toggle" style="font-size: 2rem; cursor: pointer;">☰</div>
-<nav id="main-nav" style="display: none; position: absolute; right: 1rem; background: #1a1a1a; padding: 1rem; border-radius: 8px;">
-<a href="index.html" style="display: block; margin-bottom: 0.5rem; color: #fff; text-decoration: none;">Start</a>
-<a href="Vision.html" style="display: block; margin-bottom: 0.5rem; color: #fff; text-decoration: none;">Vision</a>
-<a href="saeulen_blockstil_mit_animation.html" style="display: block; color: #fff; text-decoration: none;">Säulen</a>
-</nav>
-</header>
+
+<div class="navbar">
+  <div class="menu-toggle" onclick="document.getElementById('menu').style.display = (document.getElementById('menu').style.display === 'block') ? 'none' : 'block'">
+    <div></div><div></div><div></div>
+  </div>
+</div>
+<div class="menu" id="menu">
+  <a href="index.html">Ruf zur neuen Welt</a>
+  <a href="vision.html">Vision</a>
+  <a href="saeulen_blockstil_mit_animation.html">Säulen des Königreichs</a>
+  <a href="gabe.html">Gabe</a>
+  <a href="kommentare.html">Stimme des Volkes</a>
+  <a href="audienzzimmer.html">Audienzzimmer</a>
+  <a href="raenge.html">Ränge</a>
+  <a href="impressum.html">Impressum</a>
+</div>
+
+<div class="container">
+  <h1 class="section-title" data-aos="fade-up">Die Säulen des Königreichs</h1>
+
+  <div class="vision-block" data-aos="fade-up">
+    <h2>1. Fülle durch Replikation</h2>
+    <p>Die Technologie, die Mangel abschafft. Kein Hunger, keine Armut, kein Mangel – durch Replikatoren wird Materie kontrollierbar. Alles wird verfügbar.</p>
+  </div>
+
+  <div class="vision-block" data-aos="fade-up">
+    <h2>2. Vereinte Menschheit</h2>
+    <p>Eine Welt, ein Volk, viele Sprachen – aber ein gemeinsames Ziel. Keine Nationalstaaten, sondern eine globale Gemeinschaft unter einem Banner.</p>
+  </div>
+
+  <div class="vision-block" data-aos="fade-up">
+    <h2>3. Freiheit &amp; Selbstbestimmung</h2>
+    <p>Keine Zwangsarbeit, kein Druck – sondern ein Leben nach eigenem Rhythmus. Menschen arbeiten freiwillig, kreativ, aus Sinn – nicht aus Zwang.</p>
+  </div>
+
+  <div class="vision-block" data-aos="fade-up">
+    <h2>4. Ehrenhafte Verantwortung</h2>
+    <p>Freiheit braucht Reife. Wer Macht will, muss Weisheit zeigen. Verantwortung ist Voraussetzung für Einfluss – durch Reifekurse und Bildung.</p>
+  </div>
+
+  <div class="vision-block" data-aos="fade-up">
+    <h2>5. Forschung &amp; Erkenntnis</h2>
+    <p>Die Krone schützt die Zukunft. Wissen wird zur höchsten Währung. Frei von Konzernen und Machtspielen blüht Forschung auf: Medizin heilt, Energie wird grenzenlos, der Geist erreicht neue Dimensionen. Die Menschheit erhebt sich – nicht unter Zwang, sondern durch Sehnsucht nach Wahrheit.</p>
+  </div>
+
+  <div class="vision-block" data-aos="fade-up">
+    <h2>6. Gerechtigkeit &amp; Gleichwertigkeit</h2>
+    <p>Alle Menschen sind gleich an Wert – aber verschieden in ihren Wegen. Nicht Gleichmacherei, sondern Gleichwürdigkeit und Förderung.</p>
+  </div>
+
+  <div class="vision-block" data-aos="fade-up">
+    <h2>7. Geist &amp; Kultur</h2>
+    <p>Ein neues goldenes Zeitalter der Kunst, Musik und Seele. Ohne Zwangsarbeit entsteht Raum für Geist, Spiel, Schönheit und Ausdruck.</p>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('menu-toggle');
-    const nav = document.getElementById('main-nav');
-    toggle.addEventListener('click', () => {
-      nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
-    });
-  });
+  AOS.init();
 </script>
 
-<div class="container"><div class="container"><h1 class="section-title" data-aos="fade-up">Die 7 Säulen des Neuen Weltreichs</h1><div class="vision-block" data-aos="fade-up"><h2>1. Fülle durch Replikation</h2><p>Die Technologie, die Mangel abschafft. Kein Hunger, keine Armut, kein Mangel – durch Replikatoren wird Materie kontrollierbar. Alles wird verfügbar.</p></div><div class="vision-block" data-aos="fade-up"><h2>2. Vereinte Menschheit</h2><p>Eine Welt, ein Volk, viele Sprachen – aber ein gemeinsames Ziel. Keine Nationalstaaten, sondern eine globale Gemeinschaft unter einem Banner.</p></div><div class="vision-block" data-aos="fade-up"><h2>3. Freiheit &amp; Selbstbestimmung</h2><p>Keine Zwangsarbeit, kein Druck – sondern ein Leben nach eigenem Rhythmus. Menschen arbeiten freiwillig, kreativ, aus Sinn – nicht aus Zwang.</p></div><div class="vision-block" data-aos="fade-up"><h2>4. Ehrenhafte Verantwortung</h2><p>Freiheit braucht Reife. Wer Macht will, muss Weisheit zeigen. Verantwortung ist Voraussetzung für Einfluss – durch Reifekurse und Bildung.</p></div><div class="vision-block" data-aos="fade-up"><h2>5. Forschung &amp; Erkenntnis</h2><p>Die Krone schützt die Zukunft. Wissen wird zur höchsten Währung. Frei von Konzernen und Machtspielen blüht Forschung auf: Medizin heilt, Energie wird grenzenlos, der Geist erreicht neue Dimensionen. Die Menschheit erhebt sich – nicht unter Zwang, sondern durch Sehnsucht nach Wahrheit.</p></div><div class="vision-block" data-aos="fade-up"><h2>6. Gerechtigkeit &amp; Gleichwertigkeit</h2><p>Alle Menschen sind gleich an Wert – aber verschieden in ihren Wegen. Nicht Gleichmacherei, sondern Gleichwürdigkeit und Förderung.</p></div><div class="vision-block" data-aos="fade-up"><h2>7. Geist &amp; Kultur</h2><p>Ein neues goldenes Zeitalter der Kunst, Musik und Seele. Ohne Zwangsarbeit entsteht Raum für Geist, Spiel, Schönheit und Ausdruck.</p></div></div></div> <!-- AOS JS --> <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script> <script>AOS.init();</script> <!-- Vision Inhalte + Sprachfunktion --> <script>
-    const visions = {
-      de: [
-        {
-          title: "1. Freiheit – nicht mehr nur ein Wort, sondern Realität",
-          icon: "🌟",
-          text: `Im adelschen Königreich bedeutet Freiheit mehr als Wahlrecht oder Reisefreiheit. Freiheit heißt: Keine Existenzangst. Keine Lohnsklaverei. Keine Abhängigkeit.<br>
-          Dank Replikatoren-Technologie hat jeder Mensch Zugang zu Nahrung, Wasser, Energie, Medizin und Wohnraum – bedingungslos. Arbeit wird zur Berufung. Zeit gehört wieder dir.<br>
-          Freiheit heißt: Du entscheidest, wie du leben willst.`
-        },
-        {
-          title: "2. Gesellschaftlicher Aufstieg durch Würde und Beitrag",
-          icon: "💼",
-          text: `Hier zählt nicht Herkunft, Reichtum oder Status – sondern dein Beitrag zur Gemeinschaft. Ob durch Ideen, Mitgefühl, Kunst oder Einsatz: Wer gibt, wächst. Wer inspiriert, wird geehrt.<br>
-          Titel, Ehren, Rollen entstehen aus Leistung, nicht aus Macht. Jeder Mensch kann aufsteigen. Jeder Mensch wird gesehen.`
-        },
-        {
-          title: "3. Eine Wirtschaft des Überflusses",
-          icon: "📈",
-          text: `Vergiss Knappheit. Vergiss Konkurrenz um das Nötigste. Replikatoren machen Ressourcen frei – für alle. Wirtschaft wird zu einem Spiel der Ideen.<br>
-          Tauschhandel, Schenkökonomie, freiwilliger Handel, digitale Anerkennungssysteme: Der neue Reichtum heißt Kreativität, Sinn und Gemeinschaft.`
-        },
-        {
-          title: "4. Gesundheit als unantastbares Grundrecht",
-          icon: "❤️",
-          text: `Im adelschen Königreich ist Gesundheit kein Luxus und keine Ware. Medizin ist frei. Therapien sind offen. Hilfe ist selbstverständlich.<br>
-          Jeder Mensch verdient ein gesundes Leben – einfach, weil er existiert.`
-        },
-        {
-          title: "5. Die Natur als Mitbewohnerin, nicht als Ressource",
-          icon: "🌳",
-          text: `Technologie ersetzt Zerstörung. Energie kommt sauber. Nahrung wird erzeugt, nicht geerntet.<br>
-          Der Mensch wird Teil des Gleichgewichts – nicht sein Feind. Natur ist kein Werkzeug – sondern Schwester.`
-        },
-        {
-          title: "6. Das Weltparlament der Vielen – eine neue Demokratie für alle",
-          icon: "🌍",
-          text: `Jeder Mensch ist Teil der Regierung. Keine Eliten. Keine Parteien. Keine Lobby.<br>
-          Eine KI moderiert, gleicht aus, schützt Minderheiten und erkennt gemeinsame Wege.`
-        },
-        {
-          title: "7. Bildung, Erkenntnis, Erleuchtung",
-          icon: "🔮",
-          text: `Alle Schranken zum Wissen fallen. Jeder Mensch hat Zugang zu allem, was je gedacht, entdeckt, erschaffen wurde.<br>
-          Der neue Mensch ist kein Werkzeug mehr – sondern ein Schöpfer.`
-        },
-        {
-          title: "8. Warum Bürger werden?",
-          icon: "👑",
-          text: `Weil du weißt, dass diese Welt nicht das Ende sein muss. Das adelsche Königreich ist kein Staat. Es ist ein Versprechen.`
-        }
-      ],
-      en: [
-        {
-          title: "1. Freedom &ndash; not just a word, but reality",
-          icon: "🌟",
-          text: `In the royal kingdom, freedom means more than voting or travel rights. No fear of survival. No wage slavery.<br>
-          Thanks to replicator technology, everyone has access to food, shelter, medicine and energy &ndash; unconditionally.`
-        },
-        {
-          title: "2. Social Rise Through Dignity and Contribution",
-          icon: "💼",
-          text: `Not heritage or money, but contribution and compassion matter. Roles arise from action, not privilege.`
-        },
-        {
-          title: "3. An Economy of Abundance",
-          icon: "📈",
-          text: `Scarcity ends. Ideas flow freely. Value is measured in creativity, meaning and shared growth.`
-        },
-        {
-          title: "4. Health as a Sacred Right",
-          icon: "❤️",
-          text: `No person should suffer from curable illness. Free care, open healing, complete well-being.`
-        },
-        {
-          title: "5. Nature as Companion, not Resource",
-          icon: "🌳",
-          text: `Nature breathes again. Clean tech, wild forests, and balanced coexistence replace extraction.`
-        },
-        {
-          title: "6. The Parliament of All",
-          icon: "🌍",
-          text: `Each person has a voice. AI-assisted democracy ensures balance, fairness, and future-ready decisions.`
-        },
-        {
-          title: "7. Knowledge, Awakening, Enlightenment",
-          icon: "🔮",
-          text: `Access to all thought, all discovery, all art. Humanity becomes a creator.`
-        },
-        {
-          title: "8. Why become a citizen?",
-          icon: "👑",
-          text: `Because this vision is real. And the future belongs to those who build it.`
-        }
-      ]
-    };
-
-    function switchLang(lang) {
-      const container = document.getElementById('vision-content');
-      container.innerHTML = '';
-      visions[lang].forEach((v, i) => {
-        const block = document.createElement('div');
-        block.className = 'vision-block';
-        block.setAttribute('data-aos', 'fade-up');
-        block.innerHTML = `
-          <h2><span class="icon">${v.icon}</span>${v.title}</h2>
-          <p>${v.text}</p>
-          <button class="speak-btn" onclick="speak(this)">Anhören</button>
-        `;
-        container.appendChild(block);
-      });
-    }
-
-    function speak(btn) {
-      const text = btn.previousElementSibling.innerText;
-      const msg = new SpeechSynthesisUtterance(text);
-      msg.lang = document.documentElement.lang === 'en' ? 'en-US' : 'de-DE';
-      speechSynthesis.speak(msg);
-    }
-
-    // Start mit Deutsch
-    switchLang('de');
-  </script></body>
-</html> 
+</body>
+</html>
