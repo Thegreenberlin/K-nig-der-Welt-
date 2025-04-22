@@ -37,7 +37,6 @@
     .vision-block p {
       line-height: 1.6;
     }
-    /* Navigation */
     .navbar {
       position: fixed;
       top: 0;
@@ -59,23 +58,30 @@
       border-radius: 2px;
     }
     .menu {
-      display: none;
       position: fixed;
       top: 0;
-      right: 0;
+      right: -100%;
+      width: 50vw;
+      height: 100vh;
       background: #0c0c0c;
       color: #f0e6d2;
-      width: 200px;
-      height: 100vh;
-      padding: 2rem 1rem;
-      box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+      padding: 3rem 2rem;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+      transition: right 0.4s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 998;
+    }
+    .menu.active {
+      right: 0;
     }
     .menu a {
-      display: block;
+      font-size: 1.5rem;
       color: #f0e6d2;
       text-decoration: none;
-      margin-bottom: 1.2rem;
-      font-size: 1.1rem;
+      margin: 1rem 0;
     }
     .menu a:hover {
       color: #d4af37;
@@ -85,10 +91,11 @@
 <body>
 
 <div class="navbar">
-  <div class="menu-toggle" onclick="document.getElementById('menu').style.display = (document.getElementById('menu').style.display === 'block') ? 'none' : 'block'">
+  <div class="menu-toggle" onclick="toggleMenu()">
     <div></div><div></div><div></div>
   </div>
 </div>
+
 <div class="menu" id="menu">
   <a href="index.html">Ruf zur neuen Welt</a>
   <a href="vision.html">Vision</a>
@@ -137,13 +144,15 @@
     <h2>7. Geist &amp; Kultur</h2>
     <p>Ein neues goldenes Zeitalter der Kunst, Musik und Seele. Ohne Zwangsarbeit entsteht Raum für Geist, Spiel, Schönheit und Ausdruck.</p>
   </div>
-
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init();
+  function toggleMenu() {
+    document.getElementById('menu').classList.toggle('active');
+  }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
 
 </body>
 </html>
