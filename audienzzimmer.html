@@ -1,113 +1,110 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Audienzzimmer</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
-      font-family: Georgia, serif;
-      background: #fffbe6;
-      color: #3b2e14;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      box-sizing: border-box;
+      padding: 0;
+      background-color: #111;
+      color: #f0f0f0;
     }
-    h1, h2 {
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
       text-align: center;
+      margin-bottom: 1rem;
     }
-    a {
+    p {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #ccc;
+    }
+    .section {
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    }
+    label, input, textarea {
+      display: block;
+      width: 100%;
+      font-family: inherit;
+      margin-top: 1rem;
+    }
+    textarea, input {
+      padding: 0.6rem;
+      border-radius: 6px;
+      border: none;
+      background-color: #2a2a2a;
+      color: #f0f0f0;
+    }
+    .button {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: #d4af37;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 0.5rem;
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 999;
+      padding: 1rem;
+    }
+    .menu-toggle {
+      cursor: pointer;
+      width: 30px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .menu-toggle div {
+      background: #d4af37;
+      height: 4px;
+      border-radius: 2px;
+    }
+    .menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background: #0c0c0c;
+      color: #f0e6d2;
+      width: 200px;
+      height: 100vh;
+      padding: 2rem 1rem;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+    }
+    .menu a {
+      display: block;
+      color: #f0e6d2;
+      text-decoration: none;
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+    }
+    .menu a:hover {
       color: #d4af37;
     }
-    
-.button {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background: #d4af37;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 0.5rem;
-  margin-top: 1.5rem;
-  max-width: 90%;
-  text-align: center;
-  font-size: 1.1rem;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  white-space: normal;
-}
-
-        .section {
-          background: #fffaf0;
-          border-radius: 1rem;
-          padding: 1.5rem;
-          box-shadow: 0 0 10px rgba(0,0,0,0.05);
-          margin-top: 2rem;
-        }
-        label, input, textarea {
-          display: block;
-          width: 100%;
-          font-family: inherit;
-          margin-top: 1rem;
-        }
-        textarea, input {
-          padding: 0.6rem;
-          border-radius: 0.5rem;
-          border: 1px solid #aaa;
-        }
-        
   </style>
 </head>
 <body>
 
-<style>
-/* Hamburger-Menü */
-.navbar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 999;
-  padding: 1rem;
-}
-.menu-toggle {
-  cursor: pointer;
-  width: 30px;
-  height: 22px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.menu-toggle div {
-  background: #d4af37;
-  height: 4px;
-  border-radius: 2px;
-}
-.menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background: #0c0c0c;
-  color: #f0e6d2;
-  width: 200px;
-  height: 100vh;
-  padding: 2rem 1rem;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
-}
-.menu a {
-  display: block;
-  color: #f0e6d2;
-  text-decoration: none;
-  margin-bottom: 1.2rem;
-  font-size: 1.1rem;
-}
-.menu a:hover {
-  color: #d4af37;
-}
-</style>
 <div class="navbar">
   <div class="menu-toggle" onclick="document.getElementById('menu').style.display = (document.getElementById('menu').style.display === 'block') ? 'none' : 'block'">
     <div></div><div></div><div></div>
@@ -116,6 +113,7 @@
 <div class="menu" id="menu">
   <a href="index.html">Ruf zur neuen Welt</a>
   <a href="vision.html">Vision</a>
+  <a href="saeulen_blockstil_mit_animation.html">Säulen des Königreichs</a>
   <a href="gabe.html">Gabe</a>
   <a href="kommentare.html">Stimme des Volkes</a>
   <a href="audienzzimmer.html">Audienzzimmer</a>
@@ -123,22 +121,24 @@
   <a href="impressum.html">Impressum</a>
 </div>
 
-<main>
+<div class="container">
+  <h1 data-aos="fade-up">Audienzzimmer des Königs</h1>
+  <p data-aos="fade-up">Sprich deine Wünsche, Gedanken oder Fragen aus – der König hört zu.</p>
 
-<h1>Audienzzimmer des Königs</h1>
-<p style="text-align:center;">Sprich deine Wünsche, Gedanken oder Fragen aus – der König hört zu.</p>
-<div class="section">
-  <form action="https://formspree.io/f/DEINFORMULAR" method="POST">
-    <label for="name">Dein Name</label>
-    <input type="text" id="name" name="name" required>
-    <label for="country">Dein Land</label>
-    <input type="text" id="country" name="country" required>
-    <label for="message">Deine Botschaft an den König</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-    <p style="text-align:center;"><button type="submit" class="button">Sprich mit dem König</button></p>
-  </form>
+  <div class="section" data-aos="fade-up">
+    <form action="https://formspree.io/f/DEINFORMULAR" method="POST">
+      <label for="name">Dein Name</label>
+      <input type="text" id="name" name="name" required>
+      <label for="country">Dein Land</label>
+      <input type="text" id="country" name="country" required>
+      <label for="message">Deine Botschaft an den König</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <p style="text-align:center;"><button type="submit" class="button">Sprich mit dem König</button></p>
+    </form>
+  </div>
 </div>
-        
-</main>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
 </body>
 </html>
