@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Die Ränge</title>
+  <title>Die Ränge des Königreichs</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
       font-family: Georgia, serif;
@@ -17,94 +17,113 @@
       margin-right: auto;
       box-sizing: border-box;
     }
-    h1, h2 {
+
+    h1, h2, h3 {
       text-align: center;
     }
+
     a {
       color: #d4af37;
     }
-    
-.button {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background: #d4af37;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 0.5rem;
-  margin-top: 1.5rem;
-  max-width: 90%;
-  text-align: center;
-  font-size: 1.1rem;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  white-space: normal;
-}
 
-        .section {
-          background: #fffaf0;
-          border-radius: 1rem;
-          padding: 1rem 1.5rem;
-          box-shadow: 0 0 10px rgba(0,0,0,0.05);
-          margin-top: 1.5rem;
-        }
-        
+    .button {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: #d4af37;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      margin-top: 1.5rem;
+      max-width: 90%;
+      text-align: center;
+      font-size: 1.1rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      white-space: normal;
+    }
+
+    .section {
+      background: #fffaf0;
+      border-radius: 1rem;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-top: 1.5rem;
+    }
+
+    /* Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 999;
+      padding: 1rem;
+    }
+
+    .menu-toggle {
+      cursor: pointer;
+      width: 30px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .menu-toggle div {
+      background: #d4af37;
+      height: 4px;
+      border-radius: 2px;
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 50vw;
+      height: 100vh;
+      background: #0c0c0c;
+      color: #f0e6d2;
+      padding: 3rem 2rem;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+      transition: right 0.4s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 998;
+    }
+
+    .menu.active {
+      right: 0;
+    }
+
+    .menu a {
+      font-size: 1.5rem;
+      color: #f0e6d2;
+      text-decoration: none;
+      margin: 1rem 0;
+    }
+
+    .menu a:hover {
+      color: #d4af37;
+    }
+
+    main {
+      padding-top: 4rem;
+    }
   </style>
 </head>
 <body>
 
-<style>
-/* Hamburger-Menü */
-.navbar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 999;
-  padding: 1rem;
-}
-.menu-toggle {
-  cursor: pointer;
-  width: 30px;
-  height: 22px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.menu-toggle div {
-  background: #d4af37;
-  height: 4px;
-  border-radius: 2px;
-}
-.menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background: #0c0c0c;
-  color: #f0e6d2;
-  width: 200px;
-  height: 100vh;
-  padding: 2rem 1rem;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
-}
-.menu a {
-  display: block;
-  color: #f0e6d2;
-  text-decoration: none;
-  margin-bottom: 1.2rem;
-  font-size: 1.1rem;
-}
-.menu a:hover {
-  color: #d4af37;
-}
-</style>
 <div class="navbar">
-  <div class="menu-toggle" onclick="document.getElementById('menu').style.display = (document.getElementById('menu').style.display === 'block') ? 'none' : 'block'">
+  <div class="menu-toggle" onclick="toggleMenu()">
     <div></div><div></div><div></div>
   </div>
 </div>
+
 <div class="menu" id="menu">
   <a href="index.html">Ruf zur neuen Welt</a>
   <a href="vision.html">Vision</a>
+  <a href="saeulen_des_Koenigreichs.html">Säulen des Königreichs</a>
   <a href="gabe.html">Gabe</a>
   <a href="kommentare.html">Stimme des Volkes</a>
   <a href="audienzzimmer.html">Audienzzimmer</a>
@@ -113,37 +132,43 @@
 </div>
 
 <main>
+  <h1>Die Ränge des Königreichs</h1>
+  <p style="text-align: center;">
+    In diesem Reich zählt nicht nur Gold – sondern Mut, Stimme und Einfluss.  
+    Finde deinen Rang und erhebe dich für die Vision.
+  </p>
 
-<h1>Die Ränge des Königreichs</h1>
-<p style="text-align: center;">
-  In diesem Reich zählt nicht nur Gold – sondern Mut, Stimme und Einfluss.  
-  Finde deinen Rang und erhebe dich für die Vision.
-</p>
-<div class="section">
-  <h3>Freier Bürger</h3>
-  <p>Jede Person, die sich zur Vision bekennt.</p>
-</div>
-<div class="section">
-  <h3>Sämann der Hoffnung</h3>
-  <p>Hat eine erste Gabe in die Kornkammer getragen.</p>
-</div>
-<div class="section">
-  <h3>Botschafter der Kornkammer</h3>
-  <p>Hat gegeben und die Vision verbreitet.</p>
-</div>
-<div class="section">
-  <h3>Wächter der Vision</h3>
-  <p>Unterstützt die Bewegung mit regelmäßiger Gabe.</p>
-</div>
-<div class="section">
-  <h3>Stimme des Volkes</h3>
-  <p>Schreibt, teilt, inspiriert. Ein aktiver Träger der Idee.</p>
-</div>
-<div class="section">
-  <h3>Goldener Ritter</h3>
-  <p>Ein Leuchtfeuer der Vision – reich an Gabe und Einfluss.</p>
-</div>
-        
+  <div class="section">
+    <h3>Freier Bürger</h3>
+    <p>Jede Person, die sich zur Vision bekennt.</p>
+  </div>
+  <div class="section">
+    <h3>Sämann der Hoffnung</h3>
+    <p>Hat eine erste Gabe in die Kornkammer getragen.</p>
+  </div>
+  <div class="section">
+    <h3>Botschafter der Kornkammer</h3>
+    <p>Hat gegeben und die Vision verbreitet.</p>
+  </div>
+  <div class="section">
+    <h3>Wächter der Vision</h3>
+    <p>Unterstützt die Bewegung mit regelmäßiger Gabe.</p>
+  </div>
+  <div class="section">
+    <h3>Stimme des Volkes</h3>
+    <p>Schreibt, teilt, inspiriert. Ein aktiver Träger der Idee.</p>
+  </div>
+  <div class="section">
+    <h3>Goldener Ritter</h3>
+    <p>Ein Leuchtfeuer der Vision – reich an Gabe und Einfluss.</p>
+  </div>
 </main>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('menu').classList.toggle('active');
+  }
+</script>
+
 </body>
 </html>
