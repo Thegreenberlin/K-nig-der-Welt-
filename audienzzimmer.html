@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Audienzzimmer</title>
+  <title>Audienzzimmer des Königs</title>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
@@ -13,33 +13,96 @@
       background-color: #111;
       color: #f0f0f0;
     }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 999;
+      padding: 1rem;
+    }
+
+    .menu-toggle {
+      cursor: pointer;
+      width: 30px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .menu-toggle div {
+      background: #d4af37;
+      height: 4px;
+      border-radius: 2px;
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 50vw;
+      height: 100vh;
+      background: #0c0c0c;
+      color: #f0e6d2;
+      padding: 3rem 2rem;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+      transition: right 0.4s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 998;
+    }
+
+    .menu.active {
+      right: 0;
+    }
+
+    .menu a {
+      font-size: 1.5rem;
+      color: #f0e6d2;
+      text-decoration: none;
+      margin: 1rem 0;
+    }
+
+    .menu a:hover {
+      color: #d4af37;
+    }
+
     .container {
       max-width: 960px;
       margin: 0 auto;
-      padding: 2rem;
+      padding: 5rem 2rem 2rem;
     }
+
     h1 {
       font-size: 2.5rem;
       text-align: center;
       margin-bottom: 1rem;
     }
+
     p {
       text-align: center;
       margin-bottom: 2rem;
       color: #ccc;
+      font-size: 1.1rem;
     }
+
     .section {
       background-color: #1a1a1a;
       padding: 1.5rem;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(255,255,255,0.05);
     }
+
     label, input, textarea {
       display: block;
       width: 100%;
       font-family: inherit;
       margin-top: 1rem;
     }
+
     textarea, input {
       padding: 0.6rem;
       border-radius: 6px;
@@ -47,6 +110,7 @@
       background-color: #2a2a2a;
       color: #f0f0f0;
     }
+
     .button {
       display: inline-block;
       padding: 0.8rem 1.5rem;
@@ -58,62 +122,22 @@
       margin-top: 1.5rem;
       font-size: 1.1rem;
       cursor: pointer;
-    }
-    .navbar {
-      position: fixed;
-      top: 0;
-      right: 0;
-      z-index: 999;
-      padding: 1rem;
-    }
-    .menu-toggle {
-      cursor: pointer;
-      width: 30px;
-      height: 22px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .menu-toggle div {
-      background: #d4af37;
-      height: 4px;
-      border-radius: 2px;
-    }
-    .menu {
-      display: none;
-      position: fixed;
-      top: 0;
-      right: 0;
-      background: #0c0c0c;
-      color: #f0e6d2;
-      width: 200px;
-      height: 100vh;
-      padding: 2rem 1rem;
-      box-shadow: -2px 0 5px rgba(0,0,0,0.3);
-    }
-    .menu a {
-      display: block;
-      color: #f0e6d2;
-      text-decoration: none;
-      margin-bottom: 1.2rem;
-      font-size: 1.1rem;
-    }
-    .menu a:hover {
-      color: #d4af37;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
 <div class="navbar">
-  <div class="menu-toggle" onclick="document.getElementById('menu').style.display = (document.getElementById('menu').style.display === 'block') ? 'none' : 'block'">
+  <div class="menu-toggle" onclick="toggleMenu()">
     <div></div><div></div><div></div>
   </div>
 </div>
+
 <div class="menu" id="menu">
   <a href="index.html">Ruf zur neuen Welt</a>
   <a href="vision.html">Vision</a>
-  <a href="saeulen_blockstil_mit_animation.html">Säulen des Königreichs</a>
+  <a href="saeulen_des_Koenigreichs.html">Säulen des Königreichs</a>
   <a href="gabe.html">Gabe</a>
   <a href="kommentare.html">Stimme des Volkes</a>
   <a href="audienzzimmer.html">Audienzzimmer</a>
@@ -139,6 +163,11 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
+<script>
+  AOS.init();
+  function toggleMenu() {
+    document.getElementById('menu').classList.toggle('active');
+  }
+</script>
 </body>
 </html>
