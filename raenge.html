@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -7,47 +8,40 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
-      font-family: Georgia, serif;
-      background: #fffbe6;
-      color: #3b2e14;
       margin: 0;
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      box-sizing: border-box;
+      padding: 0;
+      background-color: #111;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    h1, h2, h3 {
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
       text-align: center;
+      margin-bottom: 2rem;
     }
 
-    a {
-      color: #d4af37;
+    .rank-block {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
     }
 
-    .button {
-      display: inline-block;
-      padding: 0.8rem 1.5rem;
-      background: #d4af37;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 0.5rem;
-      margin-top: 1.5rem;
-      max-width: 90%;
-      text-align: center;
-      font-size: 1.1rem;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-      white-space: normal;
+    .rank-block h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
     }
 
-    .section {
-      background: #fffaf0;
-      border-radius: 1rem;
-      padding: 1rem 1.5rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      margin-top: 1.5rem;
+    .rank-block p {
+      line-height: 1.6;
     }
 
     .navbar {
@@ -105,10 +99,6 @@
     .menu a:hover {
       color: #d4af37;
     }
-
-    main {
-      padding-top: 4rem;
-    }
   </style>
 </head>
 <body>
@@ -130,44 +120,50 @@
   <a href="impressum.html">Impressum</a>
 </div>
 
-<main>
-  <h1>Die Ränge des Königreichs</h1>
-  <p style="text-align: center;">
+<div class="container">
+  <h1 class="section-title" data-aos="fade-up">Die Ränge des Königreichs</h1>
+  <p data-aos="fade-up" style="text-align:center; max-width:700px; margin: 0 auto 2rem;">
     Jeder Rang ist ein Symbol deiner Entschlossenheit, deiner Gabe und deines Geistes.<br>
     Du entscheidest, wie weit du dich erhebst.
   </p>
 
-  <div class="section">
-    <h3>Freier Bürger</h3>
+  <div class="rank-block" data-aos="fade-up">
+    <h2>Freier Bürger</h2>
     <p>Jeder, der sich zur Vision bekennt und den Pfad der neuen Welt betritt. Die Grundlage des Reiches.</p>
   </div>
-  <div class="section">
-    <h3>Sämann der Hoffnung</h3>
+
+  <div class="rank-block" data-aos="fade-up">
+    <h2>Sämann der Hoffnung</h2>
     <p>Hat eine erste Gabe geleistet. Trägt das Feuer der Veränderung in sich.</p>
   </div>
-  <div class="section">
-    <h3>Botschafter der Kornkammer</h3>
+
+  <div class="rank-block" data-aos="fade-up">
+    <h2>Botschafter der Kornkammer</h2>
     <p>Hat das Reich unterstützt und mindestens einen Menschen zur Vision geführt.</p>
   </div>
-  <div class="section">
-    <h3>Wächter der Vision</h3>
+
+  <div class="rank-block" data-aos="fade-up">
+    <h2>Wächter der Vision</h2>
     <p>Gibt regelmäßig, bewahrt den Geist der Idee und schützt sie vor dem Vergessen.</p>
   </div>
-  <div class="section">
-    <h3>Stimme des Volkes</h3>
+
+  <div class="rank-block" data-aos="fade-up">
+    <h2>Stimme des Volkes</h2>
     <p>Verleiht der Bewegung Worte, Bilder, Musik oder Ideen. Ist kreativ, inspirierend, rebellisch.</p>
   </div>
-  <div class="section">
-    <h3>Goldener Ritter</h3>
+
+  <div class="rank-block" data-aos="fade-up">
+    <h2>Goldener Ritter</h2>
     <p>Großspender, Patron, Visionär. Die Krone ehrt ihn als Lichtträger der neuen Zeit.</p>
   </div>
-</main>
+</div>
 
 <script>
   function toggleMenu() {
     document.getElementById('menu').classList.toggle('active');
   }
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
 </body>
 </html>
