@@ -290,3 +290,17 @@ function changeLanguage(lang) {
   document.getElementById('learn-more').innerText = t.learnMore;
 }
 </script>
+function changeLanguage(lang) {
+  const t = translations[lang];
+  document.documentElement.lang = lang; // <-- Hier! Das ist die neue Zeile für SEO & Barrierefreiheit
+  
+  document.getElementById('intro-text').innerText = t.introText;
+  t.menu.forEach((text, i) => {
+    document.getElementById(`menu-${i}`).innerText = text;
+  });
+  document.getElementById('headline').innerText = t.headline;
+  t.texts.forEach((text, i) => {
+    document.getElementById(`text-${i}`).innerHTML = text;
+  });
+  document.getElementById('learn-more').innerText = t.learnMore;
+}
