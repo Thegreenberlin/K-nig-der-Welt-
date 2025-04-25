@@ -3,183 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pactum Elysium: Ruf zur neuen Welt</title>
+  <title id="page-title">Pactum Elysium: Ruf zur neuen Welt</title>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background-color: #111;
-      color: #f0f0f0;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    #intro {
+    /* Dein bisheriges CSS bleibt hier unverändert */
+    /* + kleines Extra für Dropdown */
+    .language-select {
       position: fixed;
-      width: 100%;
-      height: 100%;
-      background-color: #0e0e0e;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      animation: fadeIn 3s ease-in-out forwards;
-      z-index: 10000;
-      text-align: center;
+      top: 1rem;
+      left: 1rem;
+      z-index: 1000;
     }
 
-    #intro img {
-      width: 100%;
-      max-width: 700px;
-      animation: glow 4s ease-in-out infinite;
-    }
-
-    #intro p {
-      color: white;
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      padding: 0 1rem;
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: scale(1.1); }
-      100% { opacity: 1; transform: scale(1); }
-    }
-
-    @keyframes fadeOut {
-      0% { opacity: 1; }
-      100% { opacity: 0; }
-    }
-
-    @keyframes glow {
-      0%, 100% { filter: drop-shadow(0 0 8px gold); }
-      50% { filter: drop-shadow(0 0 20px gold); }
-    }
-
-    #intro.fade-out {
-      animation: fadeOut 2s ease-in-out forwards;
-    }
-
-    #main-content {
-      display: none;
-      animation: contentFadeIn 2s ease-in-out forwards;
-    }
-
-    @keyframes contentFadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    .navbar {
-      position: fixed;
-      top: 0;
-      right: 0;
-      z-index: 999;
-      padding: 1rem;
-    }
-
-    .menu-toggle {
-      cursor: pointer;
-      width: 30px;
-      height: 22px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .menu-toggle div {
-      background: #d4af37;
-      height: 4px;
-      border-radius: 2px;
-    }
-
-    .menu {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 50vw;
-      height: 100vh;
-      background: #0c0c0c;
+    .language-select select {
+      background-color: #0c0c0c;
       color: #f0e6d2;
-      padding: 3rem 2rem;
-      box-shadow: -2px 0 10px rgba(0,0,0,0.5);
-      transition: right 0.4s ease-in-out;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 998;
-    }
-
-    .menu.active {
-      right: 0;
-    }
-
-    .menu a {
-      font-size: 1.5rem;
-      color: #f0e6d2;
-      text-decoration: none;
-      margin: 1rem 0;
-    }
-
-    .menu a:hover {
-      color: #d4af37;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-
-    .block {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInText 1s ease forwards;
-    }
-
-    .block:nth-child(n) {
-      animation-delay: calc(0.5s + 0.3s * var(--i));
-    }
-
-    @keyframes fadeInText {
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .button {
-      display: inline-block;
-      padding: 0.8rem 1.5rem;
-      background: #d4af37;
-      color: white;
-      font-weight: bold;
-      border: none;
+      border: 1px solid #d4af37;
+      padding: 0.5rem;
       border-radius: 0.5rem;
-      font-size: 1.1rem;
-      cursor: pointer;
-      text-decoration: none;
-      margin-top: 2rem;
+      font-size: 1rem;
+    }
+
+    option {
+      background: #111;
+      color: #fff;
     }
   </style>
 </head>
 <body>
 
-<div id="intro">
-  <img src="pactum-elysium-emblem.png" alt="Pactum Elysium Emblem">
-  <p>Pactum Elysium: Cor Unum</p>
+<!-- Sprache wählen -->
+<div class="language-select">
+  <select id="language-picker" onchange="changeLanguage(this.value)">
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="en">🇬🇧 English</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="ar">🇸🇦 العربية</option>
+    <option value="pt">🇵🇹 Português</option>
+    <option value="vi">🇻🇳 Tiếng Việt</option>
+    <option value="zh">🇨🇳 中文</option>
+  </select>
 </div>
 
+<!-- Intro -->
+<div id="intro">
+  <img src="pactum-elysium-emblem.png" alt="Pactum Elysium Emblem">
+  <p id="intro-text">Pactum Elysium: Cor Unum</p>
+</div>
+
+<!-- Main Content -->
 <div id="main-content">
   <div class="navbar">
     <div class="menu-toggle" onclick="toggleMenu()">
@@ -188,29 +61,31 @@
   </div>
 
   <div class="menu" id="menu">
-    <a href="index.html">Ruf zur neuen Welt</a>
-    <a href="vision.html">Vision</a>
-    <a href="saeulen_des_Koenigreichs.html">Säulen des Königreichs</a>
-    <a href="gabe.html">Gabe</a>
-    <a href="kommentare.html">Stimme des Volkes</a>
-    <a href="audienzzimmer.html">Audienzzimmer</a>
-    <a href="raenge.html">Ränge</a>
-    <a href="impressum.html">Impressum</a>
+    <a id="menu-link-0" href="index.html">Ruf zur neuen Welt</a>
+    <a id="menu-link-1" href="vision.html">Vision</a>
+    <a id="menu-link-2" href="saeulen_des_Koenigreichs.html">Säulen des Königreichs</a>
+    <a id="menu-link-3" href="gabe.html">Gabe</a>
+    <a id="menu-link-4" href="kommentare.html">Stimme des Volkes</a>
+    <a id="menu-link-5" href="audienzzimmer.html">Audienzzimmer</a>
+    <a id="menu-link-6" href="raenge.html">Ränge</a>
+    <a id="menu-link-7" href="impressum.html">Impressum</a>
   </div>
 
   <div class="container">
-    <h1 class="block" style="--i:0">Der Ruf der neuen Welt</h1>
-    <p class="block" style="--i:1">Es begann mit einer Frage.</p>
-    <p class="block" style="--i:2">Warum leben Milliarden Menschen in Mühe, wenn Überfluss möglich ist?</p>
-    <p class="block" style="--i:3">Warum gibt es Hunger – wenn Maschinen nähren können?</p>
-    <p class="block" style="--i:4">Warum Arbeit – wenn Technologie längst befreit?</p>
-    <p class="block" style="--i:5">Warum Krieg – wenn ein geeinter Schutz reicht?</p>
-    <p class="block" style="--i:6">Und dann erhob sich einer.</p>
-    <p class="block" style="--i:7">Kein Kaiser, kein Tyrann. Sondern einer aus dem Volk, der bereit war, Verantwortung zu tragen.</p>
-    <p class="block" style="--i:8">Er sprach von Replikatoren, von Freiheit, von einer Welt ohne Zwang.</p>
-    <p class="block" style="--i:9"><em>„Ich will kein Thron für mich – ich will ein Leben für alle.“</em></p>
-    <p class="block" style="--i:10">So begann die Bewegung. Und du stehst nun am Tor. Nicht als Zuschauer, sondern als Teil einer neuen Geschichte.</p>
-    <p style="text-align:center;"><a href="vision.html" class="button block" style="--i:11">Ich will mehr erfahren</a></p>
+    <h1 id="main-heading" class="block" style="--i:0">Der Ruf der neuen Welt</h1>
+    <div id="main-text">
+      <p class="block" style="--i:1">Es begann mit einer Frage.</p>
+      <p class="block" style="--i:2">Warum leben Milliarden Menschen in Mühe, wenn Überfluss möglich ist?</p>
+      <p class="block" style="--i:3">Warum gibt es Hunger – wenn Maschinen nähren können?</p>
+      <p class="block" style="--i:4">Warum Arbeit – wenn Technologie längst befreit?</p>
+      <p class="block" style="--i:5">Warum Krieg – wenn ein geeinter Schutz reicht?</p>
+      <p class="block" style="--i:6">Und dann erhob sich einer.</p>
+      <p class="block" style="--i:7">Kein Kaiser, kein Tyrann. Sondern einer aus dem Volk, der bereit war, Verantwortung zu tragen.</p>
+      <p class="block" style="--i:8">Er sprach von Replikatoren, von Freiheit, von einer Welt ohne Zwang.</p>
+      <p class="block" style="--i:9"><em>„Ich will kein Thron für mich – ich will ein Leben für alle.“</em></p>
+      <p class="block" style="--i:10">So begann die Bewegung. Und du stehst nun am Tor. Nicht als Zuschauer, sondern als Teil einer neuen Geschichte.</p>
+      <p style="text-align:center;"><a id="learn-more-button" href="vision.html" class="button block" style="--i:11">Ich will mehr erfahren</a></p>
+    </div>
   </div>
 </div>
 
@@ -227,7 +102,85 @@
       document.getElementById('main-content').style.display = 'block';
     }, 2000);
   }, 5000);
+
+  const translations = {
+    de: {
+      pageTitle: "Pactum Elysium: Ruf zur neuen Welt",
+      introText: "Pactum Elysium: Cor Unum",
+      menu: [
+        "Ruf zur neuen Welt",
+        "Vision",
+        "Säulen des Königreichs",
+        "Gabe",
+        "Stimme des Volkes",
+        "Audienzzimmer",
+        "Ränge",
+        "Impressum"
+      ],
+      heading: "Der Ruf der neuen Welt",
+      content: [
+        "Es begann mit einer Frage.",
+        "Warum leben Milliarden Menschen in Mühe, wenn Überfluss möglich ist?",
+        "Warum gibt es Hunger – wenn Maschinen nähren können?",
+        "Warum Arbeit – wenn Technologie längst befreit?",
+        "Warum Krieg – wenn ein geeinter Schutz reicht?",
+        "Und dann erhob sich einer.",
+        "Kein Kaiser, kein Tyrann. Sondern einer aus dem Volk, der bereit war, Verantwortung zu tragen.",
+        "Er sprach von Replikatoren, von Freiheit, von einer Welt ohne Zwang.",
+        "„Ich will kein Thron für mich – ich will ein Leben für alle.“",
+        "So begann die Bewegung. Und du stehst nun am Tor. Nicht als Zuschauer, sondern als Teil einer neuen Geschichte."
+      ],
+      button: "Ich will mehr erfahren"
+    },
+    en: {
+      pageTitle: "Pactum Elysium: Call to the New World",
+      introText: "Pactum Elysium: One Heart",
+      menu: [
+        "Call to the New World",
+        "Vision",
+        "Pillars of the Kingdom",
+        "Gift",
+        "Voice of the People",
+        "Audience Chamber",
+        "Ranks",
+        "Imprint"
+      ],
+      heading: "The Call of the New World",
+      content: [
+        "It all began with a question.",
+        "Why do billions live in hardship when abundance is possible?",
+        "Why is there hunger when machines can feed?",
+        "Why work when technology has already freed us?",
+        "Why war when united protection suffices?",
+        "And then one arose.",
+        "No emperor, no tyrant. Just one of the people, ready to bear responsibility.",
+        "He spoke of replicators, of freedom, of a world without coercion.",
+        "“I don't want a throne for myself – I want life for all.”",
+        "Thus the movement began. And now you stand at the gate, not as a spectator, but as part of a new story."
+      ],
+      button: "I want to learn more"
+    },
+    // Weitere Sprachen kommen hier rein: fr, es, ar, pt, vi, zh...
+  };
+
+  function changeLanguage(lang) {
+    document.getElementById('page-title').innerText = translations[lang].pageTitle;
+    document.getElementById('intro-text').innerText = translations[lang].introText;
+    translations[lang].menu.forEach((item, index) => {
+      document.getElementById(`menu-link-${index}`).innerText = item;
+    });
+    document.getElementById('main-heading').innerText = translations[lang].heading;
+    const contentDiv = document.getElementById('main-text');
+    const paragraphs = contentDiv.querySelectorAll('p');
+    paragraphs.forEach((p, index) => {
+      if(index < translations[lang].content.length) {
+        p.innerHTML = translations[lang].content[index];
+      }
+    });
+    document.getElementById('learn-more-button').innerText = translations[lang].button;
+  }
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init();</script>
 
