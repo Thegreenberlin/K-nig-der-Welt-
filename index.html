@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
+<!DOCTYPE html><html lang="de"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title id="page-title">Pactum Elysium: Ruf zur neuen Welt</title>
@@ -153,7 +151,6 @@
       top: 1rem;
       left: 1rem;
       z-index: 1001;
-      display: none; /* Anfangs unsichtbar */
     }
     .language-select select {
       background-color: #0c0c0c;
@@ -164,40 +161,26 @@
       font-size: 1rem;
     }
   </style>
-</head>
-
-<body>
-
-<!-- Intro Bereich -->
-<div id="intro">
+</head>  <body><!-- Sprach-Dropdown --><div class="language-select">
+  <select id="language-picker" onchange="changeLanguage(this.value)">
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="en">🇬🇧 English</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="ar">🇸🇦 العربية</option>
+    <option value="pt">🇵🇹 Português</option>
+    <option value="vi">🇻🇳 Tiếng Việt</option>
+    <option value="zh">🇨🇳 中文</option>
+  </select>
+</div><!-- Intro Bereich --><div id="intro">
   <img src="pactum-elysium-emblem.png" alt="Pactum Elysium Emblem">
   <p id="intro-text">Pactum Elysium: Cor Unum</p>
-</div>
-
-<!-- Hauptinhalt -->
-<div id="main-content">
-
-  <!-- Sprach-Dropdown richtig eingebaut -->
-  <div class="language-select">
-    <select id="language-picker" onchange="changeLanguage(this.value)">
-      <option value="de">🇩🇪 Deutsch</option>
-      <option value="en">🇬🇧 English</option>
-      <option value="fr">🇫🇷 Français</option>
-      <option value="es">🇪🇸 Español</option>
-      <option value="ar">🇸🇦 العربية</option>
-      <option value="pt">🇵🇹 Português</option>
-      <option value="vi">🇻🇳 Tiếng Việt</option>
-      <option value="zh">🇨🇳 中文</option>
-    </select>
-  </div>
-
+</div><!-- Hauptinhalt --><div id="main-content">
   <div class="navbar">
     <div class="menu-toggle" onclick="toggleMenu()">
       <div></div><div></div><div></div>
     </div>
-  </div>
-
-  <div class="menu" id="menu">
+  </div>  <div class="menu" id="menu">
     <a href="index.html" id="menu-0">Ruf zur neuen Welt</a>
     <a href="vision.html" id="menu-1">Vision</a>
     <a href="saeulen_des_Koenigreichs.html" id="menu-2">Säulen des Königreichs</a>
@@ -206,9 +189,7 @@
     <a href="audienzzimmer.html" id="menu-5">Audienzzimmer</a>
     <a href="raenge.html" id="menu-6">Ränge</a>
     <a href="impressum.html" id="menu-7">Impressum</a>
-  </div>
-
-  <div class="container">
+  </div>  <div class="container">
     <h1 class="block" style="--i:0" id="headline">Der Ruf der neuen Welt</h1>
     <p class="block" style="--i:1" id="text-0">Es begann mit einer Frage.</p>
     <p class="block" style="--i:2" id="text-1">Warum leben Milliarden Menschen in Mühe, wenn Überfluss möglich ist?</p>
@@ -222,43 +203,200 @@
     <p class="block" style="--i:10" id="text-9">So begann die Bewegung. Und du stehst nun am Tor. Nicht als Zuschauer, sondern als Teil einer neuen Geschichte.</p>
     <p style="text-align:center;"><a href="vision.html" class="button block" style="--i:11" id="learn-more">Ich will mehr erfahren</a></p>
   </div>
-</div>
+</div> <script>
+const translations = {
+  de: {
+    introText: "Pactum Elysium: Cor Unum",
+    menu: [
+      "Ruf zur neuen Welt", "Vision", "Säulen des Königreichs", "Gabe",
+      "Stimme des Volkes", "Audienzzimmer", "Ränge", "Impressum"
+    ],
+    headline: "Der Ruf der neuen Welt",
+    texts: [
+      "Es begann mit einer Frage.",
+      "Warum leben Milliarden Menschen in Mühe, wenn Überfluss möglich ist?",
+      "Warum gibt es Hunger – wenn Maschinen nähren können?",
+      "Warum Arbeit – wenn Technologie längst befreit?",
+      "Warum Krieg – wenn ein geeinter Schutz reicht?",
+      "Und dann erhob sich einer.",
+      "Kein Kaiser, kein Tyrann. Sondern einer aus dem Volk, der bereit war, Verantwortung zu tragen.",
+      "Er sprach von Replikatoren, von Freiheit, von einer Welt ohne Zwang.",
+      "„Ich will kein Thron für mich – ich will ein Leben für alle.“",
+      "So begann die Bewegung. Und du stehst nun am Tor. Nicht als Zuschauer, sondern als Teil einer neuen Geschichte."
+    ],
+    learnMore: "Ich will mehr erfahren"
+  },
+  en: {
+    introText: "Pactum Elysium: One Heart",
+    menu: [
+      "Call to the New World", "Vision", "Pillars of the Kingdom", "Gift",
+      "Voice of the People", "Audience Chamber", "Ranks", "Imprint"
+    ],
+    headline: "The Call of the New World",
+    texts: [
+      "It all began with a question.",
+      "Why do billions live in hardship when abundance is possible?",
+      "Why is there hunger when machines can feed?",
+      "Why work when technology could already liberate?",
+      "Why war when united protection suffices?",
+      "And then one arose.",
+      "No emperor, no tyrant. Just one from the people willing to take responsibility.",
+      "He spoke of replicators, of freedom, of a world without coercion.",
+      "“I don't want a throne for myself – I want life for all.”",
+      "Thus the movement began. And now you stand at the gate, not as a spectator, but as part of a new story."
+    ],
+    learnMore: "I want to learn more"
+  },
+  fr: {
+    introText: "Pactum Elysium : Un Seul Cœur",
+    menu: [
+      "Appel au Nouveau Monde", "Vision", "Piliers du Royaume", "Don",
+      "Voix du Peuple", "Salle d'Audience", "Rangs", "Mentions Légales"
+    ],
+    headline: "L'Appel du Nouveau Monde",
+    texts: [
+      "Tout a commencé par une question.",
+      "Pourquoi des milliards vivent-ils dans la misère alors que l'abondance est possible ?",
+      "Pourquoi y a-t-il la faim si les machines peuvent nourrir ?",
+      "Pourquoi travailler si la technologie peut déjà libérer ?",
+      "Pourquoi la guerre alors qu'une protection unie suffit ?",
+      "Et puis un homme s'est levé.",
+      "Pas un empereur, pas un tyran. Juste quelqu'un du peuple prêt à prendre ses responsabilités.",
+      "Il parlait de réplicateurs, de liberté, d'un monde sans contrainte.",
+      "« Je ne veux pas de trône pour moi – je veux une vie pour tous. »",
+      "Ainsi commença le mouvement. Et tu es maintenant devant la porte, non comme spectateur, mais comme acteur d'une nouvelle histoire."
+    ],
+    learnMore: "Je veux en savoir plus"
+  },
+  es: {
+    introText: "Pactum Elysium: Un Corazón",
+    menu: [
+      "Llamado al Nuevo Mundo", "Visión", "Pilares del Reino", "Don",
+      "Voz del Pueblo", "Sala de Audiencias", "Rangos", "Aviso Legal"
+    ],
+    headline: "El Llamado al Nuevo Mundo",
+    texts: [
+      "Todo comenzó con una pregunta.",
+      "¿Por qué viven miles de millones en penurias si es posible la abundancia?",
+      "¿Por qué hay hambre si las máquinas pueden alimentar?",
+      "¿Por qué trabajar si la tecnología ya puede liberar?",
+      "¿Por qué guerra si una protección unida es suficiente?",
+      "Y entonces uno se levantó.",
+      "No un emperador, no un tirano. Solo uno del pueblo dispuesto a asumir la responsabilidad.",
+      "Habló de replicadores, de libertad, de un mundo sin coacción.",
+      "« No quiero un trono para mí – quiero una vida para todos. »",
+      "Así comenzó el movimiento. Y ahora te encuentras en la puerta, no como espectador, sino como parte de una nueva historia."
+    ],
+    learnMore: "Quiero saber más"
+  },
+  ar: {
+    introText: "باكتوم إليسيوم: قلب واحد",
+    menu: [
+      "نداء إلى العالم الجديد", "الرؤية", "أعمدة المملكة", "هبة",
+      "صوت الشعب", "قاعة الجمهور", "المراتب", "الإشعار القانوني"
+    ],
+    headline: "نداء العالم الجديد",
+    texts: [
+      "بدأ كل شيء بسؤال.",
+      "لماذا يعيش المليارات في معاناة بينما الرفاهية ممكنة؟",
+      "لماذا يوجد الجوع إذا كانت الآلات تستطيع أن تطعم؟",
+      "لماذا العمل إذا كانت التكنولوجيا قد حررتنا بالفعل؟",
+      "لماذا الحرب إذا كانت الحماية الموحدة كافية؟",
+      "ثم نهض أحدهم.",
+      "لا إمبراطور، ولا طاغية. مجرد شخص من الشعب مستعد لتحمل المسؤولية.",
+      "تحدث عن النسّاخين، وعن الحرية، وعن عالم بدون إكراه.",
+      "« لا أريد عرشًا لنفسي - أريد حياة للجميع. »",
+      "وهكذا بدأت الحركة. وأنت الآن تقف عند البوابة، لا كمشاهد، بل كجزء من قصة جديدة."
+    ],
+    learnMore: "أريد معرفة المزيد"
+  },
+  pt: {
+    introText: "Pactum Elysium: Um Só Coração",
+    menu: [
+      "Chamado para o Novo Mundo", "Visão", "Pilares do Reino", "Dom",
+      "Voz do Povo", "Sala de Audiência", "Patentes", "Aviso Legal"
+    ],
+    headline: "O Chamado para o Novo Mundo",
+    texts: [
+      "Tudo começou com uma pergunta.",
+      "Por que bilhões vivem na dificuldade quando a abundância é possível?",
+      "Por que há fome se as máquinas podem alimentar?",
+      "Por que trabalhar se a tecnologia já pode libertar?",
+      "Por que guerra se uma proteção unida é suficiente?",
+      "Então um se levantou.",
+      "Não um imperador, não um tirano. Apenas alguém do povo pronto para assumir responsabilidade.",
+      "Ele falou de replicadores, de liberdade, de um mundo sem coerção.",
+      "« Não quero um trono para mim – quero vida para todos. »",
+      "Assim começou o movimento. E agora você está na porta, não como espectador, mas como parte de uma nova história."
+    ],
+    learnMore: "Quero saber mais"
+  },
+  vi: {
+    introText: "Pactum Elysium: Một Trái Tim",
+    menu: [
+      "Lời kêu gọi đến Thế giới Mới", "Tầm nhìn", "Trụ cột của Vương quốc", "Món quà",
+      "Tiếng nói của Nhân dân", "Phòng khán giả", "Cấp bậc", "Thông báo pháp lý"
+    ],
+    headline: "Lời Kêu Gọi Đến Thế Giới Mới",
+    texts: [
+      "Mọi chuyện bắt đầu từ một câu hỏi.",
+      "Tại sao hàng tỷ người sống trong nghèo khó khi sự sung túc là có thể?",
+      "Tại sao còn nạn đói nếu máy móc có thể nuôi dưỡng?",
+      "Tại sao còn lao động khi công nghệ đã có thể giải phóng?",
+      "Tại sao còn chiến tranh nếu bảo vệ thống nhất là đủ?",
+      "Rồi một người đứng lên.",
+      "Không phải hoàng đế, không phải bạo chúa. Chỉ là một người từ nhân dân sẵn sàng gánh vác trách nhiệm.",
+      "Anh ấy nói về máy sao chép, về tự do, về một thế giới không ép buộc.",
+      "« Tôi không muốn ngai vàng cho riêng mình – tôi muốn cuộc sống cho tất cả. »",
+      "Và vậy là phong trào bắt đầu. Và bây giờ bạn đứng trước cánh cổng, không phải là khán giả, mà là một phần của câu chuyện mới."
+    ],
+    learnMore: "Tôi muốn tìm hiểu thêm"
+  },
+  zh: {
+    introText: "帕克图姆乐土：同一颗心",
+    menu: [
+      "新世界的召唤", "愿景", "王国支柱", "礼物",
+      "人民之声", "会见厅", "军衔", "法律声明"
+    ],
+    headline: "新世界的召唤",
+    texts: [
+      "一切始于一个问题。",
+      "为什么数十亿人生活在困苦中，而丰盛是可能的？",
+      "为什么还有饥饿，而机器能够养活？",
+      "为什么还要工作，而科技本可以解放？",
+      "为什么还要战争，如果统一保护已足够？",
+      "然后，一个人站了出来。",
+      "不是皇帝，不是暴君，而是一个愿意承担责任的普通人。",
+      "他谈到了复制器、自由以及没有压迫的世界。",
+      "「我不是为了自己想要王位，我想要的是大家的生活。」",
+      "于是，运动开始了。现在，你站在门前，不再是旁观者，而是新故事的一部分。"
+    ],
+    learnMore: "我想了解更多"
+  }
+};function changeLanguage(lang) { const t = translations[lang]; document.documentElement.lang = lang; document.getElementById('intro-text').innerText = t.introText; t.menu.forEach((text, i) => { document.getElementById(menu-${i}).innerText = text; }); document.getElementById('headline').innerText = t.headline; t.texts.forEach((text, i) => { document.getElementById(text-${i}).innerHTML = text; }); document.getElementById('learn-more').innerText = t.learnMore; }
 
-<script>
-// --- Sprachfunktion hier normal rein, so wie du sie geschrieben hast ---
-const translations = { /* dein ganzer translations-Code */ };
+function toggleMenu() { document.getElementById('menu').classList.toggle('active'); }
 
-function changeLanguage(lang) {
-  const t = translations[lang];
-  document.documentElement.lang = lang;
-  document.getElementById('intro-text').innerText = t.introText;
-  t.menu.forEach((text, i) => {
-    document.getElementById(`menu-${i}`).innerText = text;
-  });
-  document.getElementById('headline').innerText = t.headline;
-  t.texts.forEach((text, i) => {
-    document.getElementById(`text-${i}`).innerHTML = text;
-  });
-  document.getElementById('learn-more').innerText = t.learnMore;
-}
+setTimeout(() => { const intro = document.getElementById('intro'); intro.classList.add('fade-out'); setTimeout(() => { intro.style.display = 'none'; document.getElementById('main-content').style.display = 'block'; }, 2000); }, 5000); </script><script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script><script> AOS.init(); </script></body>
 
-function toggleMenu() {
-  document.getElementById('menu').classList.toggle('active');
-}
-
+</html>   
+// Sprach-Button sichtbar nach Intro
 setTimeout(() => {
   const intro = document.getElementById('intro');
   intro.classList.add('fade-out');
   setTimeout(() => {
     intro.style.display = 'none';
     document.getElementById('main-content').style.display = 'block';
-    document.querySelector('.language-select').style.display = 'block'; // Sprach-Button sichtbar
+    document.querySelector('.language-select').style.display = 'block'; // Sprach-Button anzeigen
   }, 2000);
 }, 5000);
-</script>
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
-
-</body>
-</html>
+// Scroll-Verhalten für Sprach-Button
+window.addEventListener('scroll', () => {
+  const languageSelect = document.querySelector('.language-select');
+  if (window.scrollY === 0) {
+    languageSelect.style.display = 'block'; // Ganz oben = zeigen
+  } else {
+    languageSelect.style.display = 'none'; // Sobald man scrollt = verstecken
+  }
+});
