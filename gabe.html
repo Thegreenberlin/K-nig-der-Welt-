@@ -116,6 +116,35 @@
       display: none;
       text-align: center;
     }
+
+    /* Neuer Patreon-Button */
+    #patreonButton {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: #d4af37;
+      color: #111;
+      font-weight: bold;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer;
+      margin-top: 3rem;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    #patreonButton:hover {
+      background: #c99c2b;
+    }
+
+    #patreonButton.clicked {
+      animation: pulse 0.5s;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
   </style>
 </head>
 <body>
@@ -151,6 +180,11 @@
     </form>
   </div>
 
+  <!-- Neuer Patreon Button Bereich -->
+  <div style="text-align:center;">
+    <button id="patreonButton" onclick="openPatreon()">Willst du Teil der Revolution sein?</button>
+  </div>
+
   <h2>Deine Botschaft</h2>
   <form onsubmit="event.preventDefault(); document.getElementById('thankyou').style.display = 'block';">
     <label for="name">Dein Name (optional)</label>
@@ -169,7 +203,18 @@
   function toggleMenu() {
     document.getElementById('menu').classList.toggle('active');
   }
+
+  function openPatreon() {
+    var button = document.getElementById('patreonButton');
+    button.innerText = "Sehr wohl.";
+    button.classList.add('clicked');
+    setTimeout(() => {
+      button.classList.remove('clicked');
+    }, 500);
+    window.open("https://patreon.com/user?u=77414364", "_blank");
+  }
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init();</script>
 
