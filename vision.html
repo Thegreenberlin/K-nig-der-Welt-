@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vision des adelschen Königreichs</title>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
@@ -52,20 +52,20 @@
   <a href="impressum.html">Impressum</a>
 </div>
 <div class="container">
-  <h1 class="section-title" id="vision-title">Die Vision des adelschen Königreichs</h1>
+  <h1 class="section-title" id="vision-title"></h1>
   <div id="vision-content"></div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init();</script>
 <script>
-// translations und Sprachlogik wird im nächsten Schritt eingesetzt (zu lang für ein einziges Update)
+// Teil 2 folgt
 </script>
 </body>
 </html>
 <!DOCTYPE html><html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vision des adelschen Königreichs</title>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
@@ -116,22 +116,676 @@
   <a href="impressum.html">Impressum</a>
 </div>
 <div class="container">
-  <h1 class="section-title" id="vision-title">Die Vision des adelschen Königreichs</h1>
+  <h1 class="section-title" id="vision-title"></h1>
   <div id="vision-content"></div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init();</script>
 <script>
 const translations = {
-  de: { title: "Die Vision des adelschen Königreichs", blocks: [...] },
-  en: { title: "The Vision of the Noble Kingdom", blocks: [...] },
-  fr: { title: "La vision du royaume noble", blocks: [...] },
-  es: { title: "La visión del Reino Noble", blocks: [...] },
-  ar: { title: "رؤية المملكة النبيلة", blocks: [...] },
-  pt: { title: "A visão do Reino Nobre", blocks: [...] },
-  vi: { title: "Tầm nhìn của Vương quốc Cao quý", blocks: [...] },
-  zh: { title: "高贵王国的愿景", blocks: [...] }
-};function toggleMenu() { document.getElementById('menu').classList.toggle('active'); } function setLanguage(lang) { localStorage.setItem('lang', lang); render(lang); } function render(lang) { const t = translations[lang] || translations['de']; document.getElementById('language-picker').value = lang; document.getElementById('vision-title').innerText = t.title; const content = document.getElementById('vision-content'); content.innerHTML = ''; t.blocks.forEach(block => { const div = document.createElement('div'); div.className = 'vision-block'; div.setAttribute('data-aos', 'fade-up'); div.innerHTML = <h2><span class=\"icon\">${block[0].split(' ')[0]}</span>${block[0].substring(2)}</h2> + block.slice(1).map(p => <p>${p}</p>).join(''); content.appendChild(div); }); } document.addEventListener('DOMContentLoaded', () => { const lang = localStorage.getItem('lang') || 'de'; render(lang); }); </script>
+  de: {
+    title: "Die Vision des adelschen Königreichs",
+    blocks: [
+      ["🌟 Freiheit – nicht mehr nur ein Wort, sondern Realität",
+       "Im adelschen Königreich bedeutet Freiheit mehr als Wahlrecht oder Reisefreiheit. Freiheit heißt: Keine Existenzangst. Keine Lohnsklaverei. Keine Abhängigkeit.",
+       "Dank Replikatoren-Technologie hat jeder Mensch Zugang zu Nahrung, Wasser, Energie, Medizin und Wohnraum – bedingungslos. Arbeit wird zur Berufung. Zeit gehört wieder dir.",
+       "Freiheit heißt: Du entscheidest, wie du leben willst."],
+      ["💼 Gesellschaftlicher Aufstieg durch Würde und Beitrag",
+       "Hier zählt nicht Herkunft, Reichtum oder Status – sondern dein Beitrag zur Gemeinschaft. Ob durch Ideen, Mitgefühl, Kunst oder Einsatz: Wer gibt, wächst. Wer inspiriert, wird geehrt.",
+       "Titel, Ehren, Rollen entstehen aus Leistung, nicht aus Macht. Jeder Mensch kann aufsteigen. Jeder Mensch wird gesehen."],
+      ["📈 Eine Wirtschaft des Überflusses",
+       "Vergiss Knappheit. Vergiss Konkurrenz um das Nötigste. Replikatoren machen Ressourcen frei – für alle. Wirtschaft wird zu einem Spiel der Ideen.",
+       "Tauschhandel, Schenkökonomie, freiwilliger Handel, digitale Anerkennungssysteme: Der neue Reichtum heißt Kreativität, Sinn und Gemeinschaft."],
+      ["❤️ Gesundheit als unantastbares Grundrecht",
+       "Im adelschen Königreich ist Gesundheit kein Luxus und keine Ware. Medizin ist frei. Therapien sind offen. Hilfe ist selbstverständlich.",
+       "Körperliche und seelische Heilung werden umfassend verstanden und gefördert. Jeder Mensch verdient ein gesundes Leben – einfach, weil er existiert."],
+      ["🌳 Die Natur als Mitbewohnerin, nicht als Ressource",
+       "Technologie ersetzt Zerstörung. Energie kommt sauber. Nahrung wird erzeugt, nicht geerntet. Die Erde darf wieder atmen. Wälder kehren zurück. Tiere finden Raum.",
+       "Der Mensch wird Teil des Gleichgewichts – nicht sein Feind. Natur ist kein Werkzeug – sondern Schwester. Wir leben nicht auf ihr – wir leben mit ihr."],
+      ["🌍 Das Weltparlament der Vielen – eine neue Demokratie für alle",
+       "Im adelschen Königreich ist jeder Mensch Teil der Regierung. Keine Eliten. Keine Parteien. Keine Lobby. Ein digitales, faires System gibt jedem eine Stimme – und jede Stimme zählt gleich viel.",
+       "Vorschläge und Entscheidungen entstehen aus Schwarmintelligenz und kollektiver Debatte. Eine KI moderiert, gleicht aus, schützt Minderheiten und erkennt gemeinsame Wege."],
+      ["🔮 Bildung, Erkenntnis, Erleuchtung",
+       "Alle Schranken zum Wissen fallen. Jeder Mensch hat Zugang zu allem, was je gedacht, entdeckt, erschaffen wurde. Bildung ist nicht mehr Mittel zum Zweck – sondern Lebensrecht.",
+       "Du lernst, weil du willst. Nicht, weil du musst. Der neue Mensch ist kein Werkzeug mehr – sondern ein Schöpfer."],
+      ["👑 Warum Bürger werden?",
+       "Weil du fühlst, dass mehr möglich ist. Weil du weißt, dass diese Welt nicht das Ende sein muss. Weil du Teil von etwas sein willst, das nicht verwaltet – sondern verwandelt.",
+       "Das adelsche Königreich ist kein Staat. Es ist ein Versprechen. An die Zukunft. An das Leben. An dich."]
+    ]
+  }
+};function toggleMenu() { document.getElementById('menu').classList.toggle('active'); } function setLanguage(lang) { localStorage.setItem('lang', lang); render(lang); } function render(lang) { const t = translations[lang] || translations['de']; document.getElementById('language-picker').value = lang; document.getElementById('vision-title').innerText = t.title; const content = document.getElementById('vision-content'); content.innerHTML = ''; t.blocks.forEach(block => { const div = document.createElement('div'); div.className = 'vision-block'; div.setAttribute('data-aos', 'fade-up'); div.innerHTML = <h2><span class="icon">${block[0].split(' ')[0]}</span>${block[0].substring(2)}</h2> + block.slice(1).map(p => <p>${p}</p>).join(''); content.appendChild(div); }); } document.addEventListener('DOMContentLoaded', () => { const lang = localStorage.getItem('lang') || 'de'; render(lang); }); </script> </script>
 
 </body>
 </html>
+<!DOCTYPE html><html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vision des adelschen Königreichs</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body { margin: 0; padding: 0; background-color: #111; color: #f0f0f0; font-family: 'Segoe UI', sans-serif; }
+    .container { max-width: 960px; margin: 0 auto; padding: 2rem; }
+    .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 2rem; }
+    .vision-block { background-color: #1a1a1a; border-radius: 12px; box-shadow: 0 0 10px rgba(255,255,255,0.05); padding: 1.5rem; margin-bottom: 2rem; }
+    .vision-block h2 { font-size: 1.6rem; margin-bottom: 1rem; }
+    .vision-block p { line-height: 1.6; }
+    .icon { font-size: 1.8rem; margin-right: 0.5rem; }
+    .navbar { position: fixed; top: 0; right: 0; z-index: 999; padding: 1rem; }
+    .menu-toggle { cursor: pointer; width: 30px; height: 22px; display: flex; flex-direction: column; justify-content: space-between; }
+    .menu-toggle div { background: #d4af37; height: 4px; border-radius: 2px; }
+    .menu { position: fixed; top: 0; right: -100%; width: 50vw; height: 100vh; background: #0c0c0c; color: #f0e6d2; padding: 3rem 2rem; box-shadow: -2px 0 10px rgba(0,0,0,0.5); transition: right 0.4s ease-in-out; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 998; }
+    .menu.active { right: 0; }
+    .menu a { font-size: 1.5rem; color: #f0e6d2; text-decoration: none; margin: 1rem 0; }
+    .menu a:hover { color: #d4af37; }
+    .language-select { position: fixed; top: 1rem; left: 1rem; z-index: 1001; }
+    .language-select select { background-color: #0c0c0c; color: #f0e6d2; border: 1px solid #d4af37; padding: 0.4rem; border-radius: 0.5rem; font-size: 1rem; }
+  </style>
+</head>
+<body>
+<div class="language-select">
+  <select id="language-picker" onchange="setLanguage(this.value)">
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="en">🇬🇧 English</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="ar">🇸🇦 العربية</option>
+    <option value="pt">🇵🇹 Português</option>
+    <option value="vi">🇻🇳 Tiếng Việt</option>
+    <option value="zh">🇨🇳 中文</option>
+  </select>
+</div>
+<div class="navbar">
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+</div>
+<div class="menu" id="menu">
+  <a href="index.html">Ruf zur neuen Welt</a>
+  <a href="vision.html">Vision</a>
+  <a href="saeulen_des_Koenigreichs.html">Säulen des Königreichs</a>
+  <a href="gabe.html">Gabe</a>
+  <a href="kommentare.html">Stimme des Volkes</a>
+  <a href="audienzzimmer.html">Audienzzimmer</a>
+  <a href="raenge.html">Ränge</a>
+  <a href="impressum.html">Impressum</a>
+</div>
+<div class="container">
+  <h1 class="section-title" id="vision-title"></h1>
+  <div id="vision-content"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js">translations.en = {
+  title: "The Vision of the Noble Kingdom",
+  blocks: [
+    ["🌟 Freedom – not just a word, but reality",
+     "In the noble kingdom, freedom means more than voting or traveling. It means no fear of existence, no wage slavery, no dependency.",
+     "Thanks to replicator technology, everyone has access to food, water, energy, medicine, and housing – unconditionally. Work becomes vocation. Time belongs to you again.",
+     "Freedom means: You choose how to live."],
+    ["💼 Social rise through dignity and contribution",
+     "Here, what counts is not origin, wealth, or status – but your contribution to the community. Through ideas, compassion, art, or effort: those who give, grow. Those who inspire, are honored.",
+     "Titles, honors, and roles arise from service, not power. Everyone can rise. Everyone is seen."],
+    ["📈 An economy of abundance",
+     "Forget scarcity. Forget competition for the basics. Replicators free resources – for all. The economy becomes a game of ideas.",
+     "Barter, gift economy, voluntary trade, digital recognition systems: The new wealth is creativity, meaning, and community."],
+    ["❤️ Health as an inviolable right",
+     "In the noble kingdom, health is not a luxury or commodity. Medicine is free. Therapies are open. Help is natural.",
+     "Healing of body and soul is understood and supported holistically. Everyone deserves a healthy life – simply because they exist."],
+    ["🌳 Nature as a roommate, not a resource",
+     "Technology replaces destruction. Energy is clean. Food is produced, not harvested. The earth breathes again. Forests return. Animals find space.",
+     "Humans become part of balance – not its enemy. Nature is no tool – but sister. We live not on her – we live with her."],
+    ["🌍 The world parliament of the many – a new democracy for all",
+     "In the noble kingdom, every human is part of the government. No elites. No parties. No lobby. A digital, fair system gives everyone a voice – and every voice counts equally.",
+     "Proposals and decisions arise from collective intelligence. AI moderates, balances, protects minorities, and finds shared paths."],
+    ["🔮 Education, knowledge, enlightenment",
+     "All barriers to knowledge fall. Everyone has access to everything ever thought, discovered, or created. Education is no longer a means – it is a right.",
+     "You learn because you want to. Not because you must. The new human is no tool – but a creator."],
+    ["👑 Why become a citizen?",
+     "Because you feel more is possible. Because you know this world is not the end. Because you want to be part of something that transforms, not governs.",
+     "The noble kingdom is no state. It is a promise. To the future. To life. To you."]
+  ]
+};
+</script>
+<script>AOS.init();</script>
+<script>
+const translations = {
+  de: {
+    title: "Die Vision des adelschen Königreichs",
+    blocks: [
+      ["🌟 Freiheit – nicht mehr nur ein Wort, sondern Realität",
+       "Im adelschen Königreich bedeutet Freiheit mehr als Wahlrecht oder Reisefreiheit. Freiheit heißt: Keine Existenzangst. Keine Lohnsklaverei. Keine Abhängigkeit.",
+       "Dank Replikatoren-Technologie hat jeder Mensch Zugang zu Nahrung, Wasser, Energie, Medizin und Wohnraum – bedingungslos. Arbeit wird zur Berufung. Zeit gehört wieder dir.",
+       "Freiheit heißt: Du entscheidest, wie du leben willst."],
+      ["💼 Gesellschaftlicher Aufstieg durch Würde und Beitrag",
+       "Hier zählt nicht Herkunft, Reichtum oder Status – sondern dein Beitrag zur Gemeinschaft. Ob durch Ideen, Mitgefühl, Kunst oder Einsatz: Wer gibt, wächst. Wer inspiriert, wird geehrt.",
+       "Titel, Ehren, Rollen entstehen aus Leistung, nicht aus Macht. Jeder Mensch kann aufsteigen. Jeder Mensch wird gesehen."],
+      ["📈 Eine Wirtschaft des Überflusses",
+       "Vergiss Knappheit. Vergiss Konkurrenz um das Nötigste. Replikatoren machen Ressourcen frei – für alle. Wirtschaft wird zu einem Spiel der Ideen.",
+       "Tauschhandel, Schenkökonomie, freiwilliger Handel, digitale Anerkennungssysteme: Der neue Reichtum heißt Kreativität, Sinn und Gemeinschaft."],
+      ["❤️ Gesundheit als unantastbares Grundrecht",
+       "Im adelschen Königreich ist Gesundheit kein Luxus und keine Ware. Medizin ist frei. Therapien sind offen. Hilfe ist selbstverständlich.",
+       "Körperliche und seelische Heilung werden umfassend verstanden und gefördert. Jeder Mensch verdient ein gesundes Leben – einfach, weil er existiert."],
+      ["🌳 Die Natur als Mitbewohnerin, nicht als Ressource",
+       "Technologie ersetzt Zerstörung. Energie kommt sauber. Nahrung wird erzeugt, nicht geerntet. Die Erde darf wieder atmen. Wälder kehren zurück. Tiere finden Raum.",
+       "Der Mensch wird Teil des Gleichgewichts – nicht sein Feind. Natur ist kein Werkzeug – sondern Schwester. Wir leben nicht auf ihr – wir leben mit ihr."],
+      ["🌍 Das Weltparlament der Vielen – eine neue Demokratie für alle",
+       "Im adelschen Königreich ist jeder Mensch Teil der Regierung. Keine Eliten. Keine Parteien. Keine Lobby. Ein digitales, faires System gibt jedem eine Stimme – und jede Stimme zählt gleich viel.",
+       "Vorschläge und Entscheidungen entstehen aus Schwarmintelligenz und kollektiver Debatte. Eine KI moderiert, gleicht aus, schützt Minderheiten und erkennt gemeinsame Wege."],
+      ["🔮 Bildung, Erkenntnis, Erleuchtung",
+       "Alle Schranken zum Wissen fallen. Jeder Mensch hat Zugang zu allem, was je gedacht, entdeckt, erschaffen wurde. Bildung ist nicht mehr Mittel zum Zweck – sondern Lebensrecht.",
+       "Du lernst, weil du willst. Nicht, weil du musst. Der neue Mensch ist kein Werkzeug mehr – sondern ein Schöpfer."],
+      ["👑 Warum Bürger werden?",
+       "Weil du fühlst, dass mehr möglich ist. Weil du weißt, dass diese Welt nicht das Ende sein muss. Weil du Teil von etwas sein willst, das nicht verwaltet – sondern verwandelt.",
+       "Das adelsche Königreich ist kein Staat. Es ist ein Versprechen. An die Zukunft. An das Leben. An dich."]
+    ]
+  }
+};function toggleMenu() { document.getElementById('menu').classList.toggle('active'); } function setLanguage(lang) { localStorage.setItem('lang', lang); render(lang); } function render(lang) { const t = translations[lang] || translations['de']; document.getElementById('language-picker').value = lang; document.getElementById('vision-title').innerText = t.title; const content = document.getElementById('vision-content'); content.innerHTML = ''; t.blocks.forEach(block => { const div = document.createElement('div'); div.className = 'vision-block'; div.setAttribute('data-aos', 'fade-up'); div.innerHTML = <h2><span class="icon">${block[0].split(' ')[0]}</span>${block[0].substring(2)}</h2> + block.slice(1).map(p => <p>${p}</p>).join(''); content.appendChild(div); }); } document.addEventListener('DOMContentLoaded', () => { const lang = localStorage.getItem('lang') || 'de'; render(lang); }); </script> </script>
+
+</body>
+</html>
+<!DOCTYPE html><html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vision des adelschen Königreichs</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body { margin: 0; padding: 0; background-color: #111; color: #f0f0f0; font-family: 'Segoe UI', sans-serif; }
+    .container { max-width: 960px; margin: 0 auto; padding: 2rem; }
+    .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 2rem; }
+    .vision-block { background-color: #1a1a1a; border-radius: 12px; box-shadow: 0 0 10px rgba(255,255,255,0.05); padding: 1.5rem; margin-bottom: 2rem; }
+    .vision-block h2 { font-size: 1.6rem; margin-bottom: 1rem; }
+    .vision-block p { line-height: 1.6; }
+    .icon { font-size: 1.8rem; margin-right: 0.5rem; }
+    .navbar { position: fixed; top: 0; right: 0; z-index: 999; padding: 1rem; }
+    .menu-toggle { cursor: pointer; width: 30px; height: 22px; display: flex; flex-direction: column; justify-content: space-between; }
+    .menu-toggle div { background: #d4af37; height: 4px; border-radius: 2px; }
+    .menu { position: fixed; top: 0; right: -100%; width: 50vw; height: 100vh; background: #0c0c0c; color: #f0e6d2; padding: 3rem 2rem; box-shadow: -2px 0 10px rgba(0,0,0,0.5); transition: right 0.4s ease-in-out; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 998; }
+    .menu.active { right: 0; }
+    .menu a { font-size: 1.5rem; color: #f0e6d2; text-decoration: none; margin: 1rem 0; }
+    .menu a:hover { color: #d4af37; }
+    .language-select { position: fixed; top: 1rem; left: 1rem; z-index: 1001; }
+    .language-select select { background-color: #0c0c0c; color: #f0e6d2; border: 1px solid #d4af37; padding: 0.4rem; border-radius: 0.5rem; font-size: 1rem; }
+  </style>
+</head>
+<body>
+<div class="language-select">
+  <select id="language-picker" onchange="setLanguage(this.value)">
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="en">🇬🇧 English</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="ar">🇸🇦 العربية</option>
+    <option value="pt">🇵🇹 Português</option>
+    <option value="vi">🇻🇳 Tiếng Việt</option>
+    <option value="zh">🇨🇳 中文</option>
+  </select>
+</div>
+<div class="navbar">
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+</div>
+<div class="menu" id="menu">
+  <a href="index.html">Ruf zur neuen Welt</a>
+  <a href="vision.html">Vision</a>
+  <a href="saeulen_des_Koenigreichs.html">Säulen des Königreichs</a>
+  <a href="gabe.html">Gabe</a>
+  <a href="kommentare.html">Stimme des Volkes</a>
+  <a href="audienzzimmer.html">Audienzzimmer</a>
+  <a href="raenge.html">Ränge</a>
+  <a href="impressum.html">Impressum</a>
+</div>
+<div class="container">
+  <h1 class="section-title" id="vision-title"></h1>
+  <div id="vision-content"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js">translations.en = {
+  title: "The Vision of the Noble Kingdom",
+  blocks: [
+    ["🌟 Freedom – not just a word, but reality",
+     "In the noble kingdom, freedom means more than voting or traveling. It means no fear of existence, no wage slavery, no dependency.",
+     "Thanks to replicator technology, everyone has access to food, water, energy, medicine, and housing – unconditionally. Work becomes vocation. Time belongs to you again.",
+     "Freedom means: You choose how to live."],
+    ["💼 Social rise through dignity and contribution",
+     "Here, what counts is not origin, wealth, or status – but your contribution to the community. Through ideas, compassion, art, or effort: those who give, grow. Those who inspire, are honored.",
+     "Titles, honors, and roles arise from service, not power. Everyone can rise. Everyone is seen."],
+    ["📈 An economy of abundance",
+     "Forget scarcity. Forget competition for the basics. Replicators free resources – for all. The economy becomes a game of ideas.",
+     "Barter, gift economy, voluntary trade, digital recognition systems: The new wealth is creativity, meaning, and community."],
+    ["❤️ Health as an inviolable right",
+     "In the noble kingdom, health is not a luxury or commodity. Medicine is free. Therapies are open. Help is natural.",
+     "Healing of body and soul is understood and supported holistically. Everyone deserves a healthy life – simply because they exist."],
+    ["🌳 Nature as a roommate, not a resource",
+     "Technology replaces destruction. Energy is clean. Food is produced, not harvested. The earth breathes again. Forests return. Animals find space.",
+     "Humans become part of balance – not its enemy. Nature is no tool – but sister. We live not on her – we live with her."],
+    ["🌍 The world parliament of the many – a new democracy for all",
+     "In the noble kingdom, every human is part of the government. No elites. No parties. No lobby. A digital, fair system gives everyone a voice – and every voice counts equally.",
+     "Proposals and decisions arise from collective intelligence. AI moderates, balances, protects minorities, and finds shared paths."],
+    ["🔮 Education, knowledge, enlightenment",
+     "All barriers to knowledge fall. Everyone has access to everything ever thought, discovered, or created. Education is no longer a means – it is a right.",
+     "You learn because you want to. Not because you must. The new human is no tool – but a creator."],
+    ["👑 Why become a citizen?",
+     "Because you feel more is possible. Because you know this world is not the end. Because you want to be part of something that transforms, not governs.",
+     "The noble kingdom is no state. It is a promise. To the future. To life. To you."]
+  ]
+};
+translations.fr = {
+  title: "La vision du royaume noble",
+  blocks: [
+    ["🌟 Liberté – plus qu'un mot, une réalité",
+     "Dans le royaume noble, la liberté signifie plus que le droit de vote ou de voyager. C’est l’absence de peur, de servitude salariale, de dépendance.",
+     "Grâce aux réplicateurs, chacun a accès à la nourriture, à l’eau, à l’énergie, aux soins et au logement – inconditionnellement. Le travail devient vocation. Le temps t’appartient.",
+     "La liberté, c’est décider comment vivre."],
+    ["💼 Ascension sociale par la dignité et la contribution",
+     "Ici, ce n’est ni l’origine, ni la richesse, ni le statut qui comptent – mais ta contribution. Idées, compassion, art, engagement : celui qui donne, grandit. Celui qui inspire, est honoré.",
+     "Les titres et rôles naissent du mérite, non du pouvoir. Chacun peut s’élever. Chacun est vu."],
+    ["📈 Une économie de l’abondance",
+     "Oublie la rareté. Oublie la compétition. Les réplicateurs libèrent les ressources pour tous. L’économie devient un jeu d’idées.",
+     "Échange, don, commerce volontaire, reconnaissance numérique : la vraie richesse, c’est la créativité, le sens, la communauté."],
+    ["❤️ La santé comme droit fondamental",
+     "Dans le royaume noble, la santé n’est ni luxe ni marchandise. Les soins sont libres. Les thérapies accessibles. L’aide est évidente.",
+     "La guérison physique et mentale est comprise et soutenue. Chacun mérite une vie saine – parce qu’il existe."],
+    ["🌳 La nature comme colocataire, pas comme ressource",
+     "La technologie remplace la destruction. L’énergie est propre. La nourriture produite, pas extraite. La Terre respire. Les forêts reviennent. Les animaux trouvent leur place.",
+     "L’humain devient partie de l’équilibre – non son ennemi. La nature est sœur, pas outil. On vit avec elle, pas dessus elle."],
+    ["🌍 Le parlement mondial des peuples",
+     "Ici, chacun gouverne. Pas d’élites. Pas de partis. Pas de lobby. Un système numérique équitable donne à tous une voix égale.",
+     "Les décisions naissent de l’intelligence collective. Une IA modère, équilibre, protège les minorités et éclaire les voies communes."],
+    ["🔮 Éducation, savoir, illumination",
+     "Plus de barrières. Tout savoir devient accessible. L’éducation n’est plus un moyen – c’est un droit.",
+     "Tu apprends parce que tu veux. L’humain nouveau n’est plus un outil – mais un créateur."],
+    ["👑 Pourquoi devenir citoyen ?",
+     "Parce que tu ressens qu’un autre monde est possible. Parce que tu veux faire partie de la transformation.",
+     "Le royaume noble n’est pas un État. C’est une promesse. À la vie. À toi."]
+  ]
+};translations.es = { title: "La visión del Reino Noble", blocks: [ ["🌟 Libertad: no solo una palabra, sino una realidad", "En el Reino Noble, la libertad va más allá del voto o el viaje. Significa no temer por la existencia, sin esclavitud laboral ni dependencia.", "Gracias a los replicadores, todos tienen acceso a comida, agua, energía, medicina y vivienda, sin condiciones. El trabajo se convierte en vocación. El tiempo vuelve a ser tuyo.", "Libertad significa: Tú decides cómo vivir."], ["💼 Ascenso social por dignidad y contribución", "Aquí no importa el origen, la riqueza o el estatus, sino tu aporte a la comunidad. Con ideas, compasión, arte o esfuerzo: quien da, crece. Quien inspira, es honrado.", "Títulos y roles surgen del mérito, no del poder. Todos pueden avanzar. Todos son vistos."], ["📈 Una economía de abundancia", "Olvida la escasez. Olvida la competencia. Los replicadores liberan recursos para todos. La economía se vuelve un juego de ideas.", "Trueque, economía del regalo, comercio voluntario, reconocimiento digital: la nueva riqueza es creatividad, sentido y comunidad."], ["❤️ Salud como derecho inviolable", "En el Reino Noble, la salud no es lujo ni mercancía. La medicina es gratuita. Las terapias son accesibles. La ayuda es natural.", "La sanación del cuerpo y la mente se entiende y apoya integralmente. Todos merecen una vida saludable – por existir."], ["🌳 La naturaleza como compañera, no como recurso", "La tecnología reemplaza la destrucción. La energía es limpia. La comida se crea, no se cosecha. La Tierra respira. Los bosques vuelven. Los animales tienen su espacio.", "El ser humano forma parte del equilibrio – no su enemigo. La naturaleza no es herramienta – es hermana. Vivimos con ella, no sobre ella."], ["🌍 El parlamento mundial de los muchos", "Aquí todos gobiernan. Sin élites, sin partidos, sin lobby. Un sistema digital justo da voz igual a todos.", "Las decisiones nacen de la inteligencia colectiva. Una IA modera, equilibra, protege a las minorías y reconoce caminos comunes."], ["🔮 Educación, conocimiento, iluminación", "Sin barreras al saber. Todo conocimiento es accesible. La educación ya no es medio – es derecho.", "Aprendes porque quieres. El nuevo humano no es herramienta – es creador."], ["👑 ¿Por qué convertirse en ciudadano?", "Porque sabes que hay algo más. Porque quieres formar parte del cambio.", "El Reino Noble no es un estado. Es una promesa. A la vida. A ti."] ] }; </script>
+
+<script>AOS.init();</script><script>
+const translations = {
+  de: {
+    title: "Die Vision des adelschen Königreichs",
+    blocks: [
+      ["🌟 Freiheit – nicht mehr nur ein Wort, sondern Realität",
+       "Im adelschen Königreich bedeutet Freiheit mehr als Wahlrecht oder Reisefreiheit. Freiheit heißt: Keine Existenzangst. Keine Lohnsklaverei. Keine Abhängigkeit.",
+       "Dank Replikatoren-Technologie hat jeder Mensch Zugang zu Nahrung, Wasser, Energie, Medizin und Wohnraum – bedingungslos. Arbeit wird zur Berufung. Zeit gehört wieder dir.",
+       "Freiheit heißt: Du entscheidest, wie du leben willst."],
+      ["💼 Gesellschaftlicher Aufstieg durch Würde und Beitrag",
+       "Hier zählt nicht Herkunft, Reichtum oder Status – sondern dein Beitrag zur Gemeinschaft. Ob durch Ideen, Mitgefühl, Kunst oder Einsatz: Wer gibt, wächst. Wer inspiriert, wird geehrt.",
+       "Titel, Ehren, Rollen entstehen aus Leistung, nicht aus Macht. Jeder Mensch kann aufsteigen. Jeder Mensch wird gesehen."],
+      ["📈 Eine Wirtschaft des Überflusses",
+       "Vergiss Knappheit. Vergiss Konkurrenz um das Nötigste. Replikatoren machen Ressourcen frei – für alle. Wirtschaft wird zu einem Spiel der Ideen.",
+       "Tauschhandel, Schenkökonomie, freiwilliger Handel, digitale Anerkennungssysteme: Der neue Reichtum heißt Kreativität, Sinn und Gemeinschaft."],
+      ["❤️ Gesundheit als unantastbares Grundrecht",
+       "Im adelschen Königreich ist Gesundheit kein Luxus und keine Ware. Medizin ist frei. Therapien sind offen. Hilfe ist selbstverständlich.",
+       "Körperliche und seelische Heilung werden umfassend verstanden und gefördert. Jeder Mensch verdient ein gesundes Leben – einfach, weil er existiert."],
+      ["🌳 Die Natur als Mitbewohnerin, nicht als Ressource",
+       "Technologie ersetzt Zerstörung. Energie kommt sauber. Nahrung wird erzeugt, nicht geerntet. Die Erde darf wieder atmen. Wälder kehren zurück. Tiere finden Raum.",
+       "Der Mensch wird Teil des Gleichgewichts – nicht sein Feind. Natur ist kein Werkzeug – sondern Schwester. Wir leben nicht auf ihr – wir leben mit ihr."],
+      ["🌍 Das Weltparlament der Vielen – eine neue Demokratie für alle",
+       "Im adelschen Königreich ist jeder Mensch Teil der Regierung. Keine Eliten. Keine Parteien. Keine Lobby. Ein digitales, faires System gibt jedem eine Stimme – und jede Stimme zählt gleich viel.",
+       "Vorschläge und Entscheidungen entstehen aus Schwarmintelligenz und kollektiver Debatte. Eine KI moderiert, gleicht aus, schützt Minderheiten und erkennt gemeinsame Wege."],
+      ["🔮 Bildung, Erkenntnis, Erleuchtung",
+       "Alle Schranken zum Wissen fallen. Jeder Mensch hat Zugang zu allem, was je gedacht, entdeckt, erschaffen wurde. Bildung ist nicht mehr Mittel zum Zweck – sondern Lebensrecht.",
+       "Du lernst, weil du willst. Nicht, weil du musst. Der neue Mensch ist kein Werkzeug mehr – sondern ein Schöpfer."],
+      ["👑 Warum Bürger werden?",
+       "Weil du fühlst, dass mehr möglich ist. Weil du weißt, dass diese Welt nicht das Ende sein muss. Weil du Teil von etwas sein willst, das nicht verwaltet – sondern verwandelt.",
+       "Das adelsche Königreich ist kein Staat. Es ist ein Versprechen. An die Zukunft. An das Leben. An dich."]
+    ]
+  }
+};
+
+function toggleMenu() {
+  document.getElementById('menu').classList.toggle('active');
+}
+function setLanguage(lang) {
+  localStorage.setItem('lang', lang);
+  render(lang);
+}
+function render(lang) {
+  const t = translations[lang] || translations['de'];
+  document.getElementById('language-picker').value = lang;
+  document.getElementById('vision-title').innerText = t.title;
+  const content = document.getElementById('vision-content');
+  content.innerHTML = '';
+  t.blocks.forEach(block => {
+    const div = document.createElement('div');
+    div.className = 'vision-block';
+    div.setAttribute('data-aos', 'fade-up');
+    div.innerHTML = `<h2><span class="icon">${block[0].split(' ')[0]}</span>${block[0].substring(2)}</h2>` +
+      block.slice(1).map(p => `<p>${p}</p>`).join('');
+    content.appendChild(div);
+  });
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const lang = localStorage.getItem('lang') || 'de';
+  render(lang);
+});
+</script></script>
+</body>
+</html>
+<!DOCTYPE html><html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vision des adelschen Königreichs</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body { margin: 0; padding: 0; background-color: #111; color: #f0f0f0; font-family: 'Segoe UI', sans-serif; }
+    .container { max-width: 960px; margin: 0 auto; padding: 2rem; }
+    .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 2rem; }
+    .vision-block { background-color: #1a1a1a; border-radius: 12px; box-shadow: 0 0 10px rgba(255,255,255,0.05); padding: 1.5rem; margin-bottom: 2rem; }
+    .vision-block h2 { font-size: 1.6rem; margin-bottom: 1rem; }
+    .vision-block p { line-height: 1.6; }
+    .icon { font-size: 1.8rem; margin-right: 0.5rem; }
+    .navbar { position: fixed; top: 0; right: 0; z-index: 999; padding: 1rem; }
+    .menu-toggle { cursor: pointer; width: 30px; height: 22px; display: flex; flex-direction: column; justify-content: space-between; }
+    .menu-toggle div { background: #d4af37; height: 4px; border-radius: 2px; }
+    .menu { position: fixed; top: 0; right: -100%; width: 50vw; height: 100vh; background: #0c0c0c; color: #f0e6d2; padding: 3rem 2rem; box-shadow: -2px 0 10px rgba(0,0,0,0.5); transition: right 0.4s ease-in-out; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 998; }
+    .menu.active { right: 0; }
+    .menu a { font-size: 1.5rem; color: #f0e6d2; text-decoration: none; margin: 1rem 0; }
+    .menu a:hover { color: #d4af37; }
+    .language-select { position: fixed; top: 1rem; left: 1rem; z-index: 1001; }
+    .language-select select { background-color: #0c0c0c; color: #f0e6d2; border: 1px solid #d4af37; padding: 0.4rem; border-radius: 0.5rem; font-size: 1rem; }
+  </style>
+</head>
+<body>
+<div class="language-select">
+  <select id="language-picker" onchange="setLanguage(this.value)">
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="en">🇬🇧 English</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="ar">🇸🇦 العربية</option>
+    <option value="pt">🇵🇹 Português</option>
+    <option value="vi">🇻🇳 Tiếng Việt</option>
+    <option value="zh">🇨🇳 中文</option>
+  </select>
+</div>
+<div class="navbar">
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+</div>
+<div class="menu" id="menu">
+  <a href="index.html">Ruf zur neuen Welt</a>
+  <a href="vision.html">Vision</a>
+  <a href="saeulen_des_Koenigreichs.html">Säulen des Königreichs</a>
+  <a href="gabe.html">Gabe</a>
+  <a href="kommentare.html">Stimme des Volkes</a>
+  <a href="audienzzimmer.html">Audienzzimmer</a>
+  <a href="raenge.html">Ränge</a>
+  <a href="impressum.html">Impressum</a>
+</div>
+<div class="container">
+  <h1 class="section-title" id="vision-title"></h1>
+  <div id="vision-content"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js">translations.en = {
+  title: "The Vision of the Noble Kingdom",
+  blocks: [
+    ["🌟 Freedom – not just a word, but reality",
+     "In the noble kingdom, freedom means more than voting or traveling. It means no fear of existence, no wage slavery, no dependency.",
+     "Thanks to replicator technology, everyone has access to food, water, energy, medicine, and housing – unconditionally. Work becomes vocation. Time belongs to you again.",
+     "Freedom means: You choose how to live."],
+    ["💼 Social rise through dignity and contribution",
+     "Here, what counts is not origin, wealth, or status – but your contribution to the community. Through ideas, compassion, art, or effort: those who give, grow. Those who inspire, are honored.",
+     "Titles, honors, and roles arise from service, not power. Everyone can rise. Everyone is seen."],
+    ["📈 An economy of abundance",
+     "Forget scarcity. Forget competition for the basics. Replicators free resources – for all. The economy becomes a game of ideas.",
+     "Barter, gift economy, voluntary trade, digital recognition systems: The new wealth is creativity, meaning, and community."],
+    ["❤️ Health as an inviolable right",
+     "In the noble kingdom, health is not a luxury or commodity. Medicine is free. Therapies are open. Help is natural.",
+     "Healing of body and soul is understood and supported holistically. Everyone deserves a healthy life – simply because they exist."],
+    ["🌳 Nature as a roommate, not a resource",
+     "Technology replaces destruction. Energy is clean. Food is produced, not harvested. The earth breathes again. Forests return. Animals find space.",
+     "Humans become part of balance – not its enemy. Nature is no tool – but sister. We live not on her – we live with her."],
+    ["🌍 The world parliament of the many – a new democracy for all",
+     "In the noble kingdom, every human is part of the government. No elites. No parties. No lobby. A digital, fair system gives everyone a voice – and every voice counts equally.",
+     "Proposals and decisions arise from collective intelligence. AI moderates, balances, protects minorities, and finds shared paths."],
+    ["🔮 Education, knowledge, enlightenment",
+     "All barriers to knowledge fall. Everyone has access to everything ever thought, discovered, or created. Education is no longer a means – it is a right.",
+     "You learn because you want to. Not because you must. The new human is no tool – but a creator."],
+    ["👑 Why become a citizen?",
+     "Because you feel more is possible. Because you know this world is not the end. Because you want to be part of something that transforms, not governs.",
+     "The noble kingdom is no state. It is a promise. To the future. To life. To you."]
+  ]
+};
+translations.fr = {
+  title: "La vision du royaume noble",
+  blocks: [
+    ["🌟 Liberté – plus qu'un mot, une réalité",
+     "Dans le royaume noble, la liberté signifie plus que le droit de vote ou de voyager. C’est l’absence de peur, de servitude salariale, de dépendance.",
+     "Grâce aux réplicateurs, chacun a accès à la nourriture, à l’eau, à l’énergie, aux soins et au logement – inconditionnellement. Le travail devient vocation. Le temps t’appartient.",
+     "La liberté, c’est décider comment vivre."],
+    ["💼 Ascension sociale par la dignité et la contribution",
+     "Ici, ce n’est ni l’origine, ni la richesse, ni le statut qui comptent – mais ta contribution. Idées, compassion, art, engagement : celui qui donne, grandit. Celui qui inspire, est honoré.",
+     "Les titres et rôles naissent du mérite, non du pouvoir. Chacun peut s’élever. Chacun est vu."],
+    ["📈 Une économie de l’abondance",
+     "Oublie la rareté. Oublie la compétition. Les réplicateurs libèrent les ressources pour tous. L’économie devient un jeu d’idées.",
+     "Échange, don, commerce volontaire, reconnaissance numérique : la vraie richesse, c’est la créativité, le sens, la communauté."],
+    ["❤️ La santé comme droit fondamental",
+     "Dans le royaume noble, la santé n’est ni luxe ni marchandise. Les soins sont libres. Les thérapies accessibles. L’aide est évidente.",
+     "La guérison physique et mentale est comprise et soutenue. Chacun mérite une vie saine – parce qu’il existe."],
+    ["🌳 La nature comme colocataire, pas comme ressource",
+     "La technologie remplace la destruction. L’énergie est propre. La nourriture produite, pas extraite. La Terre respire. Les forêts reviennent. Les animaux trouvent leur place.",
+     "L’humain devient partie de l’équilibre – non son ennemi. La nature est sœur, pas outil. On vit avec elle, pas dessus elle."],
+    ["🌍 Le parlement mondial des peuples",
+     "Ici, chacun gouverne. Pas d’élites. Pas de partis. Pas de lobby. Un système numérique équitable donne à tous une voix égale.",
+     "Les décisions naissent de l’intelligence collective. Une IA modère, équilibre, protège les minorités et éclaire les voies communes."],
+    ["🔮 Éducation, savoir, illumination",
+     "Plus de barrières. Tout savoir devient accessible. L’éducation n’est plus un moyen – c’est un droit.",
+     "Tu apprends parce que tu veux. L’humain nouveau n’est plus un outil – mais un créateur."],
+    ["👑 Pourquoi devenir citoyen ?",
+     "Parce que tu ressens qu’un autre monde est possible. Parce que tu veux faire partie de la transformation.",
+     "Le royaume noble n’est pas un État. C’est une promesse. À la vie. À toi."]
+  ]
+};translations.es = { title: "La visión del Reino Noble", blocks: [ ["🌟 Libertad: no solo una palabra, sino una realidad", "En el Reino Noble, la libertad va más allá del voto o el viaje. Significa no temer por la existencia, sin esclavitud laboral ni dependencia.", "Gracias a los replicadores, todos tienen acceso a comida, agua, energía, medicina y vivienda, sin condiciones. El trabajo se convierte en vocación. El tiempo vuelve a ser tuyo.", "Libertad significa: Tú decides cómo vivir."], ["💼 Ascenso social por dignidad y contribución", "Aquí no importa el origen, la riqueza o el estatus, sino tu aporte a la comunidad. Con ideas, compasión, arte o esfuerzo: quien da, crece. Quien inspira, es honrado.", "Títulos y roles surgen del mérito, no del poder. Todos pueden avanzar. Todos son vistos."], ["📈 Una economía de abundancia", "Olvida la escasez. Olvida la competencia. Los replicadores liberan recursos para todos. La economía se vuelve un juego de ideas.", "Trueque, economía del regalo, comercio voluntario, reconocimiento digital: la nueva riqueza es creatividad, sentido y comunidad."], ["❤️ Salud como derecho inviolable", "En el Reino Noble, la salud no es lujo ni mercancía. La medicina es gratuita. Las terapias son accesibles. La ayuda es natural.", "La sanación del cuerpo y la mente se entiende y apoya integralmente. Todos merecen una vida saludable – por existir."], ["🌳 La naturaleza como compañera, no como recurso", "La tecnología reemplaza la destrucción. La energía es limpia. La comida se crea, no se cosecha. La Tierra respira. Los bosques vuelven. Los animales tienen su espacio.", "El ser humano forma parte del equilibrio – no su enemigo. La naturaleza no es herramienta – es hermana. Vivimos con ella, no sobre ella."], ["🌍 El parlamento mundial de los muchos", "Aquí todos gobiernan. Sin élites, sin partidos, sin lobby. Un sistema digital justo da voz igual a todos.", "Las decisiones nacen de la inteligencia colectiva. Una IA modera, equilibra, protege a las minorías y reconoce caminos comunes."], ["🔮 Educación, conocimiento, iluminación", "Sin barreras al saber. Todo conocimiento es accesible. La educación ya no es medio – es derecho.", "Aprendes porque quieres. El nuevo humano no es herramienta – es creador."], ["👑 ¿Por qué convertirse en ciudadano?", "Porque sabes que hay algo más. Porque quieres formar parte del cambio.", "El Reino Noble no es un estado. Es una promesa. A la vida. A ti."] ] }; translations.ar = { title: "رؤية المملكة النبيلة", blocks: [ ["🌟 الحرية - ليست مجرد كلمة، بل واقع", "في المملكة النبيلة، الحرية تعني أكثر من التصويت أو السفر. لا خوف من الوجود، لا عبودية عمل، لا تبعية.", "بفضل تقنية النسخ، يحصل الجميع على الطعام والماء والطاقة والدواء والمسكن - دون شروط.", "الحرية تعني: أنت من يقرر كيف يعيش."], ["💼 الارتقاء الاجتماعي من خلال الكرامة والعطاء", "هنا لا تُحسب الأصول أو الثروة أو المنصب، بل مساهمتك في المجتمع.", "الألقاب والمناصب تُكتسب بالخدمة، لا بالسلطة. الجميع يُرى. الجميع يرتقي."], ["📈 اقتصاد الوفرة", "انس النقص والمنافسة. النسّاخون يحررون الموارد للجميع. الاقتصاد يتحول إلى لعبة أفكار.", "التبادل، الهبة، التجارة الطوعية، أنظمة التقدير الرقمية: الثراء الجديد هو الإبداع والمعنى والمجتمع."], ["❤️ الصحة كحق مقدس", "الصحة ليست رفاهية أو سلعة. الطب مجاني. العلاج متاح. الدعم طبيعي.", "الشفاء الجسدي والنفسي متكامل. كل إنسان يستحق حياة صحية - فقط لأنه موجود."], ["🌳 الطبيعة كرفيقة، لا كمورد", "التقنية تحل محل الدمار. الطاقة نظيفة. الطعام يُنتج، لا يُحصد. الأرض تتنفس. الغابات تعود. الحيوانات تجد مكانها.", "الإنسان جزء من التوازن - لا عدوه. الطبيعة أخت، لا أداة."], ["🌍 برلمان الشعوب - ديمقراطية للجميع", "الجميع يحكم. لا نُخب، لا أحزاب، لا لوبي. النظام الرقمي العادل يعطي الجميع صوتاً متساوياً.", "الذكاء الجماعي يقرر. الذكاء الاصطناعي يوازن ويحمي ويكشف الطريق المشترك."], ["🔮 التعليم والمعرفة والاستنارة", "لا حواجز للعلم. كل ما اكتُشف وفُهم متاح. التعليم حق لا وسيلة.", "تتعلم لأنك تريد. الإنسان الجديد ليس أداة، بل خالق."], ["👑 لماذا تصبح مواطناً؟", "لأنك تشعر أن هناك ما هو ممكن. لأنك تعرف أن هذه ليست النهاية. لأنك تريد التغيير.", "المملكة النبيلة ليست دولة، بل وعد. للمستقبل. للحياة. لك."] ] };
+
+translations.pt = { title: "A visão do Reino Nobre", blocks: [ ["🌟 Liberdade – não apenas uma palavra, mas realidade", "No Reino Nobre, liberdade é mais do que votar ou viajar. Significa não ter medo da existência, nem escravidão salarial, nem dependência.", "Graças aos replicadores, todos têm acesso a comida, água, energia, medicina e moradia – incondicionalmente.", "Liberdade significa: Você decide como viver."], ["💼 Ascensão social com dignidade e contribuição", "Aqui conta sua contribuição – não riqueza, origem ou status.", "Títulos e funções vêm do mérito. Todos podem crescer. Todos são vistos."], ["📈 Uma economia da abundância", "Esqueça a escassez. Os replicadores liberam recursos para todos. A economia se torna um jogo de ideias.", "Troca, doação, comércio voluntário, reconhecimento digital: a nova riqueza é criatividade, propósito e comunidade."], ["❤️ Saúde como direito sagrado", "Saúde não é luxo nem mercadoria. Medicina é gratuita. Terapias são acessíveis. Apoio é natural.", "Cura física e mental é prioridade. Todos merecem uma vida saudável – só por existir."], ["🌳 A natureza como companheira, não recurso", "Tecnologia substitui destruição. Energia limpa. Alimento é gerado, não colhido. A Terra respira. Florestas voltam.", "O ser humano faz parte do equilíbrio. A natureza é irmã, não ferramenta."], ["🌍 Parlamento dos Povos", "Todos governam. Sem elites, partidos ou lobby. Sistema digital justo dá voz igual a todos.", "Inteligência coletiva decide. IA modera, protege e mostra caminhos comuns."], ["🔮 Educação, conhecimento, iluminação", "Sem barreiras ao saber. Tudo está acessível. Educação é direito.", "Você aprende porque quer. O novo ser humano é criador."], ["👑 Por que tornar-se cidadão?", "Porque sente que algo maior é possível. Porque quer transformar.", "O Reino Nobre é uma promessa. Para o futuro. Para a vida. Para você."] ] }; </script>
+
+<script>AOS.init();</script><script>
+const translations = {
+  de: {
+    title: "Die Vision des adelschen Königreichs",
+    blocks: [
+      ["🌟 Freiheit – nicht mehr nur ein Wort, sondern Realität",
+       "Im adelschen Königreich bedeutet Freiheit mehr als Wahlrecht oder Reisefreiheit. Freiheit heißt: Keine Existenzangst. Keine Lohnsklaverei. Keine Abhängigkeit.",
+       "Dank Replikatoren-Technologie hat jeder Mensch Zugang zu Nahrung, Wasser, Energie, Medizin und Wohnraum – bedingungslos. Arbeit wird zur Berufung. Zeit gehört wieder dir.",
+       "Freiheit heißt: Du entscheidest, wie du leben willst."],
+      ["💼 Gesellschaftlicher Aufstieg durch Würde und Beitrag",
+       "Hier zählt nicht Herkunft, Reichtum oder Status – sondern dein Beitrag zur Gemeinschaft. Ob durch Ideen, Mitgefühl, Kunst oder Einsatz: Wer gibt, wächst. Wer inspiriert, wird geehrt.",
+       "Titel, Ehren, Rollen entstehen aus Leistung, nicht aus Macht. Jeder Mensch kann aufsteigen. Jeder Mensch wird gesehen."],
+      ["📈 Eine Wirtschaft des Überflusses",
+       "Vergiss Knappheit. Vergiss Konkurrenz um das Nötigste. Replikatoren machen Ressourcen frei – für alle. Wirtschaft wird zu einem Spiel der Ideen.",
+       "Tauschhandel, Schenkökonomie, freiwilliger Handel, digitale Anerkennungssysteme: Der neue Reichtum heißt Kreativität, Sinn und Gemeinschaft."],
+      ["❤️ Gesundheit als unantastbares Grundrecht",
+       "Im adelschen Königreich ist Gesundheit kein Luxus und keine Ware. Medizin ist frei. Therapien sind offen. Hilfe ist selbstverständlich.",
+       "Körperliche und seelische Heilung werden umfassend verstanden und gefördert. Jeder Mensch verdient ein gesundes Leben – einfach, weil er existiert."],
+      ["🌳 Die Natur als Mitbewohnerin, nicht als Ressource",
+       "Technologie ersetzt Zerstörung. Energie kommt sauber. Nahrung wird erzeugt, nicht geerntet. Die Erde darf wieder atmen. Wälder kehren zurück. Tiere finden Raum.",
+       "Der Mensch wird Teil des Gleichgewichts – nicht sein Feind. Natur ist kein Werkzeug – sondern Schwester. Wir leben nicht auf ihr – wir leben mit ihr."],
+      ["🌍 Das Weltparlament der Vielen – eine neue Demokratie für alle",
+       "Im adelschen Königreich ist jeder Mensch Teil der Regierung. Keine Eliten. Keine Parteien. Keine Lobby. Ein digitales, faires System gibt jedem eine Stimme – und jede Stimme zählt gleich viel.",
+       "Vorschläge und Entscheidungen entstehen aus Schwarmintelligenz und kollektiver Debatte. Eine KI moderiert, gleicht aus, schützt Minderheiten und erkennt gemeinsame Wege."],
+      ["🔮 Bildung, Erkenntnis, Erleuchtung",
+       "Alle Schranken zum Wissen fallen. Jeder Mensch hat Zugang zu allem, was je gedacht, entdeckt, erschaffen wurde. Bildung ist nicht mehr Mittel zum Zweck – sondern Lebensrecht.",
+       "Du lernst, weil du willst. Nicht, weil du musst. Der neue Mensch ist kein Werkzeug mehr – sondern ein Schöpfer."],
+      ["👑 Warum Bürger werden?",
+       "Weil du fühlst, dass mehr möglich ist. Weil du weißt, dass diese Welt nicht das Ende sein muss. Weil du Teil von etwas sein willst, das nicht verwaltet – sondern verwandelt.",
+       "Das adelsche Königreich ist kein Staat. Es ist ein Versprechen. An die Zukunft. An das Leben. An dich."]
+    ]
+  }
+};
+
+function toggleMenu() {
+  document.getElementById('menu').classList.toggle('active');
+}
+function setLanguage(lang) {
+  localStorage.setItem('lang', lang);
+  render(lang);
+}
+function render(lang) {
+  const t = translations[lang] || translations['de'];
+  document.getElementById('language-picker').value = lang;
+  document.getElementById('vision-title').innerText = t.title;
+  const content = document.getElementById('vision-content');
+  content.innerHTML = '';
+  t.blocks.forEach(block => {
+    const div = document.createElement('div');
+    div.className = 'vision-block';
+    div.setAttribute('data-aos', 'fade-up');
+    div.innerHTML = `<h2><span class="icon">${block[0].split(' ')[0]}</span>${block[0].substring(2)}</h2>` +
+      block.slice(1).map(p => `<p>${p}</p>`).join('');
+    content.appendChild(div);
+  });
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const lang = localStorage.getItem('lang') || 'de';
+  render(lang);
+});
+</script></script>
+</body>
+</html>
+<!DOCTYPE html><html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vision des adelschen Königreichs</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body { margin: 0; padding: 0; background-color: #111; color: #f0f0f0; font-family: 'Segoe UI', sans-serif; }
+    .container { max-width: 960px; margin: 0 auto; padding: 2rem; }
+    .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 2rem; }
+    .vision-block { background-color: #1a1a1a; border-radius: 12px; box-shadow: 0 0 10px rgba(255,255,255,0.05); padding: 1.5rem; margin-bottom: 2rem; }
+    .vision-block h2 { font-size: 1.6rem; margin-bottom: 1rem; }
+    .vision-block p { line-height: 1.6; }
+    .icon { font-size: 1.8rem; margin-right: 0.5rem; }
+    .navbar { position: fixed; top: 0; right: 0; z-index: 999; padding: 1rem; }
+    .menu-toggle { cursor: pointer; width: 30px; height: 22px; display: flex; flex-direction: column; justify-content: space-between; }
+    .menu-toggle div { background: #d4af37; height: 4px; border-radius: 2px; }
+    .menu { position: fixed; top: 0; right: -100%; width: 50vw; height: 100vh; background: #0c0c0c; color: #f0e6d2; padding: 3rem 2rem; box-shadow: -2px 0 10px rgba(0,0,0,0.5); transition: right 0.4s ease-in-out; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 998; }
+    .menu.active { right: 0; }
+    .menu a { font-size: 1.5rem; color: #f0e6d2; text-decoration: none; margin: 1rem 0; }
+    .menu a:hover { color: #d4af37; }
+    .language-select { position: fixed; top: 1rem; left: 1rem; z-index: 1001; }
+    .language-select select { background-color: #0c0c0c; color: #f0e6d2; border: 1px solid #d4af37; padding: 0.4rem; border-radius: 0.5rem; font-size: 1rem; }
+  </style>
+</head>
+<body>
+<div class="language-select">
+  <select id="language-picker" onchange="setLanguage(this.value)">
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="en">🇬🇧 English</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="ar">🇸🇦 العربية</option>
+    <option value="pt">🇵🇹 Português</option>
+    <option value="vi">🇻🇳 Tiếng Việt</option>
+    <option value="zh">🇨🇳 中文</option>
+  </select>
+</div>
+<div class="navbar">
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+</div>
+<div class="menu" id="menu">
+  <a href="index.html">Ruf zur neuen Welt</a>
+  <a href="vision.html">Vision</a>
+  <a href="saeulen_des_Koenigreichs.html">Säulen des Königreichs</a>
+  <a href="gabe.html">Gabe</a>
+  <a href="kommentare.html">Stimme des Volkes</a>
+  <a href="audienzzimmer.html">Audienzzimmer</a>
+  <a href="raenge.html">Ränge</a>
+  <a href="impressum.html">Impressum</a>
+</div>
+<div class="container">
+  <h1 class="section-title" id="vision-title"></h1>
+  <div id="vision-content"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js">translations.en = {
+  title: "The Vision of the Noble Kingdom",
+  blocks: [
+    ["🌟 Freedom – not just a word, but reality",
+     "In the noble kingdom, freedom means more than voting or traveling. It means no fear of existence, no wage slavery, no dependency.",
+     "Thanks to replicator technology, everyone has access to food, water, energy, medicine, and housing – unconditionally. Work becomes vocation. Time belongs to you again.",
+     "Freedom means: You choose how to live."],
+    ["💼 Social rise through dignity and contribution",
+     "Here, what counts is not origin, wealth, or status – but your contribution to the community. Through ideas, compassion, art, or effort: those who give, grow. Those who inspire, are honored.",
+     "Titles, honors, and roles arise from service, not power. Everyone can rise. Everyone is seen."],
+    ["📈 An economy of abundance",
+     "Forget scarcity. Forget competition for the basics. Replicators free resources – for all. The economy becomes a game of ideas.",
+     "Barter, gift economy, voluntary trade, digital recognition systems: The new wealth is creativity, meaning, and community."],
+    ["❤️ Health as an inviolable right",
+     "In the noble kingdom, health is not a luxury or commodity. Medicine is free. Therapies are open. Help is natural.",
+     "Healing of body and soul is understood and supported holistically. Everyone deserves a healthy life – simply because they exist."],
+    ["🌳 Nature as a roommate, not a resource",
+     "Technology replaces destruction. Energy is clean. Food is produced, not harvested. The earth breathes again. Forests return. Animals find space.",
+     "Humans become part of balance – not its enemy. Nature is no tool – but sister. We live not on her – we live with her."],
+    ["🌍 The world parliament of the many – a new democracy for all",
+     "In the noble kingdom, every human is part of the government. No elites. No parties. No lobby. A digital, fair system gives everyone a voice – and every voice counts equally.",
+     "Proposals and decisions arise from collective intelligence. AI moderates, balances, protects minorities, and finds shared paths."],
+    ["🔮 Education, knowledge, enlightenment",
+     "All barriers to knowledge fall. Everyone has access to everything ever thought, discovered, or created. Education is no longer a means – it is a right.",
+     "You learn because you want to. Not because you must. The new human is no tool – but a creator."],
+    ["👑 Why become a citizen?",
+     "Because you feel more is possible. Because you know this world is not the end. Because you want to be part of something that transforms, not governs.",
+     "The noble kingdom is no state. It is a promise. To the future. To life. To you."]
+  ]
+};
+translations.fr = {
+  title: "La vision du royaume noble",
+  blocks: [
+    ["🌟 Liberté – plus qu'un mot, une réalité",
+     "Dans le royaume noble, la liberté signifie plus que le droit de vote ou de voyager. C’est l’absence de peur, de servitude salariale, de dépendance.",
+     "Grâce aux réplicateurs, chacun a accès à la nourriture, à l’eau, à l’énergie, aux soins et au logement – inconditionnellement. Le travail devient vocation. Le temps t’appartient.",
+     "La liberté, c’est décider comment vivre."],
+    ["💼 Ascension sociale par la dignité et la contribution",
+     "Ici, ce n’est ni l’origine, ni la richesse, ni le statut qui comptent – mais ta contribution. Idées, compassion, art, engagement : celui qui donne, grandit. Celui qui inspire, est honoré.",
+     "Les titres et rôles naissent du mérite, non du pouvoir. Chacun peut s’élever. Chacun est vu."],
+    ["📈 Une économie de l’abondance",
+     "Oublie la rareté. Oublie la compétition. Les réplicateurs libèrent les ressources pour tous. L’économie devient un jeu d’idées.",
+     "Échange, don, commerce volontaire, reconnaissance numérique : la vraie richesse, c’est la créativité, le sens, la communauté."],
+    ["❤️ La santé comme droit fondamental",
+     "Dans le royaume noble, la santé n’est ni luxe ni marchandise. Les soins sont libres. Les thérapies accessibles. L’aide est évidente.",
+     "La guérison physique et mentale est comprise et soutenue. Chacun mérite une vie saine – parce qu’il existe."],
+    ["🌳 La nature comme colocataire, pas comme ressource",
+     "La technologie remplace la destruction. L’énergie est propre. La nourriture produite, pas extraite. La Terre respire. Les forêts reviennent. Les animaux trouvent leur place.",
+     "L’humain devient partie de l’équilibre – non son ennemi. La nature est sœur, pas outil. On vit avec elle, pas dessus elle."],
+    ["🌍 Le parlement mondial des peuples",
+     "Ici, chacun gouverne. Pas d’élites. Pas de partis. Pas de lobby. Un système numérique équitable donne à tous une voix égale.",
+     "Les décisions naissent de l’intelligence collective. Une IA modère, équilibre, protège les minorités et éclaire les voies communes."],
+    ["🔮 Éducation, savoir, illumination",
+     "Plus de barrières. Tout savoir devient accessible. L’éducation n’est plus un moyen – c’est un droit.",
+     "Tu apprends parce que tu veux. L’humain nouveau n’est plus un outil – mais un créateur."],
+    ["👑 Pourquoi devenir citoyen ?",
+     "Parce que tu ressens qu’un autre monde est possible. Parce que tu veux faire partie de la transformation.",
+     "Le royaume noble n’est pas un État. C’est une promesse. À la vie. À toi."]
+  ]
+};translations.es = { title: "La visión del Reino Noble", blocks: [ ["🌟 Libertad: no solo una palabra, sino una realidad", "En el Reino Noble, la libertad va más allá del voto o el viaje. Significa no temer por la existencia, sin esclavitud laboral ni dependencia.", "Gracias a los replicadores, todos tienen acceso a comida, agua, energía, medicina y vivienda, sin condiciones. El trabajo se convierte en vocación. El tiempo vuelve a ser tuyo.", "Libertad significa: Tú decides cómo vivir."], ["💼 Ascenso social por dignidad y contribución", "Aquí no importa el origen, la riqueza o el estatus, sino tu aporte a la comunidad. Con ideas, compasión, arte o esfuerzo: quien da, crece. Quien inspira, es honrado.", "Títulos y roles surgen del mérito, no del poder. Todos pueden avanzar. Todos son vistos."], ["📈 Una economía de abundancia", "Olvida la escasez. Olvida la competencia. Los replicadores liberan recursos para todos. La economía se vuelve un juego de ideas.", "Trueque, economía del regalo, comercio voluntario, reconocimiento digital: la nueva riqueza es creatividad, sentido y comunidad."], ["❤️ Salud como derecho inviolable", "En el Reino Noble, la salud no es lujo ni mercancía. La medicina es gratuita. Las terapias son accesibles. La ayuda es natural.", "La sanación del cuerpo y la mente se entiende y apoya integralmente. Todos merecen una vida saludable – por existir."], ["🌳 La naturaleza como compañera, no como recurso", "La tecnología reemplaza la destrucción. La energía es limpia. La comida se crea, no se cosecha. La Tierra respira. Los bosques vuelven. Los animales tienen su espacio.", "El ser humano forma parte del equilibrio – no su enemigo. La naturaleza no es herramienta – es hermana. Vivimos con ella, no sobre ella."], ["🌍 El parlamento mundial de los muchos", "Aquí todos gobiernan. Sin élites, sin partidos, sin lobby. Un sistema digital justo da voz igual a todos.", "Las decisiones nacen de la inteligencia colectiva. Una IA modera, equilibra, protege a las minorías y reconoce caminos comunes."], ["🔮 Educación, conocimiento, iluminación", "Sin barreras al saber. Todo conocimiento es accesible. La educación ya no es medio – es derecho.", "Aprendes porque quieres. El nuevo humano no es herramienta – es creador."], ["👑 ¿Por qué convertirse en ciudadano?", "Porque sabes que hay algo más. Porque quieres formar parte del cambio.", "El Reino Noble no es un estado. Es una promesa. A la vida. A ti."] ] }; translations.ar = { title: "رؤية المملكة النبيلة", blocks: [ ["🌟 الحرية - ليست مجرد كلمة، بل واقع", "في المملكة النبيلة، الحرية تعني أكثر من التصويت أو السفر. لا خوف من الوجود، لا عبودية عمل، لا تبعية.", "بفضل تقنية النسخ، يحصل الجميع على الطعام والماء والطاقة والدواء والمسكن - دون شروط.", "الحرية تعني: أنت من يقرر كيف يعيش."], ["💼 الارتقاء الاجتماعي من خلال الكرامة والعطاء", "هنا لا تُحسب الأصول أو الثروة أو المنصب، بل مساهمتك في المجتمع.", "الألقاب والمناصب تُكتسب بالخدمة، لا بالسلطة. الجميع يُرى. الجميع يرتقي."], ["📈 اقتصاد الوفرة", "انس النقص والمنافسة. النسّاخون يحررون الموارد للجميع. الاقتصاد يتحول إلى لعبة أفكار.", "التبادل، الهبة، التجارة الطوعية، أنظمة التقدير الرقمية: الثراء الجديد هو الإبداع والمعنى والمجتمع."], ["❤️ الصحة كحق مقدس", "الصحة ليست رفاهية أو سلعة. الطب مجاني. العلاج متاح. الدعم طبيعي.", "الشفاء الجسدي والنفسي متكامل. كل إنسان يستحق حياة صحية - فقط لأنه موجود."], ["🌳 الطبيعة كرفيقة، لا كمورد", "التقنية تحل محل الدمار. الطاقة نظيفة. الطعام يُنتج، لا يُحصد. الأرض تتنفس. الغابات تعود. الحيوانات تجد مكانها.", "الإنسان جزء من التوازن - لا عدوه. الطبيعة أخت، لا أداة."], ["🌍 برلمان الشعوب - ديمقراطية للجميع", "الجميع يحكم. لا نُخب، لا أحزاب، لا لوبي. النظام الرقمي العادل يعطي الجميع صوتاً متساوياً.", "الذكاء الجماعي يقرر. الذكاء الاصطناعي يوازن ويحمي ويكشف الطريق المشترك."], ["🔮 التعليم والمعرفة والاستنارة", "لا حواجز للعلم. كل ما اكتُشف وفُهم متاح. التعليم حق لا وسيلة.", "تتعلم لأنك تريد. الإنسان الجديد ليس أداة، بل خالق."], ["👑 لماذا تصبح مواطناً؟", "لأنك تشعر أن هناك ما هو ممكن. لأنك تعرف أن هذه ليست النهاية. لأنك تريد التغيير.", "المملكة النبيلة ليست دولة، بل وعد. للمستقبل. للحياة. لك."] ] };
+
+translations.pt = { title: "A visão do Reino Nobre", blocks: [ ["🌟 Liberdade – não apenas uma palavra, mas realidade", "No Reino Nobre, liberdade é mais do que votar ou viajar. Significa não ter medo da existência, nem escravidão salarial, nem dependência.", "Graças aos replicadores, todos têm acesso a comida, água, energia, medicina e moradia – incondicionalmente.", "Liberdade significa: Você decide como viver."], ["💼 Ascensão social com dignidade e contribuição", "Aqui conta sua contribuição – não riqueza, origem ou status.", "Títulos e funções vêm do mérito. Todos podem crescer. Todos são vistos."], ["📈 Uma economia da abundância", "Esqueça a escassez. Os replicadores liberam recursos para todos. A economia se torna um jogo de ideias.", "Troca, doação, comércio voluntário, reconhecimento digital: a nova riqueza é criatividade, propósito e comunidade."], ["❤️ Saúde como direito sagrado", "Saúde não é luxo nem mercadoria. Medicina é gratuita. Terapias são acessíveis. Apoio é natural.", "Cura física e mental é prioridade. Todos merecem uma vida saudável – só por existir."], ["🌳 A natureza como companheira, não recurso", "Tecnologia substitui destruição. Energia limpa. Alimento é gerado, não colhido. A Terra respira. Florestas voltam.", "O ser humano faz parte do equilíbrio. A natureza é irmã, não ferramenta."], ["🌍 Parlamento dos Povos", "Todos governam. Sem elites, partidos ou lobby. Sistema digital justo dá voz igual a todos.", "Inteligência coletiva decide. IA modera, protege e mostra caminhos comuns."], ["🔮 Educação, conhecimento, iluminação", "Sem barreiras ao saber. Tudo está acessível. Educação é direito.", "Você aprende porque quer. O novo ser humano é criador."], ["👑 Por que tornar-se cidadão?", "Porque sente que algo maior é possível. Porque quer transformar.", "O Reino Nobre é uma promessa. Para o futuro. Para a vida. Para você."] ] }; translations.vi = { title: "Tầm nhìn của Vương quốc Cao quý", blocks: [ ["🌟 Tự do – không chỉ là lời nói, mà là thực tế", "Trong Vương quốc Cao quý, tự do có nghĩa là nhiều hơn quyền bầu cử hay du lịch. Nó có nghĩa là không còn sợ hãi về sự tồn tại, không còn nô lệ lao động, không còn phụ thuộc.", "Nhờ công nghệ tái tạo, mọi người đều có quyền truy cập vào thực phẩm, nước, năng lượng, thuốc men và nhà ở – không điều kiện. Công việc trở thành một nghề. Thời gian lại thuộc về bạn.", "Tự do có nghĩa là: Bạn quyết định cuộc sống của mình như thế nào."], ["💼 Thăng tiến xã hội qua phẩm giá và đóng góp", "Ở đây, không phải nguồn gốc, sự giàu có hay địa vị quan trọng – mà là đóng góp của bạn cho cộng đồng. Qua ý tưởng, lòng nhân ái, nghệ thuật hoặc sự cống hiến: ai cho đi sẽ lớn lên. Ai truyền cảm hứng, sẽ được vinh danh.", "Danh hiệu, chức vụ và vai trò phát sinh từ thành tích, không phải từ quyền lực. Mọi người đều có thể thăng tiến. Mọi người đều được nhìn thấy."], ["📈 Một nền kinh tế của sự thịnh vượng", "Quên đi sự khan hiếm. Quên đi sự cạnh tranh vì những thứ cần thiết. Công nghệ tái tạo giải phóng tài nguyên – cho tất cả. Nền kinh tế trở thành một trò chơi của ý tưởng.", "Trao đổi, kinh tế quà tặng, thương mại tự nguyện, hệ thống công nhận kỹ thuật số: sự giàu có mới là sáng tạo, ý nghĩa và cộng đồng."], ["❤️ Sức khỏe như một quyền bất khả xâm phạm", "Trong Vương quốc Cao quý, sức khỏe không phải là xa xỉ hay hàng hóa. Y tế miễn phí. Các liệu pháp mở. Giúp đỡ là điều tự nhiên.", "Chữa lành cơ thể và tâm hồn được hiểu và hỗ trợ một cách toàn diện. Mọi người đều xứng đáng có một cuộc sống khỏe mạnh – chỉ vì họ tồn tại."], ["🌳 Thiên nhiên như bạn đồng hành, không phải tài nguyên", "Công nghệ thay thế sự hủy diệt. Năng lượng là sạch. Thực phẩm được tạo ra, không phải thu hoạch. Trái đất lại được thở. Rừng quay lại. Động vật tìm thấy không gian.", "Con người trở thành một phần của sự cân bằng – không phải kẻ thù của nó. Thiên nhiên không phải công cụ – mà là chị em. Chúng ta không sống trên nó – chúng ta sống với nó."], ["🌍 Nghị viện thế giới của nhiều người", "Ở đây, mỗi con người là một phần của chính phủ. Không có tầng lớp thượng lưu. Không có đảng phái. Không có lobby. Một hệ thống kỹ thuật số công bằng cho mọi người một tiếng nói – và mỗi tiếng nói đều có giá trị như nhau.", "Đề xuất và quyết định phát sinh từ trí tuệ tập thể. AI điều hành, cân bằng, bảo vệ thiểu số và tìm ra con đường chung."] ] };
+
+translations.zh = { title: "高贵王国的愿景", blocks: [ ["🌟 自由 – 不仅仅是一个词，而是现实", "在高贵王国，自由意味着更多的是投票或旅行。它意味着不再有生存的恐惧，摆脱工资奴隶制，摆脱依赖。", "感谢复制技术，每个人都可以无条件地获得食物、水、能源、药物和住房。工作变成了使命。时间又回到了你手中。", "自由意味着：你选择如何生活。"], ["💼 通过尊严和贡献实现社会上升", "在这里，不是出身、财富或地位决定一切，而是你对社区的贡献。通过思想、同情、艺术或努力：给予的人会成长。激励他人的人将获得尊敬。", "头衔、荣誉、角色是基于成就而非权力而产生的。每个人都可以上升，每个人都会被看到。"], ["📈 富足经济", "忘记稀缺。忘记竞争最基本的东西。复制机为所有人释放资源。经济变成了思想的游戏。", "交换、赠送经济、志愿贸易、数字认可系统：新财富是创造力、意义和社区。"], ["❤️ 健康作为不可侵犯的权利", "在高贵王国，健康不是奢侈品，也不是商品。医学是免费的，治疗是开放的，帮助是理所当然的。", "身体和精神的治愈是全方位理解和支持的。每个人都应该拥有健康的生活——只是因为他们存在。"], ["🌳 自然是伙伴，而不是资源", "技术取代了破坏。能源是干净的。食物是创造的，而不是采集的。大地又重新呼吸。森林回归。动物找到了空间。", "人类成为平衡的一部分——而不是它的敌人。大自然不是工具，而是姐妹。我们不是生活在它上面，而是与它一起生活。"], ["🌍 世界议会：全民民主", "在高贵王国，每个人都是政府的一部分。没有精英，没有政党，没有游说团体。一个公平的数字系统给每个人一个声音——每个声音的价值相等。", "提案和决策源于集体智慧。人工智能调解、平衡、保护少数群体，找出共同的道路。"] ] }; </script>
+
+<script>AOS.init();translations.vi = {
+  title: "Tầm nhìn của Vương quốc Cao quý",
+  blocks: [
+    ["🌟 Tự do – không chỉ là lời nói, mà là thực tế",
+     "Trong Vương quốc Cao quý, tự do có nghĩa là nhiều hơn quyền bầu cử hay du lịch. Nó có nghĩa là không còn sợ hãi về sự tồn tại, không còn nô lệ lao động, không còn phụ thuộc.",
+     "Nhờ công nghệ tái tạo, mọi người đều có quyền truy cập vào thực phẩm, nước, năng lượng, thuốc men và nhà ở – không điều kiện. Công việc trở thành một nghề. Thời gian lại thuộc về bạn.",
+     "Tự do có nghĩa là: Bạn quyết định cuộc sống của mình như thế nào."],
+    ["💼 Thăng tiến xã hội qua phẩm giá và đóng góp",
+     "Ở đây, không phải nguồn gốc, sự giàu có hay địa vị quan trọng – mà là đóng góp của bạn cho cộng đồng. Qua ý tưởng, lòng nhân ái, nghệ thuật hoặc sự cống hiến: ai cho đi sẽ lớn lên. Ai truyền cảm hứng, sẽ được vinh danh.",
+     "Danh hiệu, chức vụ và vai trò phát sinh từ thành tích, không phải từ quyền lực. Mọi người đều có thể thăng tiến. Mọi người đều được nhìn thấy."],
+    ["📈 Một nền kinh tế của sự thịnh vượng",
+     "Quên đi sự khan hiếm. Quên đi sự cạnh tranh vì những thứ cần thiết. Công nghệ tái tạo giải phóng tài nguyên – cho tất cả. Nền kinh tế trở thành một trò chơi của ý tưởng.",
+     "Trao đổi, kinh tế quà tặng, thương mại tự nguyện, hệ thống công nhận kỹ thuật số: sự giàu có mới là sáng tạo, ý nghĩa và cộng đồng."],
+    ["❤️ Sức khỏe như một quyền bất khả xâm phạm",
+     "Trong Vương quốc Cao quý, sức khỏe không phải là xa xỉ hay hàng hóa. Y tế miễn phí. Các liệu pháp mở. Giúp đỡ là điều tự nhiên.",
+     "Chữa lành cơ thể và tâm hồn được hiểu và hỗ trợ một cách toàn diện. Mọi người đều xứng đáng có một cuộc sống khỏe mạnh – chỉ vì họ tồn tại."],
+    ["🌳 Thiên nhiên như bạn đồng hành, không phải tài nguyên",
+     "Công nghệ thay thế sự hủy diệt. Năng lượng là sạch. Thực phẩm được tạo ra, không phải thu hoạch. Trái đất lại được thở. Rừng quay lại. Động vật tìm thấy không gian.",
+     "Con người trở thành một phần của sự cân bằng – không phải kẻ thù của nó. Thiên nhiên không phải công cụ – mà là chị em. Chúng ta không sống trên nó – chúng ta sống với nó."],
+    ["🌍 Nghị viện thế giới của nhiều người",
+     "Ở đây, mỗi con người là một phần của chính ph
