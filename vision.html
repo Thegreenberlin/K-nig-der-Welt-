@@ -119,6 +119,7 @@
       <option value="zh">🇨🇳 中文</option>
     </select>
   </div>
+
   <div class="navbar">
     <div class="menu-toggle" onclick="toggleMenu()">
       <div></div><div></div><div></div>
@@ -134,6 +135,7 @@
     <a href="raenge.html">Ränge</a>
     <a href="impressum.html">Impressum</a>
   </div>
+
   <div class="container">
     <h1 class="section-title" id="vision-title"></h1>
     <div id="vision-content"></div>
@@ -141,63 +143,362 @@
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
-
   <script>
-    const translations = {
-      de: {
-        title: "Die Vision des adelschen Königreichs",
-        blocks: [
-          ["🌟 Freiheit – nicht mehr nur ein Wort, sondern Realität", "Im adelschen Königreich bedeutet Freiheit mehr als Wahlrecht oder Reisefreiheit. Freiheit heißt: Keine Existenzangst. Keine Lohnsklaverei. Keine Abhängigkeit.", "Dank Replikatoren-Technologie hat jeder Mensch Zugang zu Nahrung, Wasser, Energie, Medizin und Wohnraum – bedingungslos. Arbeit wird zur Berufung. Zeit gehört wieder dir.", "Freiheit heißt: Du entscheidest, wie du leben willst."],
-          ["💼 Gesellschaftlicher Aufstieg durch Würde und Beitrag", "Hier zählt nicht Herkunft, Reichtum oder Status – sondern dein Beitrag zur Gemeinschaft. Ob durch Ideen, Mitgefühl, Kunst oder Einsatz: Wer gibt, wächst. Wer inspiriert, wird geehrt.", "Titel, Ehren, Rollen entstehen aus Leistung, nicht aus Macht. Jeder Mensch kann aufsteigen. Jeder Mensch wird gesehen."],
-          ["📈 Eine Wirtschaft des Überflusses", "Vergiss Knappheit. Vergiss Konkurrenz um das Nötigste. Replikatoren machen Ressourcen frei – für alle. Wirtschaft wird zu einem Spiel der Ideen.", "Tauschhandel, Schenkökonomie, freiwilliger Handel, digitale Anerkennungssysteme: Der neue Reichtum heißt Kreativität, Sinn und Gemeinschaft."],
-          ["❤️ Gesundheit als unantastbares Grundrecht", "Im adelschen Königreich ist Gesundheit kein Luxus und keine Ware. Medizin ist frei. Therapien sind offen. Hilfe ist selbstverständlich.", "Körperliche und seelische Heilung werden umfassend verstanden und gefördert. Jeder Mensch verdient ein gesundes Leben – einfach, weil er existiert."],
-          ["🌳 Die Natur als Mitbewohnerin, nicht als Ressource", "Technologie ersetzt Zerstörung. Energie kommt sauber. Nahrung wird erzeugt, nicht geerntet. Die Erde darf wieder atmen. Wälder kehren zurück. Tiere finden Raum.", "Der Mensch wird Teil des Gleichgewichts – nicht sein Feind. Natur ist kein Werkzeug – sondern Schwester. Wir leben nicht auf ihr – wir leben mit ihr."],
-          ["🌍 Das Weltparlament der Vielen – eine neue Demokratie für alle", "Im adelschen Königreich ist jeder Mensch Teil der Regierung. Keine Eliten. Keine Parteien. Keine Lobby. Ein digitales, faires System gibt jedem eine Stimme – und jede Stimme zählt gleich viel.", "Vorschläge und Entscheidungen entstehen aus Schwarmintelligenz und kollektiver Debatte. Eine KI moderiert, gleicht aus, schützt Minderheiten und erkennt gemeinsame Wege."],
-          ["🔮 Bildung, Erkenntnis, Erleuchtung", "Alle Schranken zum Wissen fallen. Jeder Mensch hat Zugang zu allem, was je gedacht, entdeckt, erschaffen wurde. Bildung ist nicht mehr Mittel zum Zweck – sondern Lebensrecht.", "Du lernst, weil du willst. Nicht, weil du musst. Der neue Mensch ist kein Werkzeug mehr – sondern ein Schöpfer."],
-          ["👑 Warum Bürger werden?", "Weil du fühlst, dass mehr möglich ist. Weil du weißt, dass diese Welt nicht das Ende sein muss. Weil du Teil von etwas sein willst, das nicht verwaltet – sondern verwandelt.", "Das adelsche Königreich ist kein Staat. Es ist ein Versprechen. An die Zukunft. An das Leben. An dich."]
-        ]
-      },
-
-      // Translations for other languages go here, for example:
-      en: {
-        title: "The Vision of the Noble Kingdom",
-        blocks: [
-          ["🌟 Freedom – not just a word, but reality", "In the noble kingdom, freedom means more than voting or traveling. It means no fear of existence, no wage slavery, no dependency.", "Thanks to replicator technology, everyone has access to food, water, energy, medicine, and housing – unconditionally. Work becomes vocation. Time belongs to you again.", "Freedom means: You choose how to live."],
-          // Add other translations here
-        ]
-      }
-      // Other languages...
-    };
-
-    function toggleMenu() {
-      document.getElementById('menu').classList.toggle('active');
+const translations = {
+  de: {
+    title: "Die Vision des adelschen Königreichs",
+    blocks: [
+      ["🌟 Freiheit – nicht mehr nur ein Wort, sondern Realität",
+      "Im adelschen Königreich bedeutet Freiheit mehr als Wahlrecht oder Reisefreiheit. Freiheit heißt: Keine Existenzangst. Keine Lohnsklaverei. Keine Abhängigkeit.",
+      "Dank Replikatoren-Technologie hat jeder Mensch Zugang zu Nahrung, Wasser, Energie, Medizin und Wohnraum – bedingungslos. Arbeit wird zur Berufung. Zeit gehört wieder dir.",
+      "Freiheit heißt: Du entscheidest, wie du leben willst."],
+      // Weitere 7 Vision-Abschnitte auf Deutsch folgen hier...
+    ]
+  },
+  en: {
+    title: "The Vision of the Noble Kingdom",
+    blocks: [
+      ["🌟 Freedom – not just a word, but reality",
+      "In the noble kingdom, freedom means more than voting or traveling. It means no fear of existence, no wage slavery, no dependency.",
+      "Thanks to replicator technology, everyone has access to food, water, energy, medicine, and housing – unconditionally. Work becomes vocation. Time belongs to you again.",
+      "Freedom means: You choose how to live."],
+      // Weitere 7 Abschnitte in Englisch folgen hier...
+    ]
+  },
+  fr: {
+    title: "La vision du royaume noble",
+    blocks: [
+      ["🌟 Liberté – plus qu'un mot, une réalité",
+      "Dans le royaume noble, la liberté signifie plus que le droit de vote ou de voyager. C’est l’absence de peur, de servitude salariale, de dépendance.",
+      // ...
+      ]
+    ]
+  },
+  es: {
+    title: "La visión del Reino Noble",
+    blocks: [
+      ["🌟 Libertad: no solo una palabra, sino una realidad",
+      "En el Reino Noble, la libertad va más allá del voto o el viaje. Significa no temer por la existencia, sin esclavitud laboral ni dependencia.",
+      // ...
+      ]
+    ]
+  },
+  ar: {
+    title: "رؤية المملكة النبيلة",
+    blocks: [
+      ["🌟 الحرية - ليست مجرد كلمة، بل واقع",
+      "في المملكة النبيلة، الحرية تعني أكثر من حق التصويت أو السفر.",
+      // ...
+      ]
+    ]
+  },
+  pt: {
+    title: "A visão do Reino Nobre",
+    blocks: [
+      ["🌟 Liberdade – não apenas uma palavra, mas realidade",
+      "No Reino Nobre, liberdade é mais do que votar ou viajar. Significa não ter medo da existência, nem escravidão salarial, nem dependência.",
+      // ...
+      ]
+    ]
+  },
+  vi: {
+    title: "Tầm nhìn vương quốc cao quyý",
+    blocks: [
+      ["🌟 Tự do – không chỉ là từ ngữ, mà là thực tế",
+      "Trong vương quốc cao quyý, tự do không chỉ là quyền bỏ phiếu hay du lịch.",
+      // ...
+      ]
+    ]
+  },
+  zh: {
+    title: "尊貴王國的願景",
+    blocks: [
+      ["🌟 自由，不仅是詞稱，更是現實",
+      "在尊貴王國，自由不只是投票或旅行的權利，而是沒有生存的恐懼。",
+      // ...
+      ]
+    ]
+  }
+};
+</script><script>
+function toggleMenu() {
+  document.getElementById('menu').classList.toggle('active');
+}
+function setLanguage(lang) {
+  localStorage.setItem('lang', lang);
+  render(lang);
+}
+function render(lang) {
+  const t = translations[lang] || translations['de'];
+  document.getElementById('language-picker').value = lang;
+  document.getElementById('vision-title').innerText = t.title;
+  const content = document.getElementById('vision-content');
+  content.innerHTML = '';
+  t.blocks.forEach(block => {
+    const div = document.createElement('div');
+    div.className = 'vision-block';
+    div.setAttribute('data-aos', 'fade-up');
+    div.innerHTML = `
+      <h2><span<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vision des adelschen Königreichs</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
     }
-
-    function setLanguage(lang) {
-      localStorage.setItem('lang', lang);
-      render(lang);
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem;
     }
-
-    function render(lang) {
-      const t = translations[lang] || translations['de'];
-      document.getElementById('language-picker').value = lang;
-      document.getElementById('vision-title').innerText = t.title;
-      const content = document.getElementById('vision-content');
-      content.innerHTML = '';
-      t.blocks.forEach(block => {
-        const div = document.createElement('div');
-        div.className = 'vision-block';
-        div.setAttribute('data-aos', 'fade-up');
-        div.innerHTML = `<h2><span class="icon">${block[0].split(' ')[0]}</span>${block[0].substring(2)}</h2>` +
-          block.slice(1).map(p => `<p>${p}</p>`).join('');
-        content.appendChild(div);
-      });
+    .section-title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
     }
+    .vision-block {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .vision-block h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    .vision-block p {
+      line-height: 1.6;
+    }
+    .icon {
+      font-size: 1.8rem;
+      margin-right: 0.5rem;
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 999;
+      padding: 1rem;
+    }
+    .menu-toggle {
+      cursor: pointer;
+      width: 30px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .menu-toggle div {
+      background: #d4af37;
+      height: 4px;
+      border-radius: 2px;
+    }
+    .menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 50vw;
+      height: 100vh;
+      background: #0c0c0c;
+      color: #f0e6d2;
+      padding: 3rem 2rem;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+      transition: right 0.4s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 998;
+    }
+    .menu.active {
+      right: 0;
+    }
+    .menu a {
+      font-size: 1.5rem;
+      color: #f0e6d2;
+      text-decoration: none;
+      margin: 1rem 0;
+    }
+    .menu a:hover {
+      color: #d4af37;
+    }
+    .language-select {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 1001;
+    }
+    .language-select select {
+      background-color: #0c0c0c;
+      color: #f0e6d2;
+      border: 1px solid #d4af37;
+      padding: 0.4rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="language-select">
+    <select id="language-picker" onchange="setLanguage(this.value)">
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="en">🇬🇧 English</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="es">🇪🇸 Español</option>
+      <option value="ar">🇸🇦 العربية</option>
+      <option value="pt">🇵🇹 Português</option>
+      <option value="vi">🇻🇳 Tiếng Việt</option>
+      <option value="zh">🇨🇳 中文</option>
+    </select>
+  </div>
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const lang = localStorage.getItem('lang') || 'de';
-      render(lang);
-    });
-  </script>
-</body>
-</html>
+  <div class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+  </div>
+  <div class="menu" id="menu">
+    <a href="index.html">Ruf zur neuen Welt</a>
+    <a href="vision.html">Vision</a>
+    <a href="saeulen_des_Koenigreichs.html">Säulen des Königreichs</a>
+    <a href="gabe.html">Gabe</a>
+    <a href="kommentare.html">Stimme des Volkes</a>
+    <a href="audienzzimmer.html">Audienzzimmer</a>
+    <a href="raenge.html">Ränge</a>
+    <a href="impressum.html">Impressum</a>
+  </div>
+
+  <div class="container">
+    <h1 class="section-title" id="vision-title"></h1>
+    <div id="vision-content"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+const translations = {
+  de: {
+    title: "Die Vision des adelschen Königreichs",
+    blocks: [
+      ["🌟 Freiheit – nicht mehr nur ein Wort, sondern Realität",
+      "Im adelschen Königreich bedeutet Freiheit mehr als Wahlrecht oder Reisefreiheit. Freiheit heißt: Keine Existenzangst. Keine Lohnsklaverei. Keine Abhängigkeit.",
+      "Dank Replikatoren-Technologie hat jeder Mensch Zugang zu Nahrung, Wasser, Energie, Medizin und Wohnraum – bedingungslos. Arbeit wird zur Berufung. Zeit gehört wieder dir.",
+      "Freiheit heißt: Du entscheidest, wie du leben willst."],
+      // Weitere 7 Vision-Abschnitte auf Deutsch folgen hier...
+    ]
+  },
+  en: {
+    title: "The Vision of the Noble Kingdom",
+    blocks: [
+      ["🌟 Freedom – not just a word, but reality",
+      "In the noble kingdom, freedom means more than voting or traveling. It means no fear of existence, no wage slavery, no dependency.",
+      "Thanks to replicator technology, everyone has access to food, water, energy, medicine, and housing – unconditionally. Work becomes vocation. Time belongs to you again.",
+      "Freedom means: You choose how to live."],
+      // Weitere 7 Abschnitte in Englisch folgen hier...
+    ]
+  },
+  fr: {
+    title: "La vision du royaume noble",
+    blocks: [
+      ["🌟 Liberté – plus qu'un mot, une réalité",
+      "Dans le royaume noble, la liberté signifie plus que le droit de vote ou de voyager. C’est l’absence de peur, de servitude salariale, de dépendance.",
+      // ...
+      ]
+    ]
+  },
+  es: {
+    title: "La visión del Reino Noble",
+    blocks: [
+      ["🌟 Libertad: no solo una palabra, sino una realidad",
+      "En el Reino Noble, la libertad va más allá del voto o el viaje. Significa no temer por la existencia, sin esclavitud laboral ni dependencia.",
+      // ...
+      ]
+    ]
+  },
+  ar: {
+    title: "رؤية المملكة النبيلة",
+    blocks: [
+      ["🌟 الحرية - ليست مجرد كلمة، بل واقع",
+      "في المملكة النبيلة، الحرية تعني أكثر من حق التصويت أو السفر.",
+      // ...
+      ]
+    ]
+  },
+  pt: {
+    title: "A visão do Reino Nobre",
+    blocks: [
+      ["🌟 Liberdade – não apenas uma palavra, mas realidade",
+      "No Reino Nobre, liberdade é mais do que votar ou viajar. Significa não ter medo da existência, nem escravidão salarial, nem dependência.",
+      // ...
+      ]
+    ]
+  },
+  vi: {
+    title: "Tầm nhìn vương quốc cao quyý",
+    blocks: [
+      ["🌟 Tự do – không chỉ là từ ngữ, mà là thực tế",
+      "Trong vương quốc cao quyý, tự do không chỉ là quyền bỏ phiếu hay du lịch.",
+      // ...
+      ]
+    ]
+  },
+  zh: {
+    title: "尊貴王國的願景",
+    blocks: [
+      ["🌟 自由，不仅是詞稱，更是現實",
+      "在尊貴王國，自由不只是投票或旅行的權利，而是沒有生存的恐懼。",
+      // ...
+      ]
+    ]
+  }
+};
+</script><script>
+function toggleMenu() {
+  document.getElementById('menu').classList.toggle('active');
+}
+function setLanguage(lang) {
+  localStorage.setItem('lang', lang);
+  render(lang);
+}
+function render(lang) {
+  const t = translations[lang] || translations['de'];
+  document.getElementById('language-picker').value = lang;
+  document.getElementById('vision-title').innerText = t.title;
+  const content = document.getElementById('vision-content');
+  content.innerHTML = '';
+  t.blocks.forEach(block => {
+    const div = document.createElement('div');
+    div.className = 'vision-block';
+    div.setAttribute('data-aos', 'fade-up');
+    div.innerHTML = `
+      <h2><span class="icon">${block[0].split(' ')[0]}</span>${block[0].substring(2)}</h2>
+      ${block.slice(1).map(p => `<p>${p}</p>`).join('')}
+    `;
+    content.appendChild(div);
+  });
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const lang = localStorage.getItem('lang') || 'de';
+  render(lang);
+});
+</script>
+ class="icon">${block[0].split(' ')[0]}</span>${block[0].substring(2)}</h2>
+      ${block.slice(1).map(p => `<p>${p}</p>`).join('')}
+    `;
+    content.appendChild(div);
+  });
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const lang = localStorage.getItem('lang') || 'de';
+  render(lang);
+});
+</script>
