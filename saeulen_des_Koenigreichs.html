@@ -86,9 +86,36 @@
     .menu a:hover {
       color: #d4af37;
     }
+    .language-select {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 1001;
+    }
+    .language-select select {
+      background-color: #0c0c0c;
+      color: #f0e6d2;
+      border: 1px solid #d4af37;
+      padding: 0.4rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
   </style>
 </head>
 <body>
+
+<div class="language-select">
+  <select id="language-picker" onchange="setLanguage(this.value)">
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="en">🇬🇧 English</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="ar">🇸🇦 العربية</option>
+    <option value="pt">🇵🇹 Português</option>
+    <option value="vi">🇻🇳 Tiếng Việt</option>
+    <option value="zh">🇨🇳 中文</option>
+  </select>
+</div>
 
 <div class="navbar">
   <div class="menu-toggle" onclick="toggleMenu()">
@@ -108,51 +135,47 @@
 </div>
 
 <div class="container">
-  <h1 class="section-title" data-aos="fade-up">Die Säulen des Königreichs</h1>
+  <h1 class="section-title" id="saeulen-title"></h1>
 
-  <div class="vision-block" data-aos="fade-up">
-    <h2>1. Fülle durch Replikation</h2>
-    <p>Die Technologie, die Mangel abschafft. Kein Hunger, keine Armut, kein Mangel – durch Replikatoren wird Materie kontrollierbar. Alles wird verfügbar.</p>
-  </div>
-
-  <div class="vision-block" data-aos="fade-up">
-    <h2>2. Vereinte Menschheit</h2>
-    <p>Eine Welt, ein Volk, viele Sprachen – aber ein gemeinsames Ziel. Keine Nationalstaaten, sondern eine globale Gemeinschaft unter einem Banner.</p>
-  </div>
-
-  <div class="vision-block" data-aos="fade-up">
-    <h2>3. Freiheit &amp; Selbstbestimmung</h2>
-    <p>Keine Zwangsarbeit, kein Druck – sondern ein Leben nach eigenem Rhythmus. Menschen arbeiten freiwillig, kreativ, aus Sinn – nicht aus Zwang.</p>
-  </div>
-
-  <div class="vision-block" data-aos="fade-up">
-    <h2>4. Ehrenhafte Verantwortung</h2>
-    <p>Freiheit braucht Reife. Wer Macht will, muss Weisheit zeigen. Verantwortung ist Voraussetzung für Einfluss – durch Reifekurse und Bildung.</p>
-  </div>
-
-  <div class="vision-block" data-aos="fade-up">
-    <h2>5. Forschung &amp; Erkenntnis</h2>
-    <p>Die Krone schützt die Zukunft. Wissen wird zur höchsten Währung. Frei von Konzernen und Machtspielen blüht Forschung auf: Medizin heilt, Energie wird grenzenlos, der Geist erreicht neue Dimensionen. Die Menschheit erhebt sich – nicht unter Zwang, sondern durch Sehnsucht nach Wahrheit.</p>
-  </div>
-
-  <div class="vision-block" data-aos="fade-up">
-    <h2>6. Gerechtigkeit &amp; Gleichwertigkeit</h2>
-    <p>Alle Menschen sind gleich an Wert – aber verschieden in ihren Wegen. Nicht Gleichmacherei, sondern Gleichwürdigkeit und Förderung.</p>
-  </div>
-
-  <div class="vision-block" data-aos="fade-up">
-    <h2>7. Geist &amp; Kultur</h2>
-    <p>Ein neues goldenes Zeitalter der Kunst, Musik und Seele. Ohne Zwangsarbeit entsteht Raum für Geist, Spiel, Schönheit und Ausdruck.</p>
-  </div>
+  <div class="vision-block" data-aos="fade-up"><h2></h2><p></p></div>
+  <div class="vision-block" data-aos="fade-up"><h2></h2><p></p></div>
+  <div class="vision-block" data-aos="fade-up"><h2></h2><p></p></div>
+  <div class="vision-block" data-aos="fade-up"><h2></h2><p></p></div>
+  <div class="vision-block" data-aos="fade-up"><h2></h2><p></p></div>
+  <div class="vision-block" data-aos="fade-up"><h2></h2><p></p></div>
+  <div class="vision-block" data-aos="fade-up"><h2></h2><p></p></div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+<script src="translations-saeulen.js"></script>
 <script>
   function toggleMenu() {
     document.getElementById('menu').classList.toggle('active');
   }
+
+  function setLanguage(lang) {
+    localStorage.setItem('lang', lang);
+    render(lang);
+  }
+
+  function render(lang) {
+    const t = translations[lang] || translations['de'];
+    document.getElementById('language-picker').value = lang;
+    document.getElementById('saeulen-title').innerText = t.title;
+
+    const blocks = document.querySelectorAll('.vision-block');
+    t.blocks.forEach((block, i) => {
+      blocks[i].querySelector('h2').innerText = block[0];
+      blocks[i].querySelector('p').innerText = block[1];
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const lang = localStorage.getItem('lang') || 'de';
+    render(lang);
+  });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
 
 </body>
 </html>
