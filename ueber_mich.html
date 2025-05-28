@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Über Adel Khcheich – König der Welt</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body { margin: 0; padding: 0; background-color: #111; color: #f0f0f0; font-family: 'Segoe UI', sans-serif; }
+    .container { max-width: 960px; margin: 0 auto; padding: 2rem; }
+    .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 2rem; }
+    .vision-block { background-color: #1a1a1a; border-radius: 12px; box-shadow: 0 0 10px rgba(255,255,255,0.05); padding: 1.5rem; margin-bottom: 2rem; }
+    .vision-block h2 { font-size: 1.6rem; margin-bottom: 1rem; }
+    .vision-block p { line-height: 1.6; }
+    .icon { font-size: 1.8rem; margin-right: 0.5rem; }
+    .navbar { position: fixed; top: 0; right: 0; z-index: 999; padding: 1rem; }
+    .menu-toggle { cursor: pointer; width: 30px; height: 22px; display: flex; flex-direction: column; justify-content: space-between; }
+    .menu-toggle div { background: #d4af37; height: 4px; border-radius: 2px; }
+    .menu { position: fixed; top: 0; right: -100%; width: 50vw; height: 100vh; background: #0c0c0c; color: #f0e6d2; padding: 3rem 2rem; box-shadow: -2px 0 10px rgba(0,0,0,0.5); transition: right 0.4s ease-in-out; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 998; }
+    .menu.active { right: 0; }
+    .menu a { font-size: 1.5rem; color: #f0e6d2; text-decoration: none; margin: 1rem 0; }
+    .menu a:hover { color: #d4af37; }
+    .language-select { position: fixed; top: 1rem; left: 1rem; z-index: 1001; }
+    .language-select select { background-color: #0c0c0c; color: #f0e6d2; border: 1px solid #d4af37; padding: 0.4rem; border-radius: 0.5rem; font-size: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="language-select">
+    <select id="language-picker" onchange="setLanguage(this.value)">
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="en">🇬🇧 English</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="es">🇪🇸 Español</option>
+      <option value="ar">🇸🇦 العربية</option>
+      <option value="pt">🇵🇹 Português</option>
+      <option value="vi">🇻🇳 Tiếng Việt</option>
+      <option value="zh">🇨🇳 中文</option>
+    </select>
+  </div>
+  <div class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+  </div>
+  <div class="menu" id="menu">
+    <a href="index.html">Ruf zur neuen Welt</a>
+    <a href="vision.html">Vision</a>
+    <a href="saeulen_des_Koenigreichs.html">Säulen des Königreichs</a>
+    <a href="gabe.html">Gabe</a>
+    <a href="kommentare.html">Stimme des Volkes</a>
+    <a href="audienzzimmer.html">Audienzzimmer</a>
+    <a href="raenge.html">Ränge</a>
+    <a href="ueber_mich.html">Über mich</a>
+    <a href="impressum.html">Impressum</a>
+  </div>
+  <div class="container">
+    <h1 class="section-title">Über Adel Khcheich – König der Welt</h1>
+    <div class="vision-block" data-aos="fade-up">
+      <h2><span class="icon">👤</span>Wer ich bin</h2>
+      <p>Mein Name ist Adel Khcheich. Ich bin Visionär, Systemkritiker und der Gründer von Königderwelt.com – einer Plattform für radikales Umdenken in Politik, Wirtschaft und Technologie.</p>
+      <p>Ich glaube nicht an das Dogma ewiger Arbeit oder künstlicher Knappheit. Ich glaube an eine Welt, in der niemand mehr arbeiten muss, um zu überleben – weil Technologie uns längst befreit haben könnte.</p>
+    </div>
+    <div class="vision-block" data-aos="fade-up">
+      <h2><span class="icon">🔥</span>Warum dieses Projekt?</h2>
+      <p>Das König-der-Welt-Projekt entstand aus einem einfachen Gedanken: Was wäre, wenn wir alles, was wir zum Leben brauchen, einfach erzeugen könnten?</p>
+      <p>Replikatoren. Autarkie. Ein globales Grundeinkommen – nicht in Geld, sondern in Dingen: Nahrung, Wärme, Medizin, Energie, Transport.</p>
+      <p>Ich will zeigen: Eine Welt ohne Zwang ist möglich. Und ich bin bereit, sie mit allen zu bauen, die bereit sind, über Grenzen hinauszudenken.</p>
+    </div>
+    <div class="vision-block" data-aos="fade-up">
+      <h2><span class="icon">🌍</span>Was ich verändern will</h2>
+      <p>Ich will:</p>
+      <p>– Das Ende der Zwangsarbeit einleiten.</p>
+      <p>– Eine neue globale Einheit formen – nicht durch Krieg, sondern durch Freiheit.</p>
+      <p>– Technologische Fülle für alle zugänglich machen (Replikator-Technologie).</p>
+      <p>– Eine Krone nicht als Machtinstrument, sondern als Symbol einer gemeinsamen Verantwortung.</p>
+    </div>
+    <div class="vision-block" data-aos="fade-up">
+      <h2><span class="icon">🤝</span>Lade dich ein</h2>
+      <p>Wenn du diese Vision teilst, bist du hier richtig.</p>
+      <p>Unterstütze das Projekt, bring dich ein, teile es mit der Welt.</p>
+      <p>Ich glaube an dich. An uns. An eine neue Welt.</p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('active');
+    }
+    function setLanguage(lang) {
+      localStorage.setItem('lang', lang);
+      location.reload();
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const lang = localStorage.getItem('lang') || 'de';
+      document.getElementById('language-picker').value = lang;
+    });
+  </script>
+</body>
+</html>
