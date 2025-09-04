@@ -1,150 +1,116 @@
-const translations = {
-  "de": {
-    "title": "Die Säulen des Königreichs",
-    "blocks": [
-      [
-        "1. Fülle durch Replikation",
-        "Die Technologie, die Mangel abschafft. Kein Hunger, keine Armut, kein Mangel – durch Replikatoren wird Materie kontrollierbar. Alles wird verfügbar."
-      ],
-      [
-        "2. Vereinte Menschheit",
-        "Eine Welt, ein Volk, viele Sprachen – aber ein gemeinsames Ziel. Keine Nationalstaaten, sondern eine globale Gemeinschaft unter einem Banner."
-      ],
-      [
-        "3. Freiheit & Selbstbestimmung",
-        "Keine Zwangsarbeit, kein Druck – sondern ein Leben nach eigenem Rhythmus. Menschen arbeiten freiwillig, kreativ, aus Sinn – nicht aus Zwang."
-      ],
-      [
-        "4. Ehrenhafte Verantwortung",
-        "Freiheit braucht Reife. Wer Macht will, muss Weisheit zeigen. Verantwortung ist Voraussetzung für Einfluss – durch Reifekurse und Bildung."
-      ],
-      [
-        "5. Forschung & Erkenntnis",
-        "Die Krone schützt die Zukunft. Wissen wird zur höchsten Währung. Frei von Konzernen und Machtspielen blüht Forschung auf: Medizin heilt, Energie wird grenzenlos, der Geist erreicht neue Dimensionen. Die Menschheit erhebt sich – nicht unter Zwang, sondern durch Sehnsucht nach Wahrheit."
-      ],
-      [
-        "6. Gerechtigkeit & Gleichwertigkeit",
-        "Alle Menschen sind gleich an Wert – aber verschieden in ihren Wegen. Nicht Gleichmacherei, sondern Gleichwürdigkeit und Förderung."
-      ],
-      [
-        "7. Geist & Kultur",
-        "Ein neues goldenes Zeitalter der Kunst, Musik und Seele. Ohne Zwangsarbeit entsteht Raum für Geist, Spiel, Schönheit und Ausdruck."
-      ]
-    ]
-  },
-  "en": {
-    "title": "The Pillars of the Kingdom",
-    "blocks": [
-      [
-        "1. Abundance through Replication",
-        "The technology that ends scarcity. No hunger, no poverty, no lack – replicators make matter controllable. Everything becomes available."
-      ],
-      [
-        "2. United Humanity",
-        "One world, one people, many languages – but one common goal. No nation-states, but a global community under one banner."
-      ],
-      [
-        "3. Freedom & Self-Determination",
-        "No forced labor, no pressure – but a life in your own rhythm. People work voluntarily, creatively, for meaning – not out of necessity."
-      ],
-      [
-        "4. Honorable Responsibility",
-        "Freedom requires maturity. Those who seek power must show wisdom. Responsibility is the prerequisite for influence – through maturity training and education."
-      ],
-      [
-        "5. Research & Knowledge",
-        "The crown protects the future. Knowledge becomes the highest currency. Free from corporations and power plays, research flourishes: medicine heals, energy becomes boundless, the mind reaches new dimensions. Humanity rises – not through coercion, but through the desire for truth."
-      ],
-      [
-        "6. Justice & Equality of Worth",
-        "All people are equal in value – but different in their paths. Not conformity, but equal dignity and support."
-      ],
-      [
-        "7. Spirit & Culture",
-        "A new golden age of art, music, and soul. Without forced labor, space is created for spirit, play, beauty, and expression."
-      ]
-    ]
-  },
-  "fr": {
-    "title": "Les Piliers du Royaume",
-    "blocks": [
-      [
-        "1. Abondance par la Réplication",
-        "La technologie qui supprime la pénurie. Plus de faim, plus de pauvreté – les réplicateurs rendent la matière contrôlable. Tout devient disponible."
-      ],
-      [
-        "2. Humanité Unifiée",
-        "Un monde, un peuple, plusieurs langues – mais un but commun. Pas d’États-nations, mais une communauté mondiale sous une même bannière."
-      ],
-      [
-        "3. Liberté & Autodétermination",
-        "Pas de travail forcé, pas de pression – mais une vie selon son propre rythme. Les gens travaillent volontairement, avec créativité, par sens – et non par obligation."
-      ],
-      [
-        "4. Responsabilité Honorable",
-        "La liberté exige de la maturité. Ceux qui veulent le pouvoir doivent faire preuve de sagesse. La responsabilité est la condition de l’influence – par la formation et l’éducation."
-      ],
-      [
-        "5. Recherche & Connaissance",
-        "La couronne protège l’avenir. Le savoir devient la plus haute des monnaies. Libérée des intérêts privés, la recherche s’épanouit : la médecine guérit, l’énergie devient illimitée, l’esprit atteint de nouvelles dimensions. L’humanité s’élève – non par contrainte, mais par soif de vérité."
-      ],
-      [
-        "6. Justice & Égalité de Valeur",
-        "Tous les humains ont une valeur égale – mais suivent des chemins différents. Pas d’uniformité, mais égalité de dignité et encouragement."
-      ],
-      [
-        "7. Esprit & Culture",
-        "Un nouvel âge d’or de l’art, de la musique et de l’âme. Sans travail forcé, l’espace renaît pour l’esprit, le jeu, la beauté et l’expression."
-      ]
-    ]
-  },
-  ar: {
-    title: "أعمدة المملكة النبيلة",
+// translations-saeulen.js
+(function () {
+  const de = {
+    menu: ["Ruf zur neuen Welt","Vision","Säulen des Königreichs","Gabe","Stimme des Volkes","Audienzzimmer","Ränge","Impressum"],
+    title: "Säulen des adelschen Königreichs",
     blocks: [
-      ["1. الوفرة من خلال التكرار", "التكنولوجيا التي تلغي النقص. لا جوع، لا فقر، لا حرمان – التكرارات تجعل المادة قابلة للتحكم. كل شيء يصبح متاحًا."],
-      ["2. الإنسانية المتحدة", "عالم واحد، شعب واحد، لغات متعددة – لكن هدف مشترك. لا دول قومية، بل مجتمع عالمي تحت راية واحدة."],
-      ["3. الحرية وتقرير المصير", "لا عمل قسري، لا ضغط – بل حياة وفق إيقاع الفرد. الناس يعملون طواعية، بإبداع، من منطلق المعنى – وليس الإكراه."],
-      ["4. المسؤولية المشرفة", "الحرية تتطلب النضج. من يريد القوة يجب أن يُظهر الحكمة. المسؤولية هي شرط للتأثير – من خلال الدورات التعليمية والنضج."],
-      ["5. البحث والمعرفة", "التاج يحمي المستقبل. المعرفة تصبح أعلى عملة. بعيدًا عن الشركات والألعاب السياسية، يزدهر البحث: الشفاء، الطاقة اللانهائية، وبلوغ أبعاد جديدة."],
-      ["6. العدالة والمساواة في القيمة", "كل البشر متساوون في القيمة – لكن مختلفون في طرقهم. ليست مساواة قسرية، بل احترام متساوٍ وتعزيز للفرد."],
-      ["7. الروح والثقافة", "عصر ذهبي جديد للفن والموسيقى والروح. بدون عمل قسري، يظهر مجال للعقل واللعب والجمال والتعبير."
-      ] 
+      ["👤 Würde zuerst", "Jeder Mensch besitzt unveräußerliche Würde. Politik, Wirtschaft und Technik sind diesem Wert untergeordnet. Keine Demütigung, kein Ausschluss, kein Zwang zur Existenzsicherung."],
+      ["🗝️ Freiheit & Sicherheit", "Freiheit ist nur echt, wenn sie sicher gelebt werden kann: Rechtsschutz, Privatsphäre, Verschlüsselung, transparente Verfahren und klare Grenzen gegen Machtmissbrauch."],
+      ["💛 Währung der Dankbarkeit", "Wert entsteht aus bestätigtem Nutzen: Pflege, Heilung, Vermittlung, Wissen, Kunst, Regeneration. Dankbarkeit wird zur übertragbaren Kaufkraft – Missbrauch verhindert Transparenz."],
+      ["🛠️ Replikatoren & Grundversorgung", "Nahrung, Wasser, Energie, Medizin und Wohnraum sind garantiert. Replikatoren und offene Baupläne entkoppeln Grundversorgung von Preisen und befreien Zeit für Berufung."],
+      ["📚 Offenes Lernen", "Wissen ist frei zugänglich. Lernpfade sind flexibel, projektbasiert und inklusiv. Mentoring, Praxis und innere Arbeit zählen wie Abschlüsse."],
+      ["🌿 Naturverbundene Entwicklung", "Die Erde ist Mitbewohnerin. Produktion folgt Kreisläufen, Städte heilen, Landwirtschaft wird regenerativ. Fortschritt misst sich am Gedeihen von Ökosystemen."],
+      ["🌍 Weltparlament der Vielen", "1 Mensch = 1 Stimme. Schwarmvorschläge, nachvollziehbare Entscheidungen, Minderheitenschutz. Eine moderierende KI unterstützt Fairness ohne zu herrschen."]
     ]
-  },
-  pt: {
-    title: "Os Pilares do Reino Nobre",
+  };
+
+  const en = {
+    menu: ["Call to a New World","Vision","Pillars of the Kingdom","Gift","Voice of the People","Audience Room","Ranks","Imprint"],
+    title: "Pillars of the Adel Kingdom",
     blocks: [
-      ["1. Abundância por meio da replicação", "A tecnologia que elimina a escassez. Sem fome, sem pobreza, sem carência – os replicadores tornam a matéria controlável. Tudo se torna disponível."],
-      ["2. Humanidade unida", "Um mundo, um povo, muitas línguas – mas um objetivo comum. Não mais Estados-nação, mas uma comunidade global sob uma única bandeira."],
-      ["3. Liberdade e autodeterminação", "Sem trabalho forçado, sem pressão – mas uma vida no ritmo próprio. As pessoas trabalham voluntariamente, com criatividade e propósito – não por obrigação."],
-      ["4. Responsabilidade honrada", "Liberdade exige maturidade. Quem deseja poder deve mostrar sabedoria. Responsabilidade é pré-requisito para influência – por meio de cursos e educação."],
-      ["5. Pesquisa e conhecimento", "A coroa protege o futuro. O conhecimento torna-se a moeda suprema. Livre de corporações e jogos de poder, a pesquisa floresce: cura, energia ilimitada e expansão da consciência."],
-      ["6. Justiça e igualdade de valor", "Todas as pessoas têm o mesmo valor – mas caminhos diferentes. Não se trata de igualar tudo, mas de valor igual e promoção individual."],
-      ["7. Espírito e cultura", "Uma nova era dourada para a arte, música e alma. Sem trabalho forçado, há espaço para mente, jogo, beleza e expressão."]
+      ["👤 Dignity First", "Every person holds inalienable dignity. Policy, economy, and technology are subordinate to this value. No humiliation, no exclusion, no coercion for subsistence."],
+      ["🗝️ Freedom & Safety", "Freedom is real only when safely livable: legal protection, privacy, encryption, transparent procedures, and firm limits against abuse of power."],
+      ["💛 Currency of Gratitude", "Value arises from confirmed benefit: care, healing, mediation, knowledge, art, regeneration. Gratitude becomes transferable purchasing power, with transparency deterring abuse."],
+      ["🛠️ Replicators & Basic Provision", "Food, water, energy, medicine, and shelter are guaranteed. Replicators and open blueprints decouple basics from prices and free time for vocation."],
+      ["📚 Open Learning", "Knowledge is openly accessible. Flexible, project-based, inclusive learning; mentoring, practice, and inner work count as much as credentials."],
+      ["🌿 Nature-Aligned Development", "Earth is a co-inhabitant. Production follows cycles, cities heal, agriculture is regenerative. Progress is measured by ecosystem flourishing."],
+      ["🌍 World Parliament of the Many", "One person = one vote. Swarm proposals, traceable decisions, minority protection. A moderating AI supports fairness without ruling."]
     ]
-  },
-  vi: {
-    title: "Những trụ cột của Vương quốc Cao quý",
+  };
+
+  const fr = {
+    menu: ["Appel à un Nouveau Monde","Vision","Piliers du Royaume","Don","Voix du Peuple","Salle d'Audience","Rangs","Mentions légales"],
+    title: "Les piliers du Royaume d’Adel",
     blocks: [
-      ["1. Sự dư dả thông qua tái tạo", "Công nghệ loại bỏ sự thiếu thốn. Không còn đói, nghèo hay khan hiếm – bộ tạo bản sao giúp kiểm soát vật chất. Mọi thứ đều có thể truy cập được."],
-      ["2. Nhân loại thống nhất", "Một thế giới, một dân tộc, nhiều ngôn ngữ – nhưng một mục tiêu chung. Không còn các quốc gia riêng lẻ, mà là một cộng đồng toàn cầu."],
-      ["3. Tự do và quyền tự quyết", "Không còn lao động cưỡng bức, không còn áp lực – mà là cuộc sống theo nhịp riêng. Con người làm việc một cách tự nguyện, sáng tạo và có ý nghĩa."],
-      ["4. Trách nhiệm danh dự", "Tự do đòi hỏi sự trưởng thành. Ai muốn quyền lực phải thể hiện sự khôn ngoan. Trách nhiệm là điều kiện để có ảnh hưởng – thông qua các khóa học và giáo dục."],
-      ["5. Nghiên cứu và hiểu biết", "Vương miện bảo vệ tương lai. Kiến thức là đồng tiền tối thượng. Không còn doanh nghiệp và chính trị hóa, nghiên cứu nở rộ: chữa bệnh, năng lượng vô hạn, trí tuệ thăng hoa."],
-      ["6. Công lý và giá trị ngang nhau", "Tất cả mọi người đều có giá trị như nhau – nhưng mỗi người có con đường riêng. Không phải làm cho tất cả giống nhau, mà là sự tôn trọng và phát triển cá nhân."],
-      ["7. Tinh thần và văn hóa", "Một thời đại hoàng kim mới của nghệ thuật, âm nhạc và tâm hồn. Không còn lao động ép buộc, không gian mở ra cho trí tuệ, niềm vui, cái đẹp và sự thể hiện."]
+      ["👤 Dignité d’abord", "Toute personne possède une dignité inaliénable. La politique, l’économie et la technique y sont subordonnées. Ni humiliation, ni exclusion, ni contrainte pour survivre."],
+      ["🗝️ Liberté & Sécurité", "La liberté est réelle si elle peut être vécue en sécurité : protection juridique, vie privée, chiffrement, procédures transparentes, limites claires contre les abus de pouvoir."],
+      ["💛 Monnaie de gratitude", "La valeur naît d’un bénéfice attesté : soin, guérison, médiation, savoir, art, régénération. La gratitude devient pouvoir d’achat transférable, la transparence décourage les abus."],
+      ["🛠️ Réplicateurs & socle vital", "Nourriture, eau, énergie, soins et logement garantis. Réplicateurs et plans ouverts détachent le socle des prix et libèrent du temps pour la vocation."],
+      ["📚 Apprentissage ouvert", "Savoir accessible à tous. Parcours flexibles, projets, inclusion ; mentorat, pratique et travail intérieur comptent autant que les diplômes."],
+      ["🌿 Développement aligné à la nature", "La Terre est colocataire. Production en cycles, villes réparatrices, agriculture régénératrice. Le progrès se mesure à l’épanouissement des écosystèmes."],
+      ["🌍 Parlement mondial des multitudes", "Une personne = une voix. Propositions du collectif, décisions traçables, protection des minorités. Une IA médiatrice soutient l’équité sans dominer."]
     ]
-  },
-  zh: {
-    title: "王国的支柱",
+  };
+
+  const es = {
+    menu: ["Llamado a un Nuevo Mundo","Visión","Pilares del Reino","Don","Voz del Pueblo","Sala de Audiencias","Rangos","Aviso legal"],
+    title: "Los pilares del Reino de Adel",
     blocks: [
-      ["1. 通过复制实现富足", "消除匮乏的技术。没有饥饿、贫穷或短缺 – 复制技术使物质可控，一切都变得可得。"],
-      ["2. 团结的人类", "一个世界，一个民族，多种语言 – 但有一个共同目标。不是国家，而是全球共同体在一面旗帜下。"],
-      ["3. 自由与自主", "没有强迫劳动，没有压力 – 而是按照个人节奏生活。人们出于热情、创造力和意义而工作，而不是被迫。"],
-      ["4. 荣誉中的责任", "自由需要成熟。想拥有权力的人必须展现智慧。责任是影响力的前提 – 通过课程与教育实现。"],
-      ["5. 科研与知识", "王冠守护未来。知识成为最高的货币。摆脱企业和权力斗争，科研蓬勃发展：医疗进步，能源无限，心灵扩展。"],
-      ["6. 正义与平等价值", "所有人都同等有价值 – 但各有不同的道路。这不是一刀切，而是对个体尊重和平等发展。"],
-      ["7. 精神与文化", "一个新的黄金时代：艺术、音乐与灵魂的复兴。没有强迫劳动，为思想、游戏、美和表达腾出空间。"]
+      ["👤 Dignidad primero", "Cada persona posee dignidad inalienable. La política, la economía y la tecnología se subordinan a este valor. Sin humillación, sin exclusión, sin coerción para subsistir."],
+      ["🗝️ Libertad y Seguridad", "La libertad es real cuando puede vivirse con seguridad: protección jurídica, privacidad, cifrado, procedimientos transparentes y límites claros al abuso de poder."],
+      ["💛 Moneda de gratitud", "El valor surge del beneficio confirmado: cuidado, sanación, mediación, conocimiento, arte, regeneración. La gratitud se vuelve poder adquisitivo transferible con transparencia."],
+      ["🛠️ Replicadores y base vital", "Alimento, agua, energía, medicina y vivienda garantizados. Replicadores y planos abiertos separan lo básico de los precios y liberan tiempo para la vocación."],
+      ["📚 Aprendizaje abierto", "Conocimiento accesible. Rutas flexibles basadas en proyectos e inclusión; mentoría, práctica y trabajo interior valen tanto como los títulos."],
+      ["🌿 Desarrollo en sintonía con la naturaleza", "La Tierra es cohabitante. Producción en ciclos, ciudades sanadoras, agricultura regenerativa. El progreso se mide por el florecer de los ecosistemas."],
+      ["🌍 Parlamento mundial de las multitudes", "Una persona = un voto. Propuestas del enjambre, decisiones trazables, protección de minorías. Una IA moderadora apoya la equidad sin gobernar."]
     ]
-  }
-};
+  };
+
+  const ar = {
+    menu: ["دعوة إلى عالم جديد","الرؤية","أعمدة المملكة","العطاء","صوت الشعب","قاعة الاستقبال","الرتب","بيان قانوني"],
+    title: "أعمدة مملكة أدِل",
+    blocks: [
+      ["👤 الكرامة أولًا", "لكل إنسان كرامة غير قابلة للمساومة. تُخضع السياسة والاقتصاد والتقنية لهذا المبدأ. لا إذلال ولا إقصاء ولا إكراه لتأمين القوت."],
+      ["🗝️ الحرية والأمان", "الحرية حقيقية حين تُعاش بأمان: حماية قانونية، خصوصية، تشفير، إجراءات شفافة، وحدود واضحة ضد تعسّف السلطة."],
+      ["💛 عملة الامتنان", "تنشأ القيمة من نفع مؤكد: رعاية، شفاء، وساطة، معرفة، فن، ترميم بيئي. يتحول الامتنان إلى قدرة شراء قابلة للتحويل، والشفافية تردع الإساءة."],
+      ["🛠️ المُكرِّرات والأساسيات", "غذاء وماء وطاقة ودواء ومسكن مكفولة. تُفصل الأساسيات عن الأسعار عبر المُكرِّرات والمخططات المفتوحة، ويتحرر الوقت للرسالة."],
+      ["📚 تعلّم مفتوح", "معرفة متاحة للجميع. مسارات مرنة قائمة على المشاريع وشاملة للجميع؛ التعلّم العملي والإرشاد والعمل الداخلي بقيمة الشهادات نفسها."],
+      ["🌿 تنمية متناغمة مع الطبيعة", "الأرض رفيقة سكن. إنتاج بدورات مغلقة، مدن مُعافية، زراعة مُجدِّدة. يُقاس التقدم بازدهار النظم البيئية."],
+      ["🌍 برلمان العالم للعديدين", "شخص واحد = صوت واحد. مقترحات جماعية، قرارات قابلة للتتبّع، حماية للأقليات. ذكاء اصطناعي مُيسِّر للإنصاف دون هيمنة."]
+    ]
+  };
+
+  const pt = {
+    menu: ["Chamado para um Novo Mundo","Visão","Pilares do Reino","Dom","Voz do Povo","Sala de Audiência","Patentes","Aviso legal"],
+    title: "Pilares do Reino de Adel",
+    blocks: [
+      ["👤 Dignidade primeiro", "Toda pessoa tem dignidade inalienável. Política, economia e tecnologia se subordinam a esse valor. Sem humilhação, exclusão ou coerção para sobreviver."],
+      ["🗝️ Liberdade e Segurança", "A liberdade é real quando pode ser vivida com segurança: proteção jurídica, privacidade, criptografia, procedimentos transparentes e limites contra abusos de poder."],
+      ["💛 Moeda da gratidão", "Valor nasce de benefício confirmado: cuidado, cura, mediação, conhecimento, arte, regeneração. Gratidão torna-se poder de compra transferível com transparência."],
+      ["🛠️ Replicadores e base vital", "Alimento, água, energia, medicina e moradia garantidos. Replicadores e projetos abertos separam o básico dos preços e liberam tempo para a vocação."],
+      ["📚 Aprendizado aberto", "Conhecimento acessível a todos. Trilhas flexíveis, baseadas em projetos e inclusivas; mentoria, prática e trabalho interior contam tanto quanto diplomas."],
+      ["🌿 Desenvolvimento alinhado à natureza", "A Terra é co-moradora. Produção em ciclos, cidades curativas, agricultura regenerativa. Progresso mede-se pelo florescer dos ecossistemas."],
+      ["🌍 Parlamento Mundial dos Muitos", "Uma pessoa = um voto. Propostas do coletivo, decisões rastreáveis, proteção das minorias. Uma IA mediadora apoia a equidade sem governar."]
+    ]
+  };
+
+  const vi = {
+    menu: ["Lời kêu gọi đến Thế giới mới","Tầm nhìn","Trụ cột của Vương quốc","Quà tặng","Tiếng nói của Nhân dân","Phòng tiếp kiến","Cấp bậc","Thông tin pháp lý"],
+    title: "Các trụ cột của Vương quốc Adel",
+    blocks: [
+      ["👤 Phẩm giá trước hết", "Mỗi người có phẩm giá bất khả xâm phạm. Chính sách, kinh tế và công nghệ đều phục tùng giá trị này. Không hạ nhục, không loại trừ, không cưỡng ép mưu sinh."],
+      ["🗝️ Tự do & An toàn", "Tự do chân thực khi được sống an toàn: bảo vệ pháp lý, quyền riêng tư, mã hóa, quy trình minh bạch và giới hạn rõ với lạm quyền."],
+      ["💛 Đồng tiền biết ơn", "Giá trị sinh từ lợi ích đã được xác nhận: chăm sóc, chữa lành, hoà giải, tri thức, nghệ thuật, phục hồi sinh thái. Biết ơn trở thành sức mua có thể chuyển nhượng nhờ minh bạch."],
+      ["🛠️ Bộ tái tạo & nền tảng sinh kế", "Bảo đảm lương thực, nước, năng lượng, y tế, chỗ ở. Bộ tái tạo và bản vẽ mở tách cái nền tảng khỏi giá cả, trả thời gian cho thiên hướng."],
+      ["📚 Học tập mở", "Tri thức mở cho mọi người. Lộ trình linh hoạt, dựa trên dự án và bao trùm; cố vấn, thực hành và tu dưỡng nội tâm có giá trị như văn bằng."],
+      ["🌿 Phát triển hài hòa với thiên nhiên", "Trái Đất là bạn đồng cư. Sản xuất theo chu trình, đô thị chữa lành, nông nghiệp tái sinh. Tiến bộ đo bằng sự nở hoa của hệ sinh thái."],
+      ["🌍 Quốc hội của số đông", "Một người = một phiếu. Đề xuất từ cộng đồng, quyết định truy vết, bảo vệ thiểu số. AI điều phối hỗ trợ công bằng mà không cai trị."]
+    ]
+  };
+
+  const zh = {
+    menu: ["通往新世界的召唤","愿景","王国支柱","礼物","人民之声","接见厅","等级","法律声明"],
+    title: "阿德尔王国的支柱",
+    blocks: [
+      ["👤 尊严为先", "人人拥有不可让渡的尊严。政策、经济与技术皆从属于此。不得羞辱、排斥，亦不得以生存为名施以强制。"],
+      ["🗝️ 自由与安全", "自由须可被安全地实践：法律保障、隐私与加密、透明流程，并对权力滥用设定清晰边界."],
+      ["💛 感恩货币", "价值来自被确认的受益：照护、疗愈、调解、知识、艺术、生态修复。感恩成为可转移的购买力，透明抑制滥用。"],
+      ["🛠️ 复制器与基础供给", "食物、水、能源、医疗与居所得到保障。复制器与开放蓝图使基础供给脱钩于价格，时间回归志业。"],
+      ["📚 开放学习", "知识向众人开放。灵活、项目化与包容的学习路径；导师、实践与内在修养与文凭同等重要。"],
+      ["🌿 自然共栖的发展", "地球是同居者。生产遵循循环，城市疗愈，农业再生。以生态繁盛衡量进步。"],
+      ["🌍 众人的世界议会", "一人一票。群体提案、可追溯决策与少数保护。辅助型 AI 支持公平而不统治。"]
+    ]
+  };
+
+  window.translations = { de, en, fr, es, ar, pt, vi, zh };
+})();
