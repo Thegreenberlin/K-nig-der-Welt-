@@ -6,7 +6,7 @@
     blocks: [
       ["👤 Würde zuerst", "Jeder Mensch besitzt unveräußerliche Würde. Politik, Wirtschaft und Technik sind diesem Wert untergeordnet. Keine Demütigung, kein Ausschluss, kein Zwang zur Existenzsicherung."],
       ["🗝️ Freiheit & Sicherheit", "Freiheit ist nur echt, wenn sie sicher gelebt werden kann: Rechtsschutz, Privatsphäre, Verschlüsselung, transparente Verfahren und klare Grenzen gegen Machtmissbrauch."],
-      ["💛 Währung der Dankbarkeit", "Wert entsteht aus bestätigtem Nutzen: Pflege, Heilung, Vermittlung, Wissen, Kunst, Regeneration. Dankbarkeit wird zur übertragbaren Kaufkraft – Missbrauch verhindert Transparenz."],
+      ["💛 Währung der Dankbarkeit","Wert entsteht aus bestätigtem Nutzen: Pflege, Heilung, Vermittlung, Wissen, Kunst, Regeneration. Dankbarkeit wird zur übertragbaren Kaufkraft – Transparenz verhindert Missbrauch."],
       ["🛠️ Replikatoren & Grundversorgung", "Nahrung, Wasser, Energie, Medizin und Wohnraum sind garantiert. Replikatoren und offene Baupläne entkoppeln Grundversorgung von Preisen und befreien Zeit für Berufung."],
       ["📚 Offenes Lernen", "Wissen ist frei zugänglich. Lernpfade sind flexibel, projektbasiert und inklusiv. Mentoring, Praxis und innere Arbeit zählen wie Abschlüsse."],
       ["🌿 Naturverbundene Entwicklung", "Die Erde ist Mitbewohnerin. Produktion folgt Kreisläufen, Städte heilen, Landwirtschaft wird regenerativ. Fortschritt misst sich am Gedeihen von Ökosystemen."],
