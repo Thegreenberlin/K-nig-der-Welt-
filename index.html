@@ -42,286 +42,281 @@
       font-weight: bold; border: none; border-radius: 0.5rem; font-size: 1.1rem;
       cursor: pointer; text-decoration: none; margin-top: 2rem;
     }
-    .language-select {
-      position: fixed; top: 1rem; left: 1rem; z-index: 1001;
-    }
+    .language-select { position: fixed; top: 1rem; left: 1rem; z-index: 1001; }
     .language-select select {
       background-color: #0c0c0c; color: #f0e6d2; border: 1px solid #d4af37;
       padding: 0.4rem; border-radius: 0.5rem; font-size: 1rem;
     }
   </style>
-  <div style="text-align: center; margin-top: 1rem;">
-  <a href="index.html">
-    <img src="logo_koenigderwelt.png"
-         alt="Logo König der Welt"
-         style="height: 64px; max-width: 90vw; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
-  </a>
-  </div>
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "König der Welt",
-  "url": "https://www.koenigderwelt.com",
-  "logo": "https://www.koenigderwelt.com/favicon.png"
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "König der Welt",
+    "url": "https://www.koenigderwelt.com",
+    "logo": "https://www.koenigderwelt.com/favicon.png"
+  }
   </script>
-  <!-- Meta Description -->
-<meta name="description" content="Visionäre Plattform für eine Welt ohne Arbeit, Hunger und Krieg – mit Replikator-Technologie, sozialer Gerechtigkeit und globaler Einheit.">
-
-<!-- Open Graph (für Facebook, WhatsApp, LinkedIn etc.) -->
-<meta property="og:title" content="König der Welt – Die Zukunft beginnt jetzt">
-<meta property="og:description" content="Eine neue Weltordnung mit Freiheit, Replikatoren, Gerechtigkeit und Frieden.">
-<meta property="og:image" content="https://koenigderwelt.com/img/social-preview.jpg">
-<meta property="og:url" content="https://koenigderwelt.com">
-<meta property="og:type" content="website">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="König der Welt – Die Zukunft beginnt jetzt">
-<meta name="twitter:description" content="Eine neue Weltordnung mit Freiheit, Replikatoren, Gerechtigkeit und Frieden.">
-<meta name="twitter:image" content="https://koenigderwelt.com/img/social-preview.jpg">
+  <meta name="description" content="Visionäre Plattform für eine Welt ohne Arbeit, Hunger und Krieg – mit Replikator-Technologie, sozialer Gerechtigkeit und globaler Einheit.">
+  <meta property="og:title" content="König der Welt – Die Zukunft beginnt jetzt">
+  <meta property="og:description" content="Eine neue Weltordnung mit Freiheit, Replikatoren, Gerechtigkeit und Frieden.">
+  <meta property="og:image" content="https://koenigderwelt.com/img/social-preview.jpg">
+  <meta property="og:url" content="https://koenigderwelt.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="König der Welt – Die Zukunft beginnt jetzt">
+  <meta name="twitter:description" content="Eine neue Weltordnung mit Freiheit, Replikatoren, Gerechtigkeit und Frieden.">
+  <meta name="twitter:image" content="https://koenigderwelt.com/img/social-preview.jpg">
 </head>
 <body>
-<div class="language-select" style="display:none;">
-  <select id="language-picker" onchange="changeLanguage(this.value)">
-    <option value="de">🇩🇪 Deutsch</option>
-    <option value="en">🇬🇧 English</option>
-    <option value="fr">🇫🇷 Français</option>
-    <option value="es">🇪🇸 Español</option>
-    <option value="ar">🇸🇦 العربية</option>
-    <option value="pt">🇵🇹 Português</option>
-    <option value="vi">🇻🇳 Tiếng Việt</option>
-    <option value="zh">🇨🇳 中文</option>
-  </select>
-</div>
+  <div class="language-select" style="display:none;">
+    <select id="language-picker" onchange="changeLanguage(this.value)">
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="en">🇬🇧 English</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="es">🇪🇸 Español</option>
+      <option value="ar">🇸🇦 العربية</option>
+      <option value="pt">🇵🇹 Português</option>
+      <option value="vi">🇻🇳 Tiếng Việt</option>
+      <option value="zh">🇨🇳 中文</option>
+    </select>
+  </div>
 
-<!-- Intro Bereich -->
-<div id="intro">
-  <img src="pactum-elysium-emblem.png" alt="Pactum Elysium Emblem">
-  <p id="intro-text">Pactum Elysium: Cor Unum</p>
-</div>
+  <div style="text-align: center; margin-top: 1rem;">
+    <a href="index.html">
+      <img src="logo_koenigderwelt.png" alt="Logo König der Welt" style="height: 64px; max-width: 90vw; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+    </a>
+  </div>
 
-<!-- Hauptinhalt -->
-<div id="main-content">
-  <div class="navbar">
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <div></div><div></div><div></div>
+  <div id="intro">
+    <img src="pactum-elysium-emblem.png" alt="Pactum Elysium Emblem">
+    <p id="intro-text">Pactum Elysium: Cor Unum</p>
+  </div>
+
+  <div id="main-content">
+    <div class="navbar">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div><div></div><div></div>
+      </div>
+    </div>
+    <div class="menu" id="menu">
+      <a href="index.html" id="menu-0">Ruf zur neuen Welt</a>
+      <a href="vision.html" id="menu-1">Vision</a>
+      <a href="saeulen_des_Koenigreichs.html" id="menu-2">Säulen des Königreichs</a>
+      <a href="gabe.html" id="menu-3">Gabe</a>
+      <a href="kommentare.html" id="menu-4">Stimme des Volkes</a>
+      <a href="audienzzimmer.html" id="menu-5">Audienzzimmer</a>
+      <a href="raenge.html" id="menu-6">Ränge</a>
+      <a href="ueber_mich.html" id="menu-7">Über mich</a>
+      <a href="impressum.html" id="menu-8">Impressum</a>
+    </div>
+
+    <div class="container">
+      <h1 class="block" style="--i:0" id="headline">Der Ruf der neuen Welt</h1>
+
+      <div id="long-text" class="block" style="--i:1"></div>
+
+      <p style="text-align:center;">
+        <a href="vision.html" class="button block" style="--i:2" id="learn-more">Ich will mehr erfahren</a>
+      </p>
     </div>
   </div>
-  <div class="menu" id="menu">
-    <a href="index.html" id="menu-0">Ruf zur neuen Welt</a>
-    <a href="vision.html" id="menu-1">Vision</a>
-    <a href="saeulen_des_Koenigreichs.html" id="menu-2">Säulen des Königreichs</a>
-    <a href="gabe.html" id="menu-3">Gabe</a>
-    <a href="kommentare.html" id="menu-4">Stimme des Volkes</a>
-    <a href="audienzzimmer.html" id="menu-5">Audienzzimmer</a>
-    <a href="raenge.html" id="menu-6">Ränge</a>
-    <a href="ueber_mich.html">Über mich</a>
-    <a href="impressum.html" id="menu-7">Impressum</a>
-  </div>
 
-  <div class="container">
-    <h1 class="block" style="--i:0" id="headline">Der Ruf der neuen Welt</h1>
-    <p class="block" style="--i:1" id="text-0">Es begann mit einer Frage.</p>
-    <p class="block" style="--i:2" id="text-1">Warum leben Milliarden Menschen in Mühe, wenn Überfluss möglich ist?</p>
-    <p class="block" style="--i:3" id="text-2">Warum gibt es Hunger – wenn Maschinen nähren können?</p>
-    <p class="block" style="--i:4" id="text-3">Warum Arbeit – wenn Technologie längst befreit?</p>
-    <p class="block" style="--i:5" id="text-4">Warum Krieg – wenn ein geeinter Schutz reicht?</p>
-    <p class="block" style="--i:6" id="text-5">Und dann erhob sich einer.</p>
-    <p class="block" style="--i:7" id="text-6">Kein Kaiser, kein Tyrann. Sondern einer aus dem Volk, der bereit war, Verantwortung zu tragen.</p>
-    <p class="block" style="--i:8" id="text-7">Er sprach von Replikatoren, von Freiheit, von einer Welt ohne Zwang.</p>
-    <p class="block" style="--i:9" id="text-8"><em>„Ich will kein Thron für mich – ich will ein Leben für alle.“</em></p>
-    <p class="block" style="--i:10" id="text-9">So begann die Bewegung. Und du stehst nun am Tor. Nicht als Zuschauer, sondern als Teil einer neuen Geschichte.</p>
-    <p style="text-align:center;"><a href="vision.html" class="button block" style="--i:11" id="learn-more">Ich will mehr erfahren</a></p>
-  </div>
-</div>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
-<script>
-const translations = {
-  de: {
-    introText: "Pactum Elysium: Cor Unum",
-    menu: ["Ruf zur neuen Welt", "Vision", "Säulen des Königreichs", "Gabe", "Stimme des Volkes", "Audienzzimmer", "Ränge", "Impressum"],
-    headline: "Der Ruf der neuen Welt",
-    texts: [
-      "Es begann mit einer Frage.",
-      "Warum leben Milliarden Menschen in Mühe, wenn Überfluss möglich ist?",
-      "Warum gibt es Hunger – wenn Maschinen nähren können?",
-      "Warum Arbeit – wenn Technologie längst befreit?",
-      "Warum Krieg – wenn ein geeinter Schutz reicht?",
-      "Und dann erhob sich einer.",
-      "Kein Kaiser, kein Tyrann. Sondern einer aus dem Volk, der bereit war, Verantwortung zu tragen.",
-      "Er sprach von Replikatoren, von Freiheit, von einer Welt ohne Zwang.",
-      "<em>„Ich will kein Thron für mich – ich will ein Leben für alle.“</em>",
-      "So begann die Bewegung. Und du stehst nun am Tor. Nicht als Zuschauer, sondern als Teil einer neuen Geschichte."
-    ],
-    learnMore: "Ich will mehr erfahren"
-  },
-  en: {
-    introText: "Pactum Elysium: One Heart",
-    menu: ["Call to a New World", "Vision", "Pillars of the Kingdom", "Gift", "Voice of the People", "Audience Room", "Ranks", "Imprint"],
-    headline: "The Call of the New World",
-    texts: [
-      "It began with a question.",
-      "Why do billions live in struggle when abundance is possible?",
-      "Why is there hunger – when machines can nourish?",
-      "Why work – when technology has already freed us?",
-      "Why war – when united protection is enough?",
-      "And then someone stood up.",
-      "No emperor, no tyrant. But one from the people, ready to bear responsibility.",
-      "He spoke of replicators, of freedom, of a world without coercion.",
-      "<em>\"I don’t want a throne for myself – I want life for all.\"</em>",
-      "Thus began the movement. And now you stand at the gate. Not as a spectator, but as part of a new story."
-    ],
-    learnMore: "I want to learn more"
-  },
-  fr: {
-    introText: "Pactum Elysium : Un Seul Cœur",
-    menu: ["Appel à un Nouveau Monde", "Vision", "Piliers du Royaume", "Don", "Voix du Peuple", "Salle d'Audience", "Rangs", "Mentions légales"],
-    headline: "L'appel du nouveau monde",
-    texts: [
-      "Tout a commencé par une question.",
-      "Pourquoi des milliards vivent-ils dans la peine alors que l’abondance est possible ?",
-      "Pourquoi y a-t-il la faim – alors que des machines peuvent nourrir ?",
-      "Pourquoi travailler – alors que la technologie peut déjà nous libérer ?",
-      "Pourquoi la guerre – alors qu’une protection unie suffit ?",
-      "Et puis quelqu’un s’est levé.",
-      "Ni empereur, ni tyran. Mais quelqu’un du peuple, prêt à assumer la responsabilité.",
-      "Il a parlé de réplicateurs, de liberté, d’un monde sans contrainte.",
-      "<em>\"Je ne veux pas de trône pour moi – je veux une vie pour tous.\"</em>",
-      "Ainsi commença le mouvement. Et maintenant tu es à la porte. Non comme spectateur, mais comme acteur d’une nouvelle histoire."
-    ],
-    learnMore: "Je veux en savoir plus"
-  },
-  es: {
-    introText: "Pactum Elysium: Corazón Unido",
-    menu: ["Llamado a un Nuevo Mundo", "Visión", "Pilares del Reino", "Don", "Voz del Pueblo", "Sala de Audiencias", "Rangos", "Aviso legal"],
-    headline: "El llamado del nuevo mundo",
-    texts: [
-      "Todo comenzó con una pregunta.",
-      "¿Por qué viven miles de millones en la miseria si es posible la abundancia?",
-      "¿Por qué hay hambre – si las máquinas pueden alimentar?",
-      "¿Por qué trabajar – si la tecnología ya nos ha liberado?",
-      "¿Por qué la guerra – si una protección unida es suficiente?",
-      "Y entonces alguien se levantó.",
-      "No un emperador, no un tirano. Sino uno del pueblo, dispuesto a asumir la responsabilidad.",
-      "Habló de replicadores, de libertad, de un mundo sin coacción.",
-      "<em>\"No quiero un trono para mí – quiero una vida para todos.\"</em>",
-      "Así comenzó el movimiento. Y ahora estás frente a la puerta. No como espectador, sino como parte de una nueva historia."
-    ],
-    learnMore: "Quiero saber más"
-  },
-  ar: {
-    introText: "باكتوم إليسيوم: قلب واحد",
-    menu: ["دعوة إلى عالم جديد", "الرؤية", "أعمدة المملكة", "العطاء", "صوت الشعب", "قاعة الاستقبال", "الرتب", "بيان قانوني"],
-    headline: "نداء العالم الجديد",
-    texts: [
-      "بدأ كل شيء بسؤال.",
-      "لماذا يعيش المليارات في المعاناة بينما الرفاهية ممكنة؟",
-      "لماذا يوجد الجوع – إذا كانت الآلات قادرة على الإطعام؟",
-      "لماذا العمل – إذا كانت التكنولوجيا قد حررتنا؟",
-      "لماذا الحرب – إذا كانت الحماية الموحدة كافية؟",
-      "ثم نهض أحدهم.",
-      "ليس إمبراطورًا، ولا طاغية. بل شخص من الشعب، مستعد لتحمل المسؤولية.",
-      "تحدث عن الناسخين، عن الحرية، عن عالم بلا إكراه.",
-      "<em>\"لا أريد عرشًا لنفسي – بل حياة للجميع.\"</em>",
-      "هكذا بدأت الحركة. والآن تقف عند البوابة. لا كمشاهد، بل كجزء من قصة جديدة."
-    ],
-    learnMore: "أريد معرفة المزيد"
-  },
-  pt: {
-    introText: "Pactum Elysium: Um Só Coração",
-    menu: ["Chamado para um Novo Mundo", "Visão", "Pilares do Reino", "Dom", "Voz do Povo", "Sala de Audiência", "Patentes", "Aviso legal"],
-    headline: "O chamado do novo mundo",
-    texts: [
-      "Tudo começou com uma pergunta.",
-      "Por que bilhões vivem em dificuldades se a abundância é possível?",
-      "Por que há fome – se as máquinas podem alimentar?",
-      "Por que trabalhar – se a tecnologia já nos libertou?",
-      "Por que a guerra – se uma proteção unida é suficiente?",
-      "Então alguém se levantou.",
-      "Nem imperador, nem tirano. Mas alguém do povo, disposto a assumir responsabilidade.",
-      "Falou de replicadores, de liberdade, de um mundo sem coerção.",
-      "<em>\"Não quero um trono para mim – quero uma vida para todos.\"</em>",
-      "Assim começou o movimento. E agora você está diante do portão. Não como espectador, mas como parte de uma nova história."
-    ],
-    learnMore: "Quero saber mais"
-  },
-  vi: {
-    introText: "Pactum Elysium: Một Trái Tim",
-    menu: ["Lời kêu gọi đến Thế giới mới", "Tầm nhìn", "Trụ cột của Vương quốc", "Quà tặng", "Tiếng nói của Nhân dân", "Phòng tiếp kiến", "Cấp bậc", "Thông tin pháp lý"],
-    headline: "Tiếng gọi của thế giới mới",
-    texts: [
-      "Mọi thứ bắt đầu bằng một câu hỏi.",
-      "Tại sao hàng tỷ người sống trong khó khăn khi có thể có sự dư thừa?",
-      "Tại sao lại có nạn đói – khi máy móc có thể nuôi sống?",
-      "Tại sao phải làm việc – khi công nghệ đã giải phóng chúng ta?",
-      "Tại sao có chiến tranh – khi một sự bảo vệ thống nhất là đủ?",
-      "Rồi một người đứng lên.",
-      "Không phải hoàng đế, không phải bạo chúa. Mà là một người từ nhân dân, sẵn sàng gánh vác trách nhiệm.",
-      "Người ấy nói về các máy tái tạo, về tự do, về một thế giới không bị cưỡng ép.",
-      "<em>\"Tôi không muốn ngai vàng cho riêng mình – tôi muốn cuộc sống cho tất cả.\"</em>",
-      "Và như thế, phong trào bắt đầu. Giờ đây bạn đang đứng trước cánh cổng. Không phải là khán giả, mà là một phần của câu chuyện mới."
-    ],
-    learnMore: "Tôi muốn tìm hiểu thêm"
-  },
-  zh: {
-    introText: "伊利西昂契约：同一个心",
-    menu: ["通往新世界的召唤", "愿景", "王国支柱", "礼物", "人民之声", "接见厅", "等级", "法律声明"],
-    headline: "新世界的召唤",
-    texts: [
-      "一切始于一个问题。",
-      "当富足是可能的，为何数十亿人仍在挣扎？",
-      "为何还有饥饿 —— 当机器能提供食物？",
-      "为何要劳动 —— 当科技早已释放人类？",
-      "为何战争 —— 当统一的保护已足够？",
-      "然后，有人站了出来。",
-      "不是皇帝，不是暴君，而是一个来自人民，愿意承担责任的人。",
-      "他讲述了复制机、自由，以及一个没有强制的世界。",
-      "<em>\"我不要王位 —— 我要为所有人带来生活。\"</em>",
-      "运动由此而起。你现在站在门前，不是旁观者，而是新故事的一部分。"
-    ],
-    learnMore: "我想了解更多"
+  <script>
+  const translations = {
+    de: {
+      introText: "Pactum Elysium: Cor Unum",
+      menu: [
+        "Ruf zur neuen Welt",
+        "Vision",
+        "Säulen des Königreichs",
+        "Gabe",
+        "Stimme des Volkes",
+        "Audienzzimmer",
+        "Ränge",
+        "Über mich",
+        "Impressum"
+      ],
+      headline: "Der Ruf der neuen Welt",
+      learnMore: "Ich will mehr erfahren"
+    },
+    en: {
+      introText: "Pactum Elysium: One Heart",
+      menu: [
+        "Call to a New World",
+        "Vision",
+        "Pillars of the Kingdom",
+        "Gift",
+        "Voice of the People",
+        "Audience Room",
+        "Ranks",
+        "About me",
+        "Imprint"
+      ],
+      headline: "The Call of the New World",
+      learnMore: "I want to learn more"
+    },
+    fr: {
+      introText: "Pactum Elysium : Un Seul Cœur",
+      menu: [
+        "Appel à un Nouveau Monde",
+        "Vision",
+        "Piliers du Royaume",
+        "Don",
+        "Voix du Peuple",
+        "Salle d'Audience",
+        "Rangs",
+        "À propos",
+        "Mentions légales"
+      ],
+      headline: "L'appel du nouveau monde",
+      learnMore: "Je veux en savoir plus"
+    },
+    es: {
+      introText: "Pactum Elysium: Corazón Unido",
+      menu: [
+        "Llamado a un Nuevo Mundo",
+        "Visión",
+        "Pilares del Reino",
+        "Don",
+        "Voz del Pueblo",
+        "Sala de Audiencias",
+        "Rangos",
+        "Sobre mí",
+        "Aviso legal"
+      ],
+      headline: "El llamado del nuevo mundo",
+      learnMore: "Quiero saber más"
+    },
+    ar: {
+      introText: "باكتوم إليسيوم: قلب واحد",
+      menu: [
+        "دعوة إلى عالم جديد",
+        "الرؤية",
+        "أعمدة المملكة",
+        "العطاء",
+        "صوت الشعب",
+        "قاعة الاستقبال",
+        "الرتب",
+        "من أنا",
+        "بيان قانوني"
+      ],
+      headline: "نداء العالم الجديد",
+      learnMore: "أريد معرفة المزيد"
+    },
+    pt: {
+      introText: "Pactum Elysium: Um Só Coração",
+      menu: [
+        "Chamado para um Novo Mundo",
+        "Visão",
+        "Pilares do Reino",
+        "Dom",
+        "Voz do Povo",
+        "Sala de Audiência",
+        "Patentes",
+        "Sobre mim",
+        "Aviso legal"
+      ],
+      headline: "O chamado do novo mundo",
+      learnMore: "Quero saber mais"
+    },
+    vi: {
+      introText: "Pactum Elysium: Một Trái Tim",
+      menu: [
+        "Lời kêu gọi đến Thế giới mới",
+        "Tầm nhìn",
+        "Trụ cột của Vương quốc",
+        "Quà tặng",
+        "Tiếng nói của Nhân dân",
+        "Phòng tiếp kiến",
+        "Cấp bậc",
+        "Giới thiệu",
+        "Thông tin pháp lý"
+      ],
+      headline: "Tiếng gọi của thế giới mới",
+      learnMore: "Tôi muốn tìm hiểu thêm"
+    },
+    zh: {
+      introText: "伊利西昂契约：同一个心",
+      menu: [
+        "通往新世界的召唤",
+        "愿景",
+        "王国支柱",
+        "礼物",
+        "人民之声",
+        "接见厅",
+        "等级",
+        "关于我",
+        "法律声明"
+      ],
+      headline: "新世界的召唤",
+      learnMore: "我想了解更多"
+    }
+  };
+  </script>
+
+  <script>
+  function changeLanguage(lang) {
+    const t = translations[lang];
+    if (!t) return;
+
+    document.documentElement.lang = lang;
+    document.getElementById('intro-text').innerText = t.introText;
+
+    t.menu.forEach((text, i) => {
+      const el = document.getElementById(`menu-${i}`);
+      if (el) el.innerText = text;
+    });
+
+    document.title = t.headline || document.title;
+    document.getElementById('headline').innerText = t.headline;
+    document.getElementById('learn-more').innerText = t.learnMore;
+
+    const long = document.getElementById('long-text');
+    if (long) {
+      if (lang === 'de') {
+        long.innerHTML = `
+<p>Willkommen in einer Welt, die wir neu denken können. Stell dir eine Gesellschaft vor, in der niemand aus Angst vor Mangel handelt, sondern aus Vertrauen in Fülle, Verbundenheit und Sinn. In dieser Welt sind Grundbedürfnisse nicht verhandelbar: Jeder Mensch hat Zugang zu Nahrung, sauberem Wasser und sicherem Wohnraum, ohne Angst vor Existenzverlust.</p>
+<p>In dieser Welt unterstützt die Gemeinschaft einander, teilt Wissen und Ressourcen und handelt nach dem Prinzip: Was dem Einzelnen gut tut, stärkt das Ganze. Bildung ist frei zugänglich und lebensnah. Technik dient der Freiheit, nicht der Kontrolle. Menschen arbeiten an dem, was sie sinnvoll finden, und die Ergebnisse kommen allen zugute. Kreativität, Fürsorge und Weisheit gelten als höchste Formen von Leistung – und medizinische Versorgung ist keine Frage des Geldes.</p>
+<p>Orte der Ruhe und Natur bieten Raum für geistige und körperliche Erholung. Stadt und Land werden so gestaltet, dass sie heilsam wirken, nicht krank machen. Kinder wachsen in sicheren, liebevollen Umgebungen auf, lernen Kooperation statt Konkurrenz und entwickeln Stärken, die der Gemeinschaft dienen. Technologie wird so verteilt, dass sie allen zugutekommt.</p>
+<p>Persönliche Daten sind geschützt, Manipulation und Missbrauch haben keinen Platz. Kommunikation ist ehrlich, transparent und respektvoll. Entscheidungen werden gemeinsam getroffen, auf Basis von Fakten, Empathie und langfristiger Vernunft. Verantwortung ist nicht Last, sondern Ausdruck von Reife. Motivation entsteht aus Sinn, Freude und Gemeinschaft.</p>
+<p>Ressourcen werden geteilt, Kooperation ersetzt Konkurrenz, und materielle Sicherheit ist Grundlage – nicht Ziel. Arbeit wird neu definiert: Nicht Zeit gegen Geld, sondern Beitrag mit Wirkung. Jeder Mensch hat ein Recht auf Muße, Lernen, Heilung und Entfaltung. Dankbarkeit hat Bedeutung und wirkt sich positiv auf die Gemeinschaft aus.</p>
+<p>Menschen übernehmen Verantwortung, weil sie erkennen, dass ihr Handeln Wirkung hat. Führung bedeutet Dienen. Fehler sind Lernräume. Konflikte werden gewaltfrei gelöst. Systeme sind resilient, gerecht und transparent. Wer Hilfe braucht, erhält Hilfe – sofort und würdevoll. Jeder kann Verantwortung übernehmen, ohne Druck, aber mit echter Wirkung.</p>
+<p>Beziehungen in dieser Welt basieren auf Vertrauen und gegenseitiger Achtung. Liebe wird nicht als Besitz verstanden, sondern als Haltung. Gemeinschaften sind inklusiv und vielfältig; Unterschiede werden nicht gegeneinander ausgespielt, sondern als Stärke verstanden. Jeder Mensch darf Grenzen setzen und Verbundenheit zeigen. Jeder kann kreativ sein, lernen und sich entwickeln.</p>
+<p>Jede Handlung trägt dazu bei, dass die Welt gerechter, lebenswerter und friedlicher wird. Die Kultur ehrt Wahrheit, Mut und Mitgefühl. Es ist normal, Hilfe anzunehmen – und normal, sie zu geben. Wir messen Fortschritt nicht länger an Profiten, sondern daran, wie gut es den Menschen, den Tieren und der Erde geht. Wir handeln im Wissen, dass wir verbunden sind – und in Verantwortung handeln. Hier wird niemand zurückgelassen.</p>
+<p>Jeder erlebt Sicherheit, Freiheit und Wertschätzung, und jede Stimme zählt. Diese Welt beginnt im Denken, im Fühlen und im Handeln jedes Einzelnen – und wächst durch die Entscheidung, heute damit zu beginnen. Willkommen in einer Welt, die wir neu denken können. Willkommen in einer Welt, in der wir uns erinnern, wer wir sind – und was wir gemeinsam vermögen. Es ist Zeit für Mut, Empathie und Bereitschaft, Verantwortung für uns und andere zu übernehmen.</p>
+        `;
+      } else {
+        long.innerHTML = '';
+      }
+    }
   }
-};
-</script>
 
-<script>
-function changeLanguage(lang) {
-  const t = translations[lang];
-  if (!t) return;
-  document.documentElement.lang = lang;
-  document.getElementById('intro-text').innerText = t.introText;
-  t.menu.forEach((text, i) => {
-    document.getElementById(`menu-${i}`).innerText = text;
+  function toggleMenu() {
+    document.getElementById('menu').classList.toggle('active');
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    changeLanguage('de');
   });
-  document.getElementById('headline').innerText = t.headline;
-  t.texts.forEach((text, i) => {
-    document.getElementById(`text-${i}`).innerHTML = text;
-  });
-  document.getElementById('learn-more').innerText = t.learnMore;
-}
 
-function toggleMenu() {
-  document.getElementById('menu').classList.toggle('active');
-}
-
-setTimeout(() => {
-  const intro = document.getElementById('intro');
-  intro.classList.add('fade-out');
   setTimeout(() => {
-    intro.style.display = 'none';
-    document.getElementById('main-content').style.display = 'block';
-    document.querySelector('.language-select').style.display = 'block';
-  }, 2000);
-}, 5000);
+    const intro = document.getElementById('intro');
+    intro.classList.add('fade-out');
+    setTimeout(() => {
+      intro.style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+      document.querySelector('.language-select').style.display = 'block';
+    }, 2000);
+  }, 5000);
 
-window.addEventListener('scroll', () => {
-  const languageSelect = document.querySelector('.language-select');
-  languageSelect.style.display = window.scrollY === 0 ? 'block' : 'none';
-});
-</script>
+  window.addEventListener('scroll', () => {
+    const languageSelect = document.querySelector('.language-select');
+    languageSelect.style.display = window.scrollY === 0 ? 'block' : 'none';
+  });
+  </script>
 </body>
 </html>
