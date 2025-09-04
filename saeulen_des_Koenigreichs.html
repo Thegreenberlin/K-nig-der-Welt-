@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Säulen des Königreichs</title>
+  <title>Säulen des adelschen Königreichs</title>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
@@ -36,6 +36,7 @@
     }
     .vision-block p {
       line-height: 1.6;
+      margin: 0;
     }
     .navbar {
       position: fixed;
@@ -74,18 +75,14 @@
       align-items: center;
       z-index: 998;
     }
-    .menu.active {
-      right: 0;
-    }
+    .menu.active { right: 0; }
     .menu a {
       font-size: 1.5rem;
       color: #f0e6d2;
       text-decoration: none;
       margin: 1rem 0;
     }
-    .menu a:hover {
-      color: #d4af37;
-    }
+    .menu a:hover { color: #d4af37; }
     .language-select {
       position: fixed;
       top: 1rem;
@@ -100,90 +97,115 @@
       border-radius: 0.5rem;
       font-size: 1rem;
     }
+    .brand {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .brand img {
+      height: 64px;
+      max-width: 90vw;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
   </style>
-  <div style="text-align: center; margin-top: 1rem;">
-  <a href="index.html">
-    <img src="logo_koenigderwelt.png"
-         alt="Logo König der Welt"
-         style="height: 64px; max-width: 90vw; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
-  </a>
-  </div>
 </head>
 <body>
 
-<div class="language-select">
-  <select id="language-picker" onchange="setLanguage(this.value)">
-    <option value="de">🇩🇪 Deutsch</option>
-    <option value="en">🇬🇧 English</option>
-    <option value="fr">🇫🇷 Français</option>
-    <option value="es">🇪🇸 Español</option>
-    <option value="ar">🇸🇦 العربية</option>
-    <option value="pt">🇵🇹 Português</option>
-    <option value="vi">🇻🇳 Tiếng Việt</option>
-    <option value="zh">🇨🇳 中文</option>
-  </select>
-</div>
-
-<div class="navbar">
-  <div class="menu-toggle" onclick="toggleMenu()">
-    <div></div><div></div><div></div>
+  <div class="brand">
+    <a href="index.html">
+      <img src="logo_koenigderwelt.png" alt="Logo König der Welt">
+    </a>
   </div>
-</div>
 
-<div class="menu" id="menu">
-  <a href="index.html">Ruf zur neuen Welt</a>
-  <a href="vision.html">Vision</a>
-  <a href="saeulen_blockstil_mit_animation.html">Säulen des Königreichs</a>
-  <a href="gabe.html">Gabe</a>
-  <a href="kommentare.html">Stimme des Volkes</a>
-  <a href="audienzzimmer.html">Audienzzimmer</a>
-  <a href="raenge.html">Ränge</a>
-  <a href="ueber_mich.html">Über mich</a>
-  <a href="impressum.html">Impressum</a>
-</div>
+  <div class="language-select">
+    <select id="language-picker" onchange="setLanguage(this.value)">
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="en">🇬🇧 English</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="es">🇪🇸 Español</option>
+      <option value="ar">🇸🇦 العربية</option>
+      <option value="pt">🇵🇹 Português</option>
+      <option value="vi">🇻🇳 Tiếng Việt</option>
+      <option value="zh">🇨🇳 中文</option>
+    </select>
+  </div>
 
-<div class="container">
-  <h1 class="section-title" id="saeulen-title"></h1>
+  <div class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+  </div>
 
-  <div class="vision-block" data-aos="fade-up"><h2></h2><p></p></div>
-  <div class="vision-block" data-aos="fade-up"><h2></h2><p></p></div>
-  <div class="vision-block" data-aos="fade-up"><h2></h2><p></p></div>
-  <div class="vision-block" data-aos="fade-up"><h2></h2><p></p></div>
-  <div class="vision-block" data-aos="fade-up"><h2></h2><p></p></div>
-  <div class="vision-block" data-aos="fade-up"><h2></h2><p></p></div>
-  <div class="vision-block" data-aos="fade-up"><h2></h2><p></p></div>
-</div>
+  <div class="menu" id="menu">
+    <a href="index.html" data-menu="0">Ruf zur neuen Welt</a>
+    <a href="vision.html" data-menu="1">Vision</a>
+    <a href="saeulen_des_Koenigreichs.html" data-menu="2">Säulen des Königreichs</a>
+    <a href="gabe.html" data-menu="3">Gabe</a>
+    <a href="kommentare.html" data-menu="4">Stimme des Volkes</a>
+    <a href="audienzzimmer.html" data-menu="5">Audienzzimmer</a>
+    <a href="raenge.html" data-menu="6">Ränge</a>
+    <a href="impressum.html" data-menu="7">Impressum</a>
+    <!-- Falls du „Über mich“ willst, kannst du den Link hier zusätzlich einfügen (ohne Übersetzung). -->
+  </div>
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
-<script src="translations-saeulen.js"></script>
-<script>
-  function toggleMenu() {
-    document.getElementById('menu').classList.toggle('active');
-  }
+  <div class="container">
+    <h1 class="section-title" id="saeulen-title"></h1>
+    <div id="saeulen-content"></div>
+  </div>
 
-  function setLanguage(lang) {
-    localStorage.setItem('lang', lang);
-    render(lang);
-  }
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="translations-saeulen.js"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('active');
+    }
 
-  function render(lang) {
-    const t = translations[lang] || translations['de'];
-    document.getElementById('language-picker').value = lang;
-    document.getElementById('saeulen-title').innerText = t.title;
+    function setLanguage(lang) {
+      localStorage.setItem('lang', lang);
+      render(lang);
+    }
 
-    const blocks = document.querySelectorAll('.vision-block');
-    t.blocks.forEach((block, i) => {
-      blocks[i].querySelector('h2').innerText = block[0];
-      blocks[i].querySelector('p').innerText = block[1];
+    function render(lang) {
+      const all = window.translations || {};
+      const t = all[lang] || all['de'];
+
+      // <html> Attribut & Richtung (für Arabisch)
+      document.documentElement.lang = (lang in all) ? lang : 'de';
+      document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+
+      // Dropdown setzen
+      const picker = document.getElementById('language-picker');
+      if (picker) picker.value = lang;
+
+      // Titel (Seite & H1)
+      document.title = t.title;
+      document.getElementById('saeulen-title').innerText = t.title;
+
+      // Menülabels (erste 8 Links mit data-menu)
+      const menuLinks = document.querySelectorAll('#menu a[data-menu]');
+      t.menu.forEach((label, i) => {
+        if (menuLinks[i]) menuLinks[i].innerText = label;
+      });
+
+      // Inhalte dynamisch erzeugen
+      const container = document.getElementById('saeulen-content');
+      container.innerHTML = '';
+      t.blocks.forEach(block => {
+        const div = document.createElement('div');
+        div.className = 'vision-block';
+        div.setAttribute('data-aos', 'fade-up');
+        const [title, para] = block;
+        div.innerHTML = `<h2>${title}</h2><p>${para}</p>`;
+        container.appendChild(div);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const lang = localStorage.getItem('lang') || 'de';
+      render(lang);
     });
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const lang = localStorage.getItem('lang') || 'de';
-    render(lang);
-  });
-</script>
+  </script>
 
 </body>
 </html>
