@@ -9,9 +9,9 @@
     .container { max-width: 960px; margin: 0 auto; padding: 2rem; }
     .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 2rem; }
     .vision-block { background-color: #1a1a1a; border-radius: 12px; box-shadow: 0 0 10px rgba(255,255,255,0.05); padding: 1.5rem; margin-bottom: 2rem; }
-    .vision-block h2 { font-size: 1.6rem; margin-bottom: 1rem; }
+    .vision-block h2 { font-size: 1.6rem; margin-bottom: 1rem; display:flex; align-items:center; gap:.5rem; }
     .vision-block p { line-height: 1.6; }
-    .icon { font-size: 1.8rem; margin-right: 0.5rem; }
+    .icon { font-size: 1.8rem; }
     .navbar { position: fixed; top: 0; right: 0; z-index: 999; padding: 1rem; }
     .menu-toggle { cursor: pointer; width: 30px; height: 22px; display: flex; flex-direction: column; justify-content: space-between; }
     .menu-toggle div { background: #d4af37; height: 4px; border-radius: 2px; }
@@ -21,34 +21,29 @@
     .menu a:hover { color: #d4af37; }
     .language-select { position: fixed; top: 1rem; left: 1rem; z-index: 1001; }
     .language-select select { background-color: #0c0c0c; color: #f0e6d2; border: 1px solid #d4af37; padding: 0.4rem; border-radius: 0.5rem; font-size: 1rem; }
+    .brand { text-align: center; margin-top: 1rem; }
+    .brand img { height: 64px; max-width: 90vw; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.3); }
   </style>
 </head>
 <body>
-<div style="text-align: center; margin-top: 1rem;">
-  <a href="index.html">
-  <img src="logo_koenigderwelt.png"
-         alt="Logo König der Welt"
-         style="height: 64px; max-width: 90vw; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
-  </a>  
-</div>  
- 
+  <div class="brand">
+    <a href="index.html">
+      <img src="logo_koenigderwelt.png" alt="Logo König der Welt">
+    </a>
+  </div>
+
   <div class="language-select">
     <select id="language-picker" onchange="setLanguage(this.value)">
       <option value="de">🇩🇪 Deutsch</option>
-      <option value="en">🇬🇧 English</option>
-      <option value="fr">🇫🇷 Français</option>
-      <option value="es">🇪🇸 Español</option>
-      <option value="ar">🇸🇦 العربية</option>
-      <option value="pt">🇵🇹 Português</option>
-      <option value="vi">🇻🇳 Tiếng Việt</option>
-      <option value="zh">🇨🇳 中文</option>
     </select>
   </div>
+
   <div class="navbar">
     <div class="menu-toggle" onclick="toggleMenu()">
       <div></div><div></div><div></div>
     </div>
   </div>
+
   <div class="menu" id="menu">
     <a href="index.html">Ruf zur neuen Welt</a>
     <a href="vision.html">Vision</a>
@@ -59,14 +54,96 @@
     <a href="raenge.html">Ränge</a>
     <a href="impressum.html">Impressum</a>
   </div>
+
   <div class="container">
     <h1 class="section-title" id="vision-title"></h1>
     <div id="vision-content"></div>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
-  <script src="translations-full.js"></script>
+
   <script>
+    const translations = {
+      de: {
+        title: "Die Vision des adelschen Königreichs",
+        blocks: [
+          [
+            "🌟 Freiheit – nicht mehr nur ein Wort, sondern Realität",
+            "Freiheit beginnt, wenn Grundbedürfnisse nicht verhandelbar sind. Wenn niemand um Miete, um Mahlzeiten oder um medizinische Hilfe bangen muss, entsteht ein Raum, in dem Entscheidungen nicht länger aus Angst, sondern aus Klarheit getroffen werden.",
+            "Replikatoren und faire Verteilung der Infrastruktur entkoppeln die Lebenssicherheit von der Erwerbsarbeit. Arbeit wird wieder Berufung: Du wählst Tätigkeiten, die Sinn stiften, statt Zwänge zu bedienen. Zeit kehrt zu dir zurück – für Familie, Lernen, Heilung und schöpferisches Tun.",
+            "Freiheit heißt auch Schutz: vor Willkür, vor Überwachung, vor dem Handel mit deiner Aufmerksamkeit. Digitale Selbstbestimmung, starke Verschlüsselung und transparente Protokolle sind Standard – nicht Privileg.",
+            "Im Alltag zeigt sich das so: Du kannst ohne finanziellen Druck eine Pflegezeit nehmen, ein Projekt beginnen, ein Instrument lernen. Du musst dich nicht rechtfertigen, wofür du deine Lebenszeit nutzt.",
+            "Freiheit bleibt verbunden mit Verantwortung. Wer frei ist, kann freiwillig beitragen: Wissen teilen, Konflikte fair lösen, Ressourcen schonen, Gemeinschaftsaufgaben übernehmen. Rechte und Pflichten sind keine Gegensätze, sondern zwei Seiten derselben Würde.",
+            "Diese Freiheit ist inklusiv. Sie gilt unabhängig von Herkunft, Alter, Fähigkeiten oder Bildung. Sie schafft nicht neue Mauern, sondern neue Türen – damit Menschen eintreten, aufatmen und wachsen können."
+          ],
+          [
+            "💼 Gesellschaftlicher Aufstieg durch Würde und Beitrag",
+            "Im adelschen Verständnis misst sich Aufstieg nicht an Besitz, sondern an Wirkung: Was heilst du, was verbindest du, was lässt du gedeihen? Anerkennung folgt dem Beitrag, nicht dem Titel.",
+            "Beiträge sind vielfältig: Pflege, Vermittlung in Konflikten, eine Idee, die Ressourcen spart, Kunst, die Gemeinschaft stiftet. Alles, was Leben stärkt, zählt – sichtbar, messbar, geehrt.",
+            "Anerkennungssysteme sind transparent, freiwillig und nicht käuflich. Reputation entsteht aus nachprüfbaren Taten, verteilt von vielen, nie monopolisiert von wenigen.",
+            "Inklusion heißt: Barrieren fallen. Assistive Technologien, flexible Lernpfade und Mentoring-Programme sorgen dafür, dass Talente nicht unentdeckt bleiben.",
+            "Führung bedeutet Dienen. Wer führt, öffnet Wege, hebt andere, teilt Macht und Wissen. Fehler gelten als Lernräume, nicht als Stigma – dadurch wird Mut möglich.",
+            "So entsteht Mobilität ohne Ellenbogen: Aufsteigen heißt, mehr Verantwortung tragen zu können, weil andere dir vertrauen – und weil du ihnen vertraust."
+          ],
+          [
+            "📈 Eine Wirtschaft des Überflusses",
+            "Knappheit war lange ein Organisationsprinzip. Mit Replikatoren und zirkulären Materialkreisläufen wird Grundversorgung von Preisen entkoppelt. Was früher Rand war, wird Basis.",
+            "Jenseits dessen wird gewirtschaftet wie in einem Ideenlabor: Schenkökonomie, Tausch, freiwilliger Handel und digitale Anerkennungssysteme existieren nebeneinander. Wettbewerb bleibt da sinnvoll, wo er Kreativität freisetzt – nicht, wo er Existenzen bedroht.",
+            "Ökologische Kosten werden von Anfang an berücksichtigt. Ressourcenflüsse sind transparent, Abfälle werden Rohstoffe, Energie ist sauber und lokal gespeichert.",
+            "Innovation ist offene Praxis: geteilte Baupläne, kollaborative Forschung, Lizenzmodelle, die Gemeingüter schützen und zugleich Unternehmertum ermöglichen.",
+            "Resilienz entsteht durch Dezentralität. Netzwerke können ausfallen, ohne dass die Gemeinschaft leidet. Redundanz ist kein Luxus, sondern Fürsorge in Strukturform.",
+            "Wohlstand bedeutet, dass Menschen Zugang zu dem haben, was sie brauchen, und Raum für das, was sie können. Wachstum misst sich am Gedeihen – von Menschen, Tieren, Ökosystemen."
+          ],
+          [
+            "❤️ Gesundheit als unantastbares Grundrecht",
+            "Gesundheit ist kein Markt, sondern ein Versprechen. Prävention, akute Versorgung und Rehabilitation stehen allen offen – ohne Zuzahlung, ohne Scham.",
+            "Körper und Psyche werden zusammen gedacht. Therapiepfade sind interdisziplinär: medizinisch, psychologisch, sozial, kulturell.",
+            "Digitale Systeme unterstützen, sie ersetzen nicht die Zuwendung. Algorithmen sind erklärbar, Daten gehören den Menschen; Einwilligung ist granular und widerrufbar.",
+            "Nachbarschaftszentren, mobile Teams und Telemedizin sorgen dafür, dass Hilfe dort ankommt, wo Menschen leben – nicht nur, wo Kliniken stehen.",
+            "Gesundheitskompetenz ist Allgemeinbildung: Schlaf, Ernährung, Bewegung, Stressregulation, Beziehungspflege. Wer versteht, kann vorbeugen; wer scheitert, wird aufgefangen.",
+            "Niemand fällt durch das Netz. Akute Krisen werden sofort begleitet; langfristige Heilwege sind möglich, weil Zeit und Mittel vorhanden sind."
+          ],
+          [
+            "🌳 Die Natur als Mitbewohnerin, nicht als Ressource",
+            "Natur hat Eigenwert. Wälder, Moore, Gewässer und Böden erhalten Rechte und Pflege – nicht nur Schutzschilder auf dem Papier.",
+            "Energie ist sauber, Kreisläufe geschlossen. Produktion geschieht dort, wo die Folgen verantwortet werden können; Transport ist effizient und selten.",
+            "Landwirtschaft wird regenerativ: Bodenaufbau, Vielfalt, faire Tierlebensräume, städtische Gärten, vertikale Farmen. Essen nährt Körper, Gemeinschaft und Landschaft zugleich.",
+            "Städte werden heilsam: Schatten, Wasser, leise Mobilität, kurze Wege, Räume für Stille. Architektur dient dem Leben, nicht dem Spektakel.",
+            "Bildung verbindet Menschen wieder mit Ökosystemen: Hüten, Pflegen, Wiederaufforsten, Beobachten. Naturnähe wird alltäglich – nicht exotisch.",
+            "Der Mensch ist Teil des Gleichgewichts. Technologie ergänzt die Natur, statt sie zu ersetzen. Fortschritt misst sich an der Tiefe der Beziehung, nicht an der Höhe der Türme."
+          ],
+          [
+            "🌍 Das Weltparlament der Vielen – eine neue Demokratie für alle",
+            "1 Mensch = 1 Stimme. Keine Parteienkartelle, keine Lobbyfesseln. Vorschläge entstehen aus dem Schwarm, Entscheidungen sind rückverfolgbar, Minderheiten geschützt.",
+            "Eine moderierende KI sorgt für Fairness, Zugänglichkeit und klare Begründungen – ohne zu herrschen. Sie unterstützt, erklärt, balanciert, lernt offen.",
+            "Diskurse sind transparent: Quellen werden offengelegt, Interessenkonflikte sichtbar gemacht, Abstimmungen dokumentiert.",
+            "Subsidiarität gilt: Lokal, was lokal entschieden werden kann; regional und global, was Kooperation braucht.",
+            "Teilhabe ist barrierefrei: mehrsprachig, inklusiv, mit Zeitfenstern und Formaten, die realistische Teilnahme ermöglichen.",
+            "Politik wird wieder Lebenskunst: gemeinsame Verständigung über gute Wege – nicht permanente Abwehrkämpfe."
+          ],
+          [
+            "🔮 Bildung, Erkenntnis, Erleuchtung",
+            "Wissen ist frei. Archive sind offen, Labore zugänglich, Lernräume vielfältig – vom Handwerk bis zur Grundlagenforschung.",
+            "Curricula sind lebendig: Menschen kombinieren Praxis, Theorie, Kunst, Ethik und Körperarbeit. Lernen folgt Neugier, nicht nur Prüfungskalendern.",
+            "Mentoring und Peergroups ersetzen einsame Leistungsläufe. Projekte gelten als Nachweise; Fehler zählen als Erkenntnisse.",
+            "Innere Arbeit hat Platz: Achtsamkeit, Dialog, Konfliktkompetenz, Trauer- und Heilungsräume.",
+            "Bildung dient der Selbstwirksamkeit: Wer lernt, kann beitragen, gestalten, Verantwortung tragen – und loslassen.",
+            "Schulen, Werkstätten, Bibliotheken, Makerspaces und digitale Campus sind Knoten eines Netzes, das das ganze Leben begleitet."
+          ],
+          [
+            "👑 Warum Bürger werden?",
+            "Weil du spürst, dass mehr möglich ist als Verwaltung des Mangels – und weil du Teil einer Kultur der Würde sein willst.",
+            "Weil Grundsicherheit dir erlaubt, groß zu denken, weich zu werden, mutig zu handeln – ohne Angst, zu fallen.",
+            "Weil deine Stimme zählt: in lokalen Entscheidungen, in globalen Projekten, in Fragen, die deine Zukunft prägen.",
+            "Weil du nicht nur Zuschauer sein willst, sondern Mitgestalter. Du bringst etwas Einzigartiges mit – und hier wird es gebraucht.",
+            "Weil Wandel dort beginnt, wo Menschen ihn leben: in Beziehungen, in Ritualen, in Arbeit, in Pausen, im Umgang mit Konflikten.",
+            "Weil das adelsche Königreich kein Staat ist, sondern ein Versprechen: an dich, an die Gemeinschaft, an die Erde – und weil du dieses Versprechen mittragen willst."
+          ]
+        ]
+      }
+    };
+
     function toggleMenu() {
       document.getElementById('menu').classList.toggle('active');
     }
@@ -75,16 +152,21 @@
       render(lang);
     }
     function render(lang) {
-      const t = translations[lang] || translations['de'];
+      const t = translations[lang] || translations.de;
       document.getElementById('language-picker').value = lang;
       document.getElementById('vision-title').innerText = t.title;
       const content = document.getElementById('vision-content');
       content.innerHTML = '';
       t.blocks.forEach(block => {
+        const heading = block[0] || "";
+        const firstSpace = heading.indexOf(' ');
+        const icon = firstSpace > 0 ? heading.slice(0, firstSpace) : "";
+        const title = firstSpace > 0 ? heading.slice(firstSpace + 1) : heading;
         const div = document.createElement('div');
         div.className = 'vision-block';
         div.setAttribute('data-aos', 'fade-up');
-        div.innerHTML = `<h2><span class="icon">${block[0].split(' ')[0]}</span>${block[0].substring(2)}</h2>` + block.slice(1).map(p => `<p>${p}</p>`).join('');
+        const paras = block.slice(1).map(p => `<p>${p}</p>`).join('');
+        div.innerHTML = `<h2><span class="icon">${icon}</span><span>${title}</span></h2>${paras}`;
         content.appendChild(div);
       });
     }
