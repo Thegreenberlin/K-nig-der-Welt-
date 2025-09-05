@@ -48,7 +48,7 @@
     blocks: [
       ["👤 Dignidad primero", "Cada persona posee dignidad inalienable. La política, la economía y la tecnología se subordinan a este valor. Sin humillación, sin exclusión, sin coerción para subsistir."],
       ["🗝️ Libertad y Seguridad", "La libertad es real cuando puede vivirse con seguridad: protección jurídica, privacidad, cifrado, procedimientos transparentes y límites claros al abuso de poder."],
-      ["💛 Moneda de gratitud", "El valor surge del beneficio confirmado: cuidado, sanación, mediación, conocimiento, arte, regeneración. La gratitud se vuelve poder adquisitivo transferible con transparencia."],
+      ["💛 Moneda de gratitud","El valor surge del beneficio confirmado: cuidado, sanación, mediación, conocimiento, arte, regeneración. La gratitud se vuelve poder adquisitivo transferible – la transparencia evita abusos."],
       ["🛠️ Replicadores y base vital", "Alimento, agua, energía, medicina y vivienda garantizados. Replicadores y planos abiertos separan lo básico de los precios y liberan tiempo para la vocación."],
       ["📚 Aprendizaje abierto", "Conocimiento accesible. Rutas flexibles basadas en proyectos e inclusión; mentoría, práctica y trabajo interior valen tanto como los títulos."],
       ["🌿 Desarrollo en sintonía con la naturaleza", "La Tierra es cohabitante. Producción en ciclos, ciudades sanadoras, agricultura regenerativa. El progreso se mide por el florecer de los ecosistemas."],
@@ -76,7 +76,7 @@
     blocks: [
       ["👤 Dignidade primeiro", "Toda pessoa tem dignidade inalienável. Política, economia e tecnologia se subordinam a esse valor. Sem humilhação, exclusão ou coerção para sobreviver."],
       ["🗝️ Liberdade e Segurança", "A liberdade é real quando pode ser vivida com segurança: proteção jurídica, privacidade, criptografia, procedimentos transparentes e limites contra abusos de poder."],
-      ["💛 Moeda da gratidão", "Valor nasce de benefício confirmado: cuidado, cura, mediação, conhecimento, arte, regeneração. Gratidão torna-se poder de compra transferível com transparência."],
+      ["💛 Moeda da gratidão", "Valor nasce de benefício confirmado: cuidado, cura, mediação, conhecimento, arte, regeneração. A gratidão torna-se poder de compra transferível – a transparência impede abusos."],
       ["🛠️ Replicadores e base vital", "Alimento, água, energia, medicina e moradia garantidos. Replicadores e projetos abertos separam o básico dos preços e liberam tempo para a vocação."],
       ["📚 Aprendizado aberto", "Conhecimento acessível a todos. Trilhas flexíveis, baseadas em projetos e inclusivas; mentoria, prática e trabalho interior contam tanto quanto diplomas."],
       ["🌿 Desenvolvimento alinhado à natureza", "A Terra é co-moradora. Produção em ciclos, cidades curativas, agricultura regenerativa. Progresso mede-se pelo florescer dos ecossistemas."],
@@ -90,7 +90,7 @@
     blocks: [
       ["👤 Phẩm giá trước hết", "Mỗi người có phẩm giá bất khả xâm phạm. Chính sách, kinh tế và công nghệ đều phục tùng giá trị này. Không hạ nhục, không loại trừ, không cưỡng ép mưu sinh."],
       ["🗝️ Tự do & An toàn", "Tự do chân thực khi được sống an toàn: bảo vệ pháp lý, quyền riêng tư, mã hóa, quy trình minh bạch và giới hạn rõ với lạm quyền."],
-      ["💛 Đồng tiền biết ơn", "Giá trị sinh từ lợi ích đã được xác nhận: chăm sóc, chữa lành, hoà giải, tri thức, nghệ thuật, phục hồi sinh thái. Biết ơn trở thành sức mua có thể chuyển nhượng nhờ minh bạch."],
+      ["💛 Đồng tiền biết ơn","Giá trị sinh từ lợi ích đã được xác nhận: chăm sóc, chữa lành, hoà giải, tri thức, nghệ thuật, phục hồi sinh thái. Biết ơn trở thành sức mua có thể chuyển nhượng – sự minh bạch ngăn ngừa lạm dụng."],
       ["🛠️ Bộ tái tạo & nền tảng sinh kế", "Bảo đảm lương thực, nước, năng lượng, y tế, chỗ ở. Bộ tái tạo và bản vẽ mở tách cái nền tảng khỏi giá cả, trả thời gian cho thiên hướng."],
       ["📚 Học tập mở", "Tri thức mở cho mọi người. Lộ trình linh hoạt, dựa trên dự án và bao trùm; cố vấn, thực hành và tu dưỡng nội tâm có giá trị như văn bằng."],
       ["🌿 Phát triển hài hòa với thiên nhiên", "Trái Đất là bạn đồng cư. Sản xuất theo chu trình, đô thị chữa lành, nông nghiệp tái sinh. Tiến bộ đo bằng sự nở hoa của hệ sinh thái."],
