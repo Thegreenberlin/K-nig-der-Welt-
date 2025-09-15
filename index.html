@@ -34,9 +34,10 @@
     .block:nth-child(n) { animation-delay: calc(0.5s + 0.3s * var(--i)); }
     @keyframes fadeInText { to { opacity: 1; transform: translateY(0); } }
     .button { display: inline-block; padding: 0.8rem 1.5rem; background: #d4af37; color: white; font-weight: bold; border: none; border-radius: 0.5rem; font-size: 1.1rem; cursor: pointer; text-decoration: none; margin-top: 2rem; }
-    .language-select { position: fixed; top: 1rem; left: 1rem; z-index: 1001; }
+    .language-select { position: fixed; top: 1rem; left: 1rem; z-index: 1001; display:none; }
     .language-select select { background-color: #0c0c0c; color: #f0e6d2; border: 1px solid #d4af37; padding: 0.4rem; border-radius: 0.5rem; font-size: 1rem; }
   </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,6 +47,7 @@
     "logo": "https://www.koenigderwelt.com/favicon.png"
   }
   </script>
+
   <meta name="description" content="Visionäre Plattform für eine Welt ohne Arbeit, Hunger und Krieg – mit Replikator-Technologie, sozialer Gerechtigkeit und globaler Einheit.">
   <meta property="og:title" content="König der Welt – Die Zukunft beginnt jetzt">
   <meta property="og:description" content="Eine neue Weltordnung mit Freiheit, Replikatoren, Gerechtigkeit und Frieden.">
@@ -58,7 +60,7 @@
   <meta name="twitter:image" content="https://koenigderwelt.com/img/social-preview.jpg">
 </head>
 <body>
-  <div class="language-select" style="display:none;">
+  <div class="language-select">
     <select id="language-picker" onchange="changeLanguage(this.value)">
       <option value="de">🇩🇪 Deutsch</option>
       <option value="en">🇬🇧 English</option>
@@ -68,6 +70,15 @@
       <option value="pt">🇵🇹 Português</option>
       <option value="vi">🇻🇳 Tiếng Việt</option>
       <option value="zh">🇨🇳 中文</option>
+      <option value="it">🇮🇹 Italiano</option>
+      <option value="ru">🇷🇺 Русский</option>
+      <option value="ja">🇯🇵 日本語</option>
+      <option value="ko">🇰🇷 한국어</option>
+      <option value="hi">🇮🇳 हिन्दी</option>
+      <option value="tr">🇹🇷 Türkçe</option>
+      <option value="sw">🇰🇪 Kiswahili</option>
+      <option value="ha">🇳🇬 Hausa</option>
+      <option value="am">🇪🇹 አማርኛ</option>
     </select>
   </div>
 
@@ -112,167 +123,42 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
 
-  <script>
-  const translations = {
-    de: {
-      introText: "Pactum Elysium: Cor Unum",
-      menu: ["Ruf zur neuen Welt","Vision","Säulen des Königreichs","Gabe","Stimme des Volkes","Audienzzimmer","Ränge","Über mich","Impressum"],
-      headline: "Der Ruf der neuen Welt",
-      learnMore: "Ich will mehr erfahren",
-      longTextHTML: `
-<p>Willkommen in einer Welt, die wir neu denken können. Stell dir eine Gesellschaft vor, in der niemand aus Angst vor Mangel handelt, sondern aus Vertrauen in Fülle, Verbundenheit und Sinn. In dieser Welt sind Grundbedürfnisse nicht verhandelbar: Jeder Mensch hat Zugang zu Nahrung, sauberem Wasser und sicherem Wohnraum, ohne Angst vor Existenzverlust.</p>
-<p>In dieser Welt unterstützt die Gemeinschaft einander, teilt Wissen und Ressourcen und handelt nach dem Prinzip: Was dem Einzelnen gut tut, stärkt das Ganze. Bildung ist frei zugänglich und lebensnah. Technik dient der Freiheit, nicht der Kontrolle. Menschen arbeiten an dem, was sie sinnvoll finden, und die Ergebnisse kommen allen zugute. Kreativität, Fürsorge und Weisheit gelten als höchste Formen von Leistung – und medizinische Versorgung ist keine Frage des Geldes.</p>
-<p>Orte der Ruhe und Natur bieten Raum für geistige und körperliche Erholung. Stadt und Land werden so gestaltet, dass sie heilsam wirken, nicht krank machen. Kinder wachsen in sicheren, liebevollen Umgebungen auf, lernen Kooperation statt Konkurrenz und entwickeln Stärken, die der Gemeinschaft dienen. Technologie wird so verteilt, dass sie allen zugutekommt.</p>
-<p>Persönliche Daten sind geschützt, Manipulation und Missbrauch haben keinen Platz. Kommunikation ist ehrlich, transparent und respektvoll. Entscheidungen werden gemeinsam getroffen, auf Basis von Fakten, Empathie und langfristiger Vernunft. Verantwortung ist nicht Last, sondern Ausdruck von Reife. Motivation entsteht aus Sinn, Freude und Gemeinschaft.</p>
-<p>Ressourcen werden geteilt, Kooperation ersetzt Konkurrenz, und materielle Sicherheit ist Grundlage – nicht Ziel. Arbeit wird neu definiert: Nicht Zeit gegen Geld, sondern Beitrag mit Wirkung. Jeder Mensch hat ein Recht auf Muße, Lernen, Heilung und Entfaltung. Dankbarkeit hat Bedeutung und wirkt sich positiv auf die Gemeinschaft aus.</p>
-<p>Menschen übernehmen Verantwortung, weil sie erkennen, dass ihr Handeln Wirkung hat. Führung bedeutet Dienen. Fehler sind Lernräume. Konflikte werden gewaltfrei gelöst. Systeme sind resilient, gerecht und transparent. Wer Hilfe braucht, erhält Hilfe – sofort und würdevoll. Jeder kann Verantwortung übernehmen, ohne Druck, aber mit echter Wirkung.</p>
-<p>Beziehungen in dieser Welt basieren auf Vertrauen und gegenseitiger Achtung. Liebe wird nicht als Besitz verstanden, sondern als Haltung. Gemeinschaften sind inklusiv und vielfältig; Unterschiede werden nicht gegeneinander ausgespielt, sondern als Stärke verstanden. Jeder Mensch darf Grenzen setzen und Verbundenheit zeigen. Jeder kann kreativ sein, lernen und sich entwickeln.</p>
-<p>Jede Handlung trägt dazu bei, dass die Welt gerechter, lebenswerter und friedlicher wird. Die Kultur ehrt Wahrheit, Mut und Mitgefühl. Es ist normal, Hilfe anzunehmen – und normal, sie zu geben. Wir messen Fortschritt nicht länger an Profiten, sondern daran, wie gut es den Menschen, den Tieren und der Erde geht. Wir handeln im Wissen, dass wir verbunden sind – und in Verantwortung handeln. Hier wird niemand zurückgelassen.</p>
-<p>Jeder erlebt Sicherheit, Freiheit und Wertschätzung, und jede Stimme zählt. Diese Welt beginnt im Denken, im Fühlen und im Handeln jedes Einzelnen – und wächst durch die Entscheidung, heute damit zu beginnen. Willkommen in einer Welt, die wir neu denken können. Willkommen in einer Welt, in der wir uns erinnern, wer wir sind – und was wir gemeinsam vermögen. Es ist Zeit für Mut, Empathie und Bereitschaft, Verantwortung für uns und andere zu übernehmen.</p>
-`
-    },
-    en: {
-      introText: "Pactum Elysium: One Heart",
-      menu: ["Call to a New World","Vision","Pillars of the Kingdom","Gift","Voice of the People","Audience Room","Ranks","About me","Imprint"],
-      headline: "The Call of the New World",
-      learnMore: "I want to learn more",
-      longTextHTML: `
-<p>Welcome to a world we can rethink. Imagine a society where no one acts out of fear of scarcity, but from trust in abundance, connection, and meaning. In this world, basic needs are non-negotiable: every person has access to food, clean water, and safe housing, without the fear of losing their livelihood.</p>
-<p>In this world, the community supports one another, shares knowledge and resources, and acts on the principle that what benefits one strengthens the whole. Education is freely accessible and relevant to life. Technology serves freedom, not control. People work on what they find meaningful, and the results benefit everyone. Creativity, care, and wisdom are recognized as the highest forms of contribution — and healthcare is not a matter of money.</p>
-<p>Places of rest and nature offer space for mental and physical recovery. Cities and rural areas are designed to heal rather than harm. Children grow up in safe, loving environments, learn cooperation instead of competition, and develop strengths that serve the community. Technology is distributed so that it benefits all.</p>
-<p>Personal data is protected; manipulation and abuse have no place. Communication is honest, transparent, and respectful. Decisions are made together, based on facts, empathy, and long-term reason. Responsibility is not a burden but an expression of maturity. Motivation arises from meaning, joy, and community.</p>
-<p>Resources are shared, cooperation replaces competition, and material security is a foundation — not the goal. Work is redefined: not time for money, but contribution with impact. Every person has a right to leisure, learning, healing, and growth. Gratitude matters — and it positively affects the community.</p>
-<p>People take responsibility because they recognize that their actions have effects. Leadership means service. Mistakes are learning spaces. Conflicts are resolved nonviolently. Systems are resilient, fair, and transparent. Whoever needs help receives it — immediately and with dignity. Everyone can take responsibility, without pressure, yet with real effect.</p>
-<p>Relationships in this world are based on trust and mutual respect. Love is not possession but a stance. Communities are inclusive and diverse; differences are not played against one another but understood as strengths. Every person may set boundaries and show connection. Everyone can be creative, learn, and develop.</p>
-<p>Every action contributes to making the world more just, livable, and peaceful. The culture honors truth, courage, and compassion. It is normal to receive help — and normal to give it. We no longer measure progress by profits but by how well people, animals, and the Earth are doing. We act knowing we are connected — and therefore act responsibly. No one is left behind here.</p>
-<p>Everyone experiences safety, freedom, and appreciation, and every voice counts. This world begins in the thinking, feeling, and acting of each person — and grows through the decision to begin today. Welcome to a world we can rethink. Welcome to a world in which we remember who we are — and what we can accomplish together. It is time for courage, empathy, and the willingness to take responsibility for ourselves and others.</p>
-`
-    },
-    fr: {
-      introText: "Pactum Elysium : Un Seul Cœur",
-      menu: ["Appel à un Nouveau Monde","Vision","Piliers du Royaume","Don","Voix du Peuple","Salle d'Audience","Rangs","À propos","Mentions légales"],
-      headline: "L'appel du nouveau monde",
-      learnMore: "Je veux en savoir plus",
-      longTextHTML: `
-<p>Bienvenue dans un monde que nous pouvons repenser. Imagine une société où personne n’agit par peur du manque, mais par confiance dans l’abondance, le lien et le sens. Dans ce monde, les besoins fondamentaux ne sont pas négociables : chacun a accès à la nourriture, à l’eau potable et à un logement sûr, sans craindre de perdre ses moyens d’existence.</p>
-<p>Dans ce monde, la communauté se soutient mutuellement, partage savoirs et ressources, et agit selon le principe : ce qui fait du bien à l’individu renforce l’ensemble. L’éducation est libre d’accès et ancrée dans la vie réelle. La technologie sert la liberté, non le contrôle. Chacun travaille à ce qu’il trouve porteur de sens, et le résultat profite à tous. La créativité, le soin et la sagesse sont reconnus comme des contributions majeures — et l’accès aux soins ne dépend pas de l’argent.</p>
-<p>Des lieux de repos et de nature offrent des espaces de régénération mentale et physique. Villes et campagnes sont conçues pour guérir plutôt que blesser. Les enfants grandissent dans des environnements sûrs et aimants, apprennent la coopération plutôt que la concurrence et développent des forces au service de la collectivité. La technologie est répartie de sorte qu’elle bénéficie à tous.</p>
-<p>Les données personnelles sont protégées ; manipulation et abus n’ont pas leur place. La communication est honnête, transparente et respectueuse. Les décisions se prennent ensemble, sur la base des faits, de l’empathie et de la raison à long terme. La responsabilité n’est pas un fardeau, mais une expression de maturité. La motivation naît du sens, de la joie et de la communauté.</p>
-<p>Les ressources sont partagées, la coopération remplace la concurrence et la sécurité matérielle est un socle — non une fin. Le travail est redéfini : non du temps contre de l’argent, mais une contribution à impact. Chacun a droit à la détente, à l’apprentissage, à la guérison et à l’épanouissement. La gratitude a du poids — et elle profite à la communauté.</p>
-<p>Les personnes assument leurs responsabilités car elles savent que leurs actes ont des effets. Diriger, c’est servir. Les erreurs sont des espaces d’apprentissage. Les conflits se résolvent sans violence. Les systèmes sont résilients, justes et transparents. Quiconque a besoin d’aide la reçoit — immédiatement et dignement. Chacun peut assumer des responsabilités, sans pression mais avec un véritable impact.</p>
-<p>Les relations, ici, reposent sur la confiance et le respect mutuel. L’amour n’est pas une possession, mais une attitude. Les communautés sont inclusives et diverses ; les différences ne sont pas opposées mais comprises comme des forces. Chacun peut poser des limites et exprimer la connexion. Chacun peut créer, apprendre et se développer.</p>
-<p>Chaque action contribue à rendre le monde plus juste, plus vivable et plus pacifique. La culture honore la vérité, le courage et la compassion. Recevoir de l’aide est normal — en donner aussi. Nous ne mesurons plus le progrès aux profits, mais à l’état des humains, des animaux et de la Terre. Nous agissons en sachant que nous sommes liés — et donc de manière responsable. Ici, personne n’est laissé de côté.</p>
-<p>Chacun fait l’expérience de la sécurité, de la liberté et de la reconnaissance, et chaque voix compte. Ce monde commence dans la pensée, le ressenti et l’action de chacun — et grandit par la décision de commencer aujourd’hui. Bienvenue dans un monde que nous pouvons repenser. Bienvenue dans un monde où nous nous souvenons de qui nous sommes — et de ce que nous pouvons accomplir ensemble. Il est temps pour le courage, l’empathie et la volonté d’assumer nos responsabilités pour nous-mêmes et pour les autres.</p>
-`
-    },
-    es: {
-      introText: "Pactum Elysium: Corazón Unido",
-      menu: ["Llamado a un Nuevo Mundo","Visión","Pilares del Reino","Don","Voz del Pueblo","Sala de Audiencias","Rangos","Sobre mí","Aviso legal"],
-      headline: "El llamado del nuevo mundo",
-      learnMore: "Quiero saber más",
-      longTextHTML: `
-<p>Bienvenido a un mundo que podemos repensar. Imagina una sociedad donde nadie actúe por miedo a la escasez, sino por confianza en la abundancia, la conexión y el sentido. En este mundo, las necesidades básicas no son negociables: toda persona tiene acceso a alimentos, agua limpia y vivienda segura, sin temer perder su sustento.</p>
-<p>En este mundo, la comunidad se apoya mutuamente, comparte conocimiento y recursos, y actúa según el principio de que lo que beneficia a uno fortalece al conjunto. La educación es libre y relevante para la vida. La tecnología sirve a la libertad, no al control. Las personas trabajan en lo que consideran significativo, y los resultados benefician a todos. La creatividad, el cuidado y la sabiduría son reconocidos como las formas más altas de contribución — y la atención sanitaria no depende del dinero.</p>
-<p>Los lugares de descanso y la naturaleza brindan espacio para la recuperación mental y física. Las ciudades y el campo se diseñan para sanar, no para dañar. Los niños crecen en entornos seguros y amorosos, aprenden cooperación en vez de competencia y desarrollan fortalezas al servicio de la comunidad. La tecnología se distribuye de modo que beneficie a todos.</p>
-<p>Los datos personales están protegidos; la manipulación y el abuso no tienen cabida. La comunicación es honesta, transparente y respetuosa. Las decisiones se toman en conjunto, basadas en hechos, empatía y razón a largo plazo. La responsabilidad no es una carga, sino una expresión de madurez. La motivación nace del sentido, la alegría y la comunidad.</p>
-<p>Se comparten los recursos, la cooperación sustituye a la competencia y la seguridad material es una base — no el fin. El trabajo se redefine: no tiempo por dinero, sino contribución con impacto. Toda persona tiene derecho al descanso, al aprendizaje, a la sanación y al desarrollo. La gratitud importa — y repercute positivamente en la comunidad.</p>
-<p>Las personas asumen responsabilidad porque reconocen que sus actos tienen efectos. Liderar es servir. Los errores son espacios de aprendizaje. Los conflictos se resuelven sin violencia. Los sistemas son resilientes, justos y transparentes. Quien necesita ayuda la recibe — de inmediato y con dignidad. Todos pueden asumir responsabilidad, sin presión, pero con verdadero efecto.</p>
-<p>Las relaciones se basan en la confianza y el respeto mutuo. El amor no es posesión, sino una actitud. Las comunidades son inclusivas y diversas; las diferencias no se enfrentan, sino que se comprenden como fortalezas. Toda persona puede poner límites y mostrar conexión. Todos pueden ser creativos, aprender y desarrollarse.</p>
-<p>Cada acción contribuye a que el mundo sea más justo, habitable y pacífico. La cultura honra la verdad, el valor y la compasión. Es normal recibir ayuda — y normal brindarla. Ya no medimos el progreso por beneficios, sino por el bienestar de las personas, los animales y la Tierra. Actuamos sabiendo que estamos conectados — y por ello actuamos con responsabilidad. Aquí nadie se queda atrás.</p>
-<p>Todos experimentan seguridad, libertad y aprecio, y cada voz cuenta. Este mundo comienza en el pensamiento, el sentir y la acción de cada persona — y crece con la decisión de empezar hoy. Bienvenido a un mundo que podemos repensar. Bienvenido a un mundo donde recordamos quiénes somos — y lo que podemos lograr juntos. Es tiempo de valentía, empatía y voluntad de asumir la responsabilidad por nosotros y por los demás.</p>
-`
-    },
-    ar: {
-      introText: "باكتوم إليسيوم: قلب واحد",
-      menu: ["دعوة إلى عالم جديد","الرؤية","أعمدة المملكة","العطاء","صوت الشعب","قاعة الاستقبال","الرتب","من أنا","بيان قانوني"],
-      headline: "نداء العالم الجديد",
-      learnMore: "أريد معرفة المزيد",
-      longTextHTML: `
-<p>مرحبًا بك في عالم يمكننا إعادة التفكير فيه. تخيّل مجتمعًا لا يتصرّف فيه أحد بدافع الخوف من النقص، بل انطلاقًا من الثقة في الوفرة والترابط والمعنى. في هذا العالم، تُعدّ الحاجات الأساسية غير قابلة للتفاوض: لكل إنسان حقّ في الغذاء والماء النظيف والسكن الآمن دون خوف من فقدان مقومات العيش.</p>
-<p>في هذا العالم، يدعم الناس بعضهم بعضًا، ويتشاركون المعرفة والموارد، ويعملون وفق مبدأ أن منفعة الفرد تقوّي الجماعة بأكملها. التعليم متاح للجميع ومرتبط بالحياة. التكنولوجيا تخدم الحرية لا السيطرة. يعمل الناس فيما يجدونه ذا معنى، وتعود نتائجه بالنفع على الجميع. تُعدّ الإبداع والرعاية والحكمة أرقى صور العطاء — كما أن الرعاية الصحية ليست مسألة مال.</p>
-<p>توفّر أماكن السكينة والطبيعة مساحة للتعافي النفسي والجسدي. وتُصمَّم المدن والأرياف لتكون مداوية لا مُنهِكة. ينشأ الأطفال في بيئات آمنة ومحبّة، ويتعلّمون التعاون بدل التنافس، وينمّون نقاط قوّة تخدم المجتمع. وتُوزَّع التكنولوجيا بحيث تعود بالنفع على الجميع.</p>
-<p>البيانات الشخصية مصونة، ولا مكان للتلاعب أو الإساءة. التواصل صادق وشفّاف ومحترم. تُتّخذ القرارات معًا على أساس الحقائق والتعاطف والحكمة بعيدة المدى. المسؤولية ليست عبئًا، بل تعبير عن النضج. والدافعية تنبع من المعنى والفرح والمجتمع.</p>
-<p>تُشارَك الموارد، وتحلّ الشراكة محلّ المنافسة، وتكون الكفاية المادية أساسًا — لا غاية. يُعاد تعريف العمل: ليس زمنًا مقابل مال، بل مساهمة ذات أثر. لكل إنسان حقّ في الراحة والتعلّم والشفاء والنماء. للامتنان وزن ومعنى — وينعكس إيجابًا على المجتمع.</p>
-<p>يتحمّل الناس المسؤولية لأنهم يدركون أثر أفعالهم. القيادة خدمة. والأخطاء مساحات للتعلّم. وتُحَلّ النزاعات بلا عنف. الأنظمة مرِنة وعادلة وشفافة. من يحتاج العون ينله — فورًا وبكرامة. ويمكن للجميع تحمّل المسؤولية، بلا ضغط، ولكن بأثر حقيقي.</p>
-<p>تقوم العلاقات هنا على الثقة والاحترام المتبادل. الحبّ ليس تملّكًا بل موقفًا. المجتمعات شاملة ومتنوّعة؛ والاختلافات لا تُستَغلّ ضدًا لبعضها، بل تُفهَم كقوة. لكل شخص أن يضع حدودًا ويُظهِر الترابط. وكل أحد يمكنه الإبداع والتعلّم والتطوّر.</p>
-<p>يسهم كل فعل في جعل العالم أعدل وأكثر قابلية للعيش وأكثر سلمًا. الثقافة تُجِلّ الحقيقة والشجاعة والرحمة. ومن الطبيعي تلقّي العون — كما من الطبيعي تقديمه. لم نعد نقيس التقدّم بالأرباح، بل بمدى عافية الناس والحيوانات والأرض. نتصرف ونحن نعلم أنّنا مترابطون — ولذلك نتصرف بمسؤولية. وهنا لا يُترَك أحد خلف الركب.</p>
-<p>يختبر الجميع الأمان والحرية والتقدير، وتُحسَب كلّ كلمة. ويبدأ هذا العالم في تفكير كل فرد وشعوره وفعله — ويكبر بقرار البدء اليوم. مرحبًا بك في عالم يمكننا إعادة التفكير فيه. مرحبًا بك في عالم نتذكّر فيه من نحن — وما الذي نستطيع إنجازه معًا. لقد آن أوان الشجاعة والتعاطف والاستعداد لتحمّل المسؤولية عن أنفسنا وعن الآخرين.</p>
-`
-    },
-    pt: {
-      introText: "Pactum Elysium: Um Só Coração",
-      menu: ["Chamado para um Novo Mundo","Visão","Pilares do Reino","Dom","Voz do Povo","Sala de Audiência","Patentes","Sobre mim","Aviso legal"],
-      headline: "O chamado do novo mundo",
-      learnMore: "Quero saber mais",
-      longTextHTML: `
-<p>Bem-vindo a um mundo que podemos repensar. Imagine uma sociedade em que ninguém age por medo da escassez, mas por confiança na abundância, na conexão e no propósito. Neste mundo, as necessidades básicas não são negociáveis: toda pessoa tem acesso a alimento, água potável e moradia segura, sem medo de perder seus meios de vida.</p>
-<p>Neste mundo, a comunidade apoia uns aos outros, compartilha conhecimento e recursos e age com base no princípio de que o que beneficia uma pessoa fortalece o todo. A educação é livre e relevante para a vida. A tecnologia serve à liberdade, não ao controle. As pessoas trabalham no que consideram significativo, e os resultados beneficiam a todos. A criatividade, o cuidado e a sabedoria são reconhecidos como as formas mais elevadas de contribuição — e a saúde não depende de dinheiro.</p>
-<p>Lugares de descanso e a natureza oferecem espaço para a recuperação mental e física. Cidades e zonas rurais são planejadas para curar, não para adoecer. As crianças crescem em ambientes seguros e amorosos, aprendem cooperação em vez de competição e desenvolvem forças a serviço da comunidade. A tecnologia é distribuída de modo a beneficiar a todos.</p>
-<p>Os dados pessoais são protegidos; a manipulação e o abuso não têm lugar. A comunicação é honesta, transparente e respeitosa. As decisões são tomadas em conjunto, baseadas em fatos, empatia e razão de longo prazo. Responsabilidade não é fardo, mas expressão de maturidade. A motivação nasce do propósito, da alegria e da comunidade.</p>
-<p>Os recursos são compartilhados, a cooperação substitui a competição, e a segurança material é base — não fim. O trabalho é redefinido: não tempo por dinheiro, mas contribuição com impacto. Toda pessoa tem direito ao descanso, ao aprendizado, à cura e ao desenvolvimento. A gratidão importa — e impacta positivamente a comunidade.</p>
-<p>As pessoas assumem responsabilidade porque reconhecem que suas ações têm efeitos. Liderar é servir. Os erros são espaços de aprendizado. Conflitos são resolvidos sem violência. Sistemas são resilientes, justos e transparentes. Quem precisa de ajuda a recebe — de imediato e com dignidade. Todos podem assumir responsabilidade, sem pressão, mas com efeito real.</p>
-<p>Os relacionamentos se baseiam na confiança e no respeito mútuo. Amor não é posse, mas postura. Comunidades são inclusivas e diversas; as diferenças não são colocadas umas contra as outras, mas compreendidas como forças. Toda pessoa pode estabelecer limites e mostrar vínculo. Todos podem ser criativos, aprender e se desenvolver.</p>
-<p>Cada ação contribui para tornar o mundo mais justo, habitável e pacífico. A cultura honra a verdade, a coragem e a compaixão. É normal receber ajuda — e normal oferecê-la. Não medimos mais o progresso por lucros, mas por como estão as pessoas, os animais e a Terra. Agimos sabendo que estamos conectados — e, por isso, agimos com responsabilidade. Aqui, ninguém fica para trás.</p>
-<p>Todos experimentam segurança, liberdade e reconhecimento, e cada voz conta. Este mundo começa no pensar, no sentir e no agir de cada pessoa — e cresce com a decisão de começar hoje. Bem-vindo a um mundo que podemos repensar. Bem-vindo a um mundo em que lembramos quem somos — e o que podemos realizar juntos. É tempo de coragem, empatia e disposição para assumir responsabilidade por nós e pelos outros.</p>
-`
-    },
-    vi: {
-      introText: "Pactum Elysium: Một Trái Tim",
-      menu: ["Lời kêu gọi đến Thế giới mới","Tầm nhìn","Trụ cột của Vương quốc","Quà tặng","Tiếng nói của Nhân dân","Phòng tiếp kiến","Cấp bậc","Giới thiệu","Thông tin pháp lý"],
-      headline: "Tiếng gọi của thế giới mới",
-      learnMore: "Tôi muốn tìm hiểu thêm",
-      longTextHTML: `
-<p>Chào mừng đến với một thế giới mà chúng ta có thể nghĩ lại. Hãy hình dung một xã hội nơi không ai hành động vì sợ thiếu thốn, mà từ niềm tin vào sự sung túc, kết nối và ý nghĩa. Trong thế giới này, các nhu cầu cơ bản là điều hiển nhiên: mọi người đều có quyền tiếp cận thực phẩm, nước sạch và nơi ở an toàn, không lo mất kế sinh nhai.</p>
-<p>Trong thế giới này, cộng đồng hỗ trợ lẫn nhau, chia sẻ tri thức và nguồn lực, hành động theo nguyên tắc: điều tốt cho một người sẽ làm mạnh cả tập thể. Giáo dục mở và gắn với cuộc sống. Công nghệ phục vụ tự do, không phải kiểm soát. Con người làm những việc có ý nghĩa, và thành quả mang lại lợi ích cho mọi người. Sáng tạo, chăm sóc và trí tuệ được coi là những đóng góp cao quý — và chăm sóc y tế không phụ thuộc vào tiền bạc.</p>
-<p>Những không gian nghỉ ngơi và thiên nhiên giúp phục hồi tinh thần và thể chất. Thành thị và nông thôn được thiết kế để chữa lành chứ không làm tổn hại. Trẻ em lớn lên trong môi trường an toàn, yêu thương, học hợp tác thay vì ganh đua và phát triển thế mạnh phục vụ cộng đồng. Công nghệ được phân bổ để tất cả đều được hưởng lợi.</p>
-<p>Dữ liệu cá nhân được bảo vệ; thao túng và lạm dụng không có chỗ đứng. Giao tiếp trung thực, minh bạch và tôn trọng. Quyết định được đưa ra cùng nhau dựa trên sự thật, lòng thấu cảm và lý trí dài hạn. Trách nhiệm không phải gánh nặng mà là biểu hiện của sự trưởng thành. Động lực sinh ra từ ý nghĩa, niềm vui và cộng đồng.</p>
-<p>Nguồn lực được chia sẻ, hợp tác thay thế cạnh tranh, và an toàn vật chất là nền tảng — không phải mục tiêu. Công việc được định nghĩa lại: không phải đổi thời gian lấy tiền, mà là cống hiến tạo tác động. Mỗi người có quyền nghỉ ngơi, học tập, chữa lành và phát triển. Lòng biết ơn có giá trị — và lan tỏa tích cực đến cộng đồng.</p>
-<p>Mọi người nhận trách nhiệm vì nhận ra hành động của mình có hệ quả. Lãnh đạo là phục vụ. Sai lầm là không gian học hỏi. Xung đột được giải quyết phi bạo lực. Hệ thống kiên cường, công bằng, minh bạch. Ai cần giúp đỡ đều được giúp — ngay lập tức và trong phẩm giá. Ai cũng có thể gánh vác trách nhiệm, không bị ép buộc nhưng với hiệu quả thực.</p>
-<p>Quan hệ giữa người với người dựa trên niềm tin và sự tôn trọng lẫn nhau. Tình yêu không phải sở hữu mà là một thái độ. Cộng đồng bao dung và đa dạng; khác biệt không bị đối lập mà được coi là sức mạnh. Mỗi người đều có thể đặt ranh giới và bày tỏ sự gắn kết. Ai cũng có thể sáng tạo, học hỏi và trưởng thành.</p>
-<p>Mỗi hành động đều góp phần làm cho thế giới công bằng hơn, đáng sống hơn và hòa bình hơn. Văn hóa tôn vinh sự thật, lòng can đảm và lòng trắc ẩn. Nhận giúp đỡ là bình thường — trao giúp đỡ cũng vậy. Chúng ta không còn đo tiến bộ bằng lợi nhuận, mà bằng sức khỏe của con người, muôn loài và Trái Đất. Chúng ta hành động trong ý thức về sự kết nối — và vì thế hành động có trách nhiệm. Ở đây, không ai bị bỏ lại phía sau.</p>
-<p>Mọi người đều trải nghiệm an toàn, tự do và được trân trọng, và mọi tiếng nói đều có giá trị. Thế giới này bắt đầu từ suy nghĩ, cảm xúc và hành động của mỗi người — và lớn lên từ quyết định bắt đầu ngay hôm nay. Chào mừng đến với một thế giới mà chúng ta có thể nghĩ lại. Chào mừng đến với một thế giới nơi ta nhớ mình là ai — và những gì ta có thể làm cùng nhau. Đã đến lúc cho lòng dũng cảm, sự thấu cảm và tinh thần trách nhiệm với chính mình và với nhau.</p>
-`
-    },
-    zh: {
-      introText: "伊利西昂契约：同一个心",
-      menu: ["通往新世界的召唤","愿景","王国支柱","礼物","人民之声","接见厅","等级","关于我","法律声明"],
-      headline: "新世界的召唤",
-      learnMore: "我想了解更多",
-      longTextHTML: `
-<p>欢迎来到一个我们可以重新思考的世界。想象一个社会，人们不再因匮乏的恐惧而行动，而是基于对丰裕、联结与意义的信任。在这个世界里，基本需求不可被讨价还价：每个人都能获得食物、清洁用水与安全住房，而无需担心生计不保。</p>
-<p>在这里，社区彼此支持，分享知识与资源，并遵循这样一个原则：有利于个人的，也会强化整体。教育向所有人开放且贴近生活。技术服务于自由，而非控制。人们投身于他们认为有意义的事情，其成果惠及所有人。创造力、关怀与智慧被视为最高形式的贡献——医疗保障不再取决于金钱。</p>
-<p>休憩之所与自然空间，为身心复原提供土壤。城市与乡村以疗愈为旨归，而非造成伤害。孩子们在安全而有爱的环境中成长，学习合作而非竞争，发展能服务于社区的长处。技术的分配以“惠及众人”为原则。</p>
-<p>个人数据受到保护，操控与滥用无处容身。沟通真诚、透明且相互尊重。决策以事实、同理与长远理性为基础，由人们共同作出。责任不是负担，而是成熟的表现。动力源自意义、喜悦与社群归属。</p>
-<p>资源被共享，合作取代竞争，物质安全只是基础——而非终点。工作的定义被更新：不再是“用时间换金钱”，而是“创造有影响的贡献”。人人都有权休憩、学习、疗愈与成长。感恩具有分量——并对社区产生正向影响。</p>
-<p>人们承担责任，因为他们明白行动必有影响。领导意味着服务。错误是学习的空间。冲突以非暴力方式化解。制度具有韧性、公正而透明。凡有需要者皆可即时而有尊严地获得帮助。每个人都能在无压力之下承担起真正有效的责任。</p>
-<p>这里的人际关系以信任与相互尊重为基石。爱不是占有，而是一种姿态。社群包容多元；差异不是相互对立的工具，而被理解为力量。每个人都可以设定界限，也能表达联结。人人皆可创造、学习与发展。</p>
-<p>每一个行动都在推动世界更公正、更宜居、更和平。文化尊崇真诚、勇气与慈悲。接受帮助是常态——给予帮助亦然。我们不再以利润衡量进步，而以人类、众生与地球的福祉为衡量。我们在“彼此相连”的认知中行动——因此负责任地行动。这里，没有人被落下。</p>
-<p>人人都能体验安全、自由与被珍视，每个声音都被听见。这个世界源于每个人的思想、情感与行动——并因“从今天开始”的决定而成长。欢迎来到一个可以重新思考的世界。欢迎来到一个让我们想起“我们是谁、我们能共同成就什么”的世界。是时候怀抱勇气、同理与对自己及彼此的责任了。</p>
-`
-    }
-  };
-  </script>
+  <!-- Externe Übersetzungen (NEU) -->
+  <script src="translations-index.js"></script>
 
   <script>
   function changeLanguage(lang) {
-    const t = translations[lang] || translations.de;
-    document.documentElement.lang = lang in translations ? lang : "de";
+    const t = (window.INDEX_TRANSLATIONS && window.INDEX_TRANSLATIONS[lang]) || window.INDEX_TRANSLATIONS.de;
+
+    // lang/dir wie gehabt
+    document.documentElement.lang = (lang in window.INDEX_TRANSLATIONS) ? lang : "de";
     document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
 
+    // Texte setzen (wie im Original)
     document.getElementById('intro-text').innerText = t.introText;
-    t.menu.forEach((text, i) => { const el = document.getElementById(`menu-${i}`); if (el) el.innerText = text; });
+    t.menu.forEach((text, i) => {
+      const el = document.getElementById(`menu-${i}`);
+      if (el) el.innerText = text;
+    });
+
+    // Im Original wird der Dokumenttitel aus der Headline gesetzt:
     document.title = t.headline || document.title;
-    document.getElementById('headline').innerText = t.headline;
-    document.getElementById('learn-more').innerText = t.learnMore;
+
+    const headline = document.getElementById('headline');
+    if (headline) headline.innerText = t.headline;
+
+    const cta = document.getElementById('learn-more');
+    if (cta) cta.innerText = t.learnMore;
 
     const long = document.getElementById('long-text');
-    if (long) long.innerHTML = t.longTextHTML || translations.de.longTextHTML || '';
+    if (long) long.innerHTML = t.longTextHTML || '';
   }
 
   function toggleMenu() {
     document.getElementById('menu').classList.toggle('active');
   }
 
+  // Startzustand, Intro-Fade & Anzeigeverhalten wie im Original
   document.addEventListener('DOMContentLoaded', () => {
     changeLanguage('de');
   });
